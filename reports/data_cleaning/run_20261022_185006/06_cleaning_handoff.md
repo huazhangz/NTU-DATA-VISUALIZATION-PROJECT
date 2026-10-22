@@ -1,6 +1,6 @@
 # Handoff — CDC PLACES county GIS, 2025 release
 
-Stop here. This handoff is for the next visualisation stage. Do not treat the cleaned file as a direct survey.
+Cleaning is closed. The next stage is Data Visualization preparation, then charts. Do not treat the cleaned file as a direct survey. Do not rerun cleaning or add cross-checks for the items closed below.
 
 ## How to rerun
 
@@ -47,12 +47,27 @@ Cleaned dimensions: 3,143 rows, 332 columns. Raw dimensions: 3,143 rows, 167 col
 8. Do not compare a 2022 measure with a 2023 measure as if they were the same year.
 9. `derived__source_row_number` only locates the raw row.
 
-## Unresolved items the next stage inherits
+## Closed / Accepted
 
-- The Windows download named in the follow-up was never hashed against this raw file.
-- Loving County, Texas (FIPS `48301`) is in the Census 2023 county gazetteer and is not in this file. Do not invent a row for it.
+These three items are closed because the project scope does not require more investigation. The underlying validation words are unchanged.
 
-Kentucky and Pennsylvania are now confirmed by the CDC current release notes: 2023 measures were not available, and the five 2022 measures were carried over. The Census 2023 gazetteer crosswalk is `data/reference/places_to_2023_gazetteer.csv`. County legal-class suffixes live there. They were not copied onto `CountyName`.
+| Item | Record that still stands | Decision |
+| --- | --- | --- |
+| HRSN blanks in 11 states (Q03) | V17 lists CO, FL, KY, OR, PA, SD, TN, TX, VT, WA, WY. The saved release notes do not name those states one by one. | Closed / Accepted. Do not search for an official name list. Leave the seven HRSN measures unpublished in those states. Do not draw the blanks as zero. |
+| Loving County missing cause (Q08, V26 WARNING) | FIPS `48301` is absent. No population table was checked. | Closed / Accepted. The cause is still unknown. Do not add a row. Do not change V26 from WARNING to PASS. |
+| V23 | `05_validation_results.csv` still says NOT TESTED. | Closed / Accepted. Do not run another byte comparison. Do not rewrite V23 as PASS. |
+
+Kentucky and Pennsylvania remain a data rule, not an open investigation: 2023 measures are unpublished there, and the five 2022 measures are present. The catalog `Issued` date of 7/27/2023 is still only a labeling caveat. Do not call the estimates a July 2023 release.
+
+## Visualization preparation
+
+Use `data/processed/places_county_gis_2025_i46a-9kgh_cleaned.csv` and `data/processed/places_county_gis_2025_field_dictionary.csv`. The dictionary has 332 field rows. Forty measures each have crude prevalence, crude interval, age-adjusted prevalence, and age-adjusted interval.
+
+Map key: `CountyFIPS`. Labels: `derived__CountyName_display`. Uncertainty: `derived__*_Low` and `derived__*_High` (160 columns). Source interval text remains in the 80 `*95CI` / `*95ci` columns.
+
+A first map can use `OBESITY_AdjPrev` or `DIABETES_AdjPrev` with its Low/High columns. A 2022 example that V16 recorded as present in every state is `DENTAL_CrudePrev`. Do not put `COLON_SCREEN`, `MAMMOUSE`, `TEETHLOST`, or `ACCESS2` on the same population footing as all-adult measures. Field descriptions give the age or sex group.
+
+No chart or dashboard has been built.
 
 ## Not in this task
 

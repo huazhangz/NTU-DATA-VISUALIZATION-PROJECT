@@ -36,16 +36,19 @@
 
 ### 当前阶段
 
-数据清洗阶段已完成，可以进入 EDA。仓库里没有 EDA 脚本、图表、仪表板或演示文稿。
+清洗阶段已经结束。当前是 Data Visualization 准备阶段。仓库里仍然没有 EDA 脚本、图表、仪表板或演示文稿。本轮只更新状态和交接，没有重跑清洗，也没有改原始数据、清洗结果或清洗脚本。
 
-### 待解决事项
+### 已关闭事项
 
-这些事项不阻止使用清洗结果，但下一阶段必须遵守：
+2026-10-22（亚洲/新加坡）按项目范围关闭下面三项。状态是 **Closed / Accepted**。这不是新的验证通过，也没有把未知原因改写成已查明。
 
-- 健康相关社会需求（HRSN）的 11 个空白州是文件中的实测名单。已保存的 CDC 发布说明只写“39 个州和哥伦比亚特区”这一覆盖范围，没有逐州点名。`03_open_questions.csv` 的 Q03 状态为 `partially resolved`。
-- 目录字段 `Issued: 7/27/2023` 早于数据行更新时间 2025-12-04。Q05 仍是元数据滞后，清洗时未把它当作数据年份。
-- Loving County, Texas（FIPS `48301`）在 2023 县名册中、不在 PLACES 文件中。CDC“成年人口少于 50 则不报告”只是可能原因，人口表未核对。Q08 状态为 `retained; cause not verified`。
-- 校验项 V23 在 `05_validation_results.csv` 中仍是 `NOT TESTED`。那次校验早于本地文件被采纳。按当前约定，不再补做对照核验。
+| 事项 | 关闭前的记录 | 关闭决定 |
+| --- | --- | --- |
+| HRSN 11 个州空白（Q03） | 校验 V17 记录空白州为 CO、FL、KY、OR、PA、SD、TN、TX、VT、WA、WY。已保存的发布说明只写 39 个州和哥伦比亚特区，没有逐州点名。 | Closed / Accepted。不再追查官方逐州名单。可视化时把这 11 个州的七个 HRSN 指标当作未发布，不要画成 0。 |
+| Loving County 缺失原因（Q08，校验 V26 为 WARNING） | FIPS `48301` 不在清洗文件中。成年人口是否低于 50 没有用人口表核实。 | Closed / Accepted。原因仍未知。不要补行，也不要把 V26 改成 PASS。 |
+| V23 未测试 | `05_validation_results.csv` 中 V23 的状态仍是 `NOT TESTED`。 | Closed / Accepted。不再补做与 Windows 路径或上传文件的字节对照。V23 继续保持 NOT TESTED，不能写成 PASS。 |
+
+目录签发日期 Q05 没有关闭成“已查明”。它仍只是使用限制：不要把数据标成 2023 年 7 月。数据行更新时间仍以元数据中的 2025-12-04 为准。
 
 ## 2. 完整 Pipeline
 
@@ -59,7 +62,7 @@ flowchart TD
     out["清洗结果与字段字典<br/>已完成"]
     valid["校验与 pytest<br/>已完成"]
     eda["EDA<br/>未开始"]
-    viz["可视化<br/>未开始"]
+    viz["可视化准备<br/>当前阶段；图表未开始"]
 
     raw --> profile
     meta --> rules
@@ -82,7 +85,8 @@ flowchart TD
 | 清洗结果 | 已完成 | `data/processed/places_county_gis_2025_i46a-9kgh_cleaned.csv` |
 | 验证 | 已完成 | `05_validation_results.csv`；`05_pytest_log.txt` 为 4 passed |
 | EDA | 未开始 | 仓库中无 EDA 脚本或笔记本 |
-| 可视化 | 未开始 | 仓库中无图表或仪表板 |
+| 可视化准备 | 当前阶段 | 本节与交接文档已写明可用字段和限制；尚无图表 |
+| 图表或仪表板 | 未开始 | 仓库中无图表或仪表板 |
 
 ## 3. 技术记录
 
@@ -147,8 +151,8 @@ CDC 规则在清洗中的用法：发布说明摘录写明肯塔基和宾夕法�
 最新校验文件：`reports/data_cleaning/run_20261022_185006/05_validation_results.csv`。
 
 - PASS：V01–V22、V24、V25，共 24 项
-- WARNING：V26，Loving County 不在文件中，原因未用人口表证实
-- NOT TESTED：V23。该项文字仍写着 Windows 路径在恢复检查时不在会话中
+- WARNING：V26，Loving County 不在文件中。原因未查明。该调查已 Closed / Accepted，校验状态仍是 WARNING，不是 PASS。
+- NOT TESTED：V23。校验文件里的文字仍是 NOT TESTED。该调查已 Closed / Accepted，没有改成 PASS。
 - FAIL：无
 
 `05_pytest_log.txt` 只有汇总：`4 passed in 2.94s`。它没有逐条列出测试名。测试模块中定义了四个函数：`test_validation_suite_has_no_failures`、`test_cleaner_refuses_a_different_raw_file`、`test_display_repair_does_not_guess_other_non_ascii_names`、`test_repeat_clean_of_preserved_file_is_stable`。日志阶段 7 的计数也写了 `pytest: 4`。不能从日志文本单独推出每个函数的单独结果，只能确认这次保存的运行是 4 passed。
@@ -213,25 +217,79 @@ HRSN 空白州，来自 V17 的记录：CO、FL、KY、OR、PA、SD、TN、TX、
 
 ## 5. 下一步交接
 
+清洗阶段结束。下一阶段是 Data Visualization 准备，然后才是作图。不要回到清洗脚本。
+
 ### 现在可用
 
 - 清洗表：`data/processed/places_county_gis_2025_i46a-9kgh_cleaned.csv`
-- 字段字典：`data/processed/places_county_gis_2025_field_dictionary.csv`
+- 字段字典：`data/processed/places_county_gis_2025_field_dictionary.csv`（332 行字段说明，与清洗表列数一致）
 - 原始表：`data/raw/places_county_gis_2025_i46a-9kgh.csv`
 - 清洗交接：`reports/data_cleaning/run_20261022_185006/06_cleaning_handoff.md`
 - 本进度报告：`reports/project_status/SD6105_project_status_and_pipeline.md`
 
-### 未完成
+本环境不能写入 `C:\Users\ASUS\Desktop\Data Visualization`。给组员的副本就是上面这一份仓库文件。
 
-- EDA 未开始。
-- 可视化未开始。
-- Q03：2025 年 HRSN 空白州没有官方逐州名单，只有文件中的实测名单和“39 州 + DC”的覆盖说明。
-- Q05：目录签发日期仍早于 2025-12-04 的行更新。不要把数据标成 2023 年 7 月。
-- Q08：Loving County 缺失的原因未用人口表证实。
-- V23 没有在本地文件采纳之后重跑。按当前约定不再补核验。
+### 仍须遵守的使用限制
 
-### 建议的下一阶段入口
+- Q03、Q08、V23 已按范围关闭，事实没有升级。HRSN 仍按 V17 的 11 州处理；Loving County 仍没有行；V23 仍是 NOT TESTED。
+- Q05 未关闭为已查明：不要把数据标成 2023 年 7 月。
+- 空白不是 0。肯塔基和宾夕法尼亚不要画 2023 指标。
+- 地图键用 `CountyFIPS`。区间用 `derived__*_Low` 和 `derived__*_High`。
 
-从清洗表做 EDA，而不是从原始 CSV 重做清洗。先读 `06_cleaning_handoff.md` 的限制，再选一个 2023 指标和一个 2022 指标分开看。地图键用 `CountyFIPS`。区间用 `derived__*_Low` 和 `derived__*_High`。第一张图不要包含肯塔基、宾夕法尼亚的 2023 指标，也不要把 HRSN 画进上述 11 个空白州。
+### 建议的入口
 
-本阶段到此停止。
+读第 6 节的字段和方向，从清洗表选图，而不是从原始 CSV 重做清洗。第一张图不要包含肯塔基、宾夕法尼亚的 2023 指标，也不要把 HRSN 画进上述 11 个空白州。
+
+## 6. Data Visualization 准备
+
+字段来自 `data/processed/places_county_gis_2025_field_dictionary.csv`。字典有 332 行，对应清洗表的 332 列。其中 40 个指标各有粗率、粗率区间、年龄调整、年龄调整区间四列。
+
+### 地理字段
+
+| 字段 | 用途 |
+| --- | --- |
+| `CountyFIPS` | 地图和连接的主键，五位文本 |
+| `StateAbbr`、`StateDesc` | 州筛选 |
+| `CountyName` | 源短名 |
+| `derived__CountyName_display` | 标注。只在 FIPS `35013` 修成 Doña Ana |
+| `derived__short_name_collision` | `yes` 表示同州另有一个同名县或县等价区 |
+| `Geolocation` | 源 WKT 中心点 |
+| `derived__Geolocation_Longitude`、`derived__Geolocation_Latitude` | 从 WKT 取出的经纬度文本 |
+| `TotalPopulation`、`TotalPop18plus` | 2023 年人口计数，不是每个指标的分母 |
+
+`derived__source_row_number` 只用于回到原始行，不用于地图。
+
+### 核心指标
+
+40 个指标前缀。作图时用 `前缀_CrudePrev` 或 `前缀_AdjPrev`，不要混在同一条序列里。年份写在字段字典的描述里。
+
+| 类别 | 个数 | 前缀 |
+| --- | ---: | --- |
+| 健康结果 | 12 | ARTHRITIS，BPHIGH，CANCER，CASTHMA，CHD，COPD，DEPRESSION，DIABETES，HIGHCHOL，OBESITY，STROKE，TEETHLOST |
+| 预防 | 7 | ACCESS2，BPMED，CHECKUP，CHOLSCREEN，COLON_SCREEN，DENTAL，MAMMOUSE |
+| 健康风险行为 | 4 | BINGE，CSMOKING，LPA，SLEEP |
+| 残疾 | 7 | HEARING，VISION，COGNITION，MOBILITY，SELFCARE，INDEPLIVE，DISABILITY |
+| 健康状况 | 3 | GHLTH，MHLTH，PHLTH |
+| 健康相关社会需求 | 7 | LONELINESS，FOODSTAMP，FOODINSECU，HOUSINSECU，SHUTUTILITY，LACKTRPT，EMOTIONSPT |
+
+适合先做的核心图，仍然只用现有字段：
+
+- 一张全国县地图：`OBESITY_AdjPrev` 或 `DIABETES_AdjPrev`，配合同名 Low/High。这两个描述是 2023、成年人，空白只涉及肯塔基和宾夕法尼亚。
+- 一张 2022 指标地图：`DENTAL_CrudePrev` 或 `SLEEP_CrudePrev`。发布说明写明这两项在肯塔基和宾夕法尼亚被保留，校验 V16 记录 DENTAL 没有整州空白。
+- 不要把 `COLON_SCREEN`（45–75 岁）、`MAMMOUSE`（50–74 岁女性）、`TEETHLOST`（65 岁及以上）、`ACCESS2`（18–64 岁）与全体成年人指标画成同一人口。
+- HRSN 只在非空白州使用。字段字典里 `LONELINESS_CrudePrev` 的描述仍写 “feeling socially isolated”；列名是 LONELINESS。发布说明摘录说该测度已从社会隔离改为孤独。作图标题用列名和发布说明中的 loneliness，不要另造一个新指标。
+
+### 置信区间字段
+
+- 源区间 80 列：每个指标的 `*_Crude95CI` 与 `*_Adj95CI`。`FOODSTAMP_Crude95ci` 的 `ci` 是小写，这是源列名。
+- 派生区间 160 列：每个源区间对应 `derived__原列名_Low` 和 `derived__原列名_High`。
+- 源区间是文本，例如带空格的 `(low, high)`。作图用派生的 Low/High。空白区间的派生列也是空白，不是 0。
+
+### 适合的方向
+
+1. 县 choropleth：年龄调整患病率，颜色表示点估计，另外用区间宽度或 Low/High 表示不确定度。
+2. 州内分布：箱线或点图，比较各县的同一指标，并标出肯塔基、宾夕法尼亚缺失。
+3. 粗率与年龄调整并排，同一指标两列，不取平均。
+4. HRSN 小倍数图，事先去掉 11 个空白州，避免大片假缺失被读成低患病率。
+
+不做的事：不制作图表或仪表板，不把县按一个点估计排成健康排名，不把 2022 与 2023 指标连成时间趋势。
