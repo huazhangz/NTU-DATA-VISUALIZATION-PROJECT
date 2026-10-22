@@ -1,0 +1,11 @@
+python=3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+platform=Linux-6.12.94+-x86_64-with-glibc2.39
+executable=/usr/bin/python3
+pytest=9.1.1
+pandas=3.0.6
+numpy=1.26.4
+pipeline_dependencies=Python 3 standard library only (csv, hashlib, json, decimal, re, argparse, pathlib, zoneinfo)
+test_runner=pytest
+pandas_used=no
+numpy_used=no
+reason_stdlib=Reading with pandas type inference can cast CountyFIPS to integers and drop leading zeros. The pipeline keeps every source token as text.

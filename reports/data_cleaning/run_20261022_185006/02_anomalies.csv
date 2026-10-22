@@ -1,0 +1,14 @@
+source_row_number,CountyFIPS,StateAbbr,CountyName,column_name,issue_code,observed_value,detail
+1093,35013,NM,DoÃ±a Ana,CountyName,non_ascii_county_name,DoÃ±a Ana,county short name contains a non-ASCII character
+2345,24510,MD,Baltimore,CountyName,within_state_short_name_collision,Baltimore,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+2899,24005,MD,Baltimore,CountyName,within_state_short_name_collision,Baltimore,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+878,29189,MO,St. Louis,CountyName,within_state_short_name_collision,St. Louis,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+1341,29510,MO,St. Louis,CountyName,within_state_short_name_collision,St. Louis,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+621,51600,VA,Fairfax,CountyName,within_state_short_name_collision,Fairfax,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+1580,51059,VA,Fairfax,CountyName,within_state_short_name_collision,Fairfax,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+2138,51620,VA,Franklin,CountyName,within_state_short_name_collision,Franklin,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+2600,51067,VA,Franklin,CountyName,within_state_short_name_collision,Franklin,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+1807,51760,VA,Richmond,CountyName,within_state_short_name_collision,Richmond,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+1826,51159,VA,Richmond,CountyName,within_state_short_name_collision,Richmond,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+453,51161,VA,Roanoke,CountyName,within_state_short_name_collision,Roanoke,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them
+1079,51770,VA,Roanoke,CountyName,within_state_short_name_collision,Roanoke,same short name is used by more than one county-equivalent in this state; CountyFIPS distinguishes them

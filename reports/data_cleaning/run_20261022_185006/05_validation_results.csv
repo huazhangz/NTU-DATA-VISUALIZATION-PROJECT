@@ -1,0 +1,26 @@
+test_id,status,validates,detail
+V01,PASS,Preserved raw file is still the acquired CDC download.,observed=a47cad3a852c5b35a031d548bc6dd4e9b5f7836bb7c851b84382160beafe15ef; expected=a47cad3a852c5b35a031d548bc6dd4e9b5f7836bb7c851b84382160beafe15ef
+V02,PASS,Cleaned CSV reopens with the csv module as UTF-8.,rows=3143; columns=332
+V03,PASS,"Row count matches the raw file. 3143 is the observed count for this file, not a generic deletion rule.",raw=3143; cleaned=3143
+V04,PASS,"All 167 source columns are present, in the original order, including FOODSTAMP_Crude95ci.",source_columns=167; foodstamp_name_preserved=True
+V05,PASS,"Derived columns are exactly the documented set, after the source columns.",derived=165; expected=165
+V06,PASS,"No source cell was changed, imputed, reformatted, or deleted.",mismatched_cells=0; first=none
+V07,PASS,CountyFIPS is a unique five-digit string and leading zeros are still present.,unique=3143; leading_zero_codes=318; format_ok=True
+V08,PASS,"State abbreviation, state name, and county FIPS prefix agree with Census ANSI state codes.",prefix_mismatches=0; name_mismatches=0; states=51
+V09,PASS,Short-name collisions are flagged and not deleted. County name is not used as a key.,"flagged=['24005', '24510', '29189', '29510', '51059', '51067', '51159', '51161', '51600', '51620', '51760', '51770']; expected=['24005', '24510', '29189', '29510', '51059', '51067', '51159', '51161', '51600', '51620', '51760', '51770']"
+V10,PASS,"CountyFIPS satisfies uniqueness. StateAbbr+CountyName does not, and that is expected.",CountyFIPS unique=True; colliding_name_pairs=6
+V11,PASS,"Only the Doña Ana display label is repaired, and the source CountyName remains the published token.",dona_ok=True; other_display_changes=0
+V12,PASS,"Parsed confidence limits equal the verified (low, high) text and stay blank when the source is blank.",parse_mismatches=0; low_gt_high=0; blank_mismatches=0
+V13,PASS,Non-blank prevalence values are inside 0 to 100 and inside their published confidence interval.,violations=0
+V14,PASS,Population fields are positive integer tokens and the adult count does not exceed the total count.,violations=0
+V15,PASS,Every Geolocation WKT parses to the derived longitude and latitude and stays inside WGS84 degree limits.,violations=0
+V16,PASS,2023-description measures are blank for all Kentucky and Pennsylvania counties; the five 2022 measures are present in every state. Nothing was imputed.,"ACCESS2_all_blank_states=['KY', 'PA']; DENTAL_all_blank_states=[]"
+V17,PASS,Health-related social needs are blank for the same 11 states and present for the other 39 states plus DC.,"blank_states=['CO', 'FL', 'KY', 'OR', 'PA', 'SD', 'TN', 'TX', 'VT', 'WA', 'WY']"
+V18,PASS,"Kalawao County is retained. Its adult population is 75, which is above the CDC reporting threshold of 50, and its estimates are present.",row=Kalawao; adult=75
+V19,PASS,derived__source_row_number matches the raw row order and is not reused as a geographic identifier.,first=1; last=3143
+V20,PASS,Re-running the cleaner on the same raw input reproduces the cleaned file byte for byte.,cleaned=58a324b2918d1e6571056235afc4f1d8fd2817e00c09f1833355de515fadf201; rebuilt=58a324b2918d1e6571056235afc4f1d8fd2817e00c09f1833355de515fadf201
+V21,PASS,The raw hash is unchanged after cleaning and after the reproducibility rebuild.,a47cad3a852c5b35a031d548bc6dd4e9b5f7836bb7c851b84382160beafe15ef
+V22,NOT TESTED,County short names were not matched to a Census county gazetteer.,"The 2023 national gazetteer URL returned HTTP 404 in this environment, so county legal-class suffixes were not added."
+V23,NOT TESTED,Byte identity with the Windows file cited in the follow-up.,c:\Users\ASUS\Downloads\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv was not present in the session.
+V24,NOT TESTED,The CDC current-release-notes page naming Kentucky and Pennsylvania was not retrieved.,data.cdc.gov metadata and the empirical blank pattern are tested. https://www.cdc.gov/places/current-release-notes/index.html returned HTTP 403 to the downloader and timed out in the page fetcher.
+V25,PASS,The Socrata computed region column was not in the CSV and was not invented.,column absent from cleaned output

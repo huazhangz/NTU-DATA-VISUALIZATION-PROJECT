@@ -1,0 +1,16 @@
+rule_id,status,action,affected,count,detail
+R00,accepted,lock_raw_file,raw csv,1,SHA-256 of the raw file is checked before cleaning. The raw file is not opened for writing.
+R01,accepted,copy_source_cells,all 167 source columns,524881,"Every source cell is copied as text. Numeric tokens, confidence-interval text, and FIPS codes keep their published characters."
+R02,accepted,retain_all_rows,rows,3143,No row is deleted. There were no exact duplicate records.
+R03,rejected,rename_FOODSTAMP_Crude95ci,FOODSTAMP_Crude95ci,0,"The lowercase ci suffix is the published Socrata column name, including in the 2024 release. It is preserved."
+R04,accepted,no_imputation,blank measure cells,0,"Blank cells stay blank. Kentucky, Pennsylvania, and health-related social needs gaps are structured nonresponse, not values to fill."
+R05,accepted,preserve_fips_text,CountyFIPS,3143,CountyFIPS stays a five-character string. Leading zeros are not stripped and codes are not padded or recalculated.
+R06,accepted_no_change,no_whitespace_normalisation,text fields,0,"Profiling found no leading, trailing, or whitespace-only cells."
+R07,rejected,delete_or_winsorise_extremes,prevalence and population,0,Extreme counties such as Kalawao and Los Angeles are valid. No IQR or z-score deletion is applied.
+R08,rejected,deduplicate_by_county_name,rows,0,"CountyName is not unique within Maryland, Missouri, or Virginia. CountyFIPS is the unique key. No rows are removed."
+R09,accepted,parse_confidence_intervals,derived CI low and high columns,229152,Parsed cells=229152; blank source intervals=22288; failures=0. Source interval text is kept.
+R10,accepted,parse_geolocation_wkt,derived longitude and latitude,3143,Parsed=3143; blank=0; failures=0.
+R11,accepted,add_source_row_number,derived__source_row_number,3143,Audit index back to the raw file. Not a CDC field and not a geographic key.
+R12,accepted,flag_short_name_collisions,derived__short_name_collision,12,Flag is computed from the file. It does not rewrite CountyName.
+R13,accepted,repair_dona_ana_display_name,derived__CountyName_display,1,"Only CountyFIPS 35013 with the exact mojibake token is repaired, and only in the derived display column."
+R13,accepted,cell_display_repair,row 1093 FIPS 35013,1,source CountyName kept as 'DoÃ±a Ana'; derived display set to 'Doña Ana'

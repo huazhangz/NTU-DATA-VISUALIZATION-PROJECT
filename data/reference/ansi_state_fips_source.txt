@@ -1,0 +1,5 @@
+U.S. Census Bureau ANSI state and state-equivalent FIPS codes.
+Source page: https://www.census.gov/library/reference/code-lists/ansi.html
+This table was transcribed for cross-field checks. It is not a CDC PLACES file.
+It includes the 50 states and the District of Columbia. It does not include
+U.S. territories, which are outside the geographic scope of this county file.

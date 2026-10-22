@@ -1,0 +1,448 @@
+{
+  "n_rows": 3143,
+  "n_columns": 167,
+  "duplicate_column_names": [],
+  "n_measures": 40,
+  "unmapped_measures": [],
+  "category_counts": {
+    "health_outcome": 12,
+    "prevention": 7,
+    "health_risk_behavior": 4,
+    "disability": 7,
+    "health_status": 3,
+    "health_related_social_need": 7
+  },
+  "year_description_conflicts": [],
+  "n_states": 51,
+  "state_county_counts": {
+    "AK": 30,
+    "AL": 67,
+    "AR": 75,
+    "AZ": 15,
+    "CA": 58,
+    "CO": 64,
+    "CT": 9,
+    "DC": 1,
+    "DE": 3,
+    "FL": 67,
+    "GA": 159,
+    "HI": 5,
+    "IA": 99,
+    "ID": 44,
+    "IL": 102,
+    "IN": 92,
+    "KS": 105,
+    "KY": 120,
+    "LA": 64,
+    "MA": 14,
+    "MD": 24,
+    "ME": 16,
+    "MI": 83,
+    "MN": 87,
+    "MO": 115,
+    "MS": 82,
+    "MT": 56,
+    "NC": 100,
+    "ND": 53,
+    "NE": 93,
+    "NH": 10,
+    "NJ": 21,
+    "NM": 33,
+    "NV": 17,
+    "NY": 62,
+    "OH": 88,
+    "OK": 77,
+    "OR": 36,
+    "PA": 67,
+    "RI": 5,
+    "SC": 46,
+    "SD": 66,
+    "TN": 95,
+    "TX": 253,
+    "UT": 29,
+    "VA": 133,
+    "VT": 14,
+    "WA": 39,
+    "WI": 72,
+    "WV": 55,
+    "WY": 23
+  },
+  "connecticut_county_fips": [
+    "09110",
+    "09120",
+    "09130",
+    "09140",
+    "09150",
+    "09160",
+    "09170",
+    "09180",
+    "09190"
+  ],
+  "fips_format_failures": 0,
+  "state_fips_mismatches": 0,
+  "state_name_mismatches": 0,
+  "unknown_state_abbreviations": 0,
+  "non_ascii_county_names": [
+    {
+      "source_row_number": 1093,
+      "CountyFIPS": "35013",
+      "CountyName": "DoÃ±a Ana"
+    }
+  ],
+  "county_suffix_counts": {
+    "no_standard_suffix": 3143
+  },
+  "within_state_short_name_collisions": [
+    {
+      "StateAbbr": "MD",
+      "CountyName": "Baltimore",
+      "n_rows": 2,
+      "source_row_numbers": "2345|2899",
+      "county_fips": "24510|24005"
+    },
+    {
+      "StateAbbr": "MO",
+      "CountyName": "St. Louis",
+      "n_rows": 2,
+      "source_row_numbers": "878|1341",
+      "county_fips": "29189|29510"
+    },
+    {
+      "StateAbbr": "VA",
+      "CountyName": "Fairfax",
+      "n_rows": 2,
+      "source_row_numbers": "621|1580",
+      "county_fips": "51600|51059"
+    },
+    {
+      "StateAbbr": "VA",
+      "CountyName": "Franklin",
+      "n_rows": 2,
+      "source_row_numbers": "2138|2600",
+      "county_fips": "51620|51067"
+    },
+    {
+      "StateAbbr": "VA",
+      "CountyName": "Richmond",
+      "n_rows": 2,
+      "source_row_numbers": "1807|1826",
+      "county_fips": "51760|51159"
+    },
+    {
+      "StateAbbr": "VA",
+      "CountyName": "Roanoke",
+      "n_rows": 2,
+      "source_row_numbers": "453|1079",
+      "county_fips": "51161|51770"
+    }
+  ],
+  "population_not_integer": 0,
+  "population_nonpositive": 0,
+  "adult_pop_exceeds_total": 0,
+  "small_population_counties": [],
+  "ci_parse_fail": 0,
+  "ci_low_gt_high": 0,
+  "estimate_outside_ci": 0,
+  "max_estimate_outside_ci_deviation": "0",
+  "estimate_outside_ci_examples": [],
+  "ci_without_estimate": 0,
+  "estimate_without_ci": 0,
+  "partial_measure_groups": 0,
+  "fully_missing_states_by_measure": {
+    "ACCESS2": [
+      "KY",
+      "PA"
+    ],
+    "ARTHRITIS": [
+      "KY",
+      "PA"
+    ],
+    "BINGE": [
+      "KY",
+      "PA"
+    ],
+    "BPHIGH": [
+      "KY",
+      "PA"
+    ],
+    "BPMED": [
+      "KY",
+      "PA"
+    ],
+    "CANCER": [
+      "KY",
+      "PA"
+    ],
+    "CASTHMA": [
+      "KY",
+      "PA"
+    ],
+    "CHD": [
+      "KY",
+      "PA"
+    ],
+    "CHECKUP": [
+      "KY",
+      "PA"
+    ],
+    "CHOLSCREEN": [
+      "KY",
+      "PA"
+    ],
+    "COGNITION": [
+      "KY",
+      "PA"
+    ],
+    "COPD": [
+      "KY",
+      "PA"
+    ],
+    "CSMOKING": [
+      "KY",
+      "PA"
+    ],
+    "DEPRESSION": [
+      "KY",
+      "PA"
+    ],
+    "DIABETES": [
+      "KY",
+      "PA"
+    ],
+    "DISABILITY": [
+      "KY",
+      "PA"
+    ],
+    "EMOTIONSPT": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "FOODINSECU": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "FOODSTAMP": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "GHLTH": [
+      "KY",
+      "PA"
+    ],
+    "HEARING": [
+      "KY",
+      "PA"
+    ],
+    "HIGHCHOL": [
+      "KY",
+      "PA"
+    ],
+    "HOUSINSECU": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "INDEPLIVE": [
+      "KY",
+      "PA"
+    ],
+    "LACKTRPT": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "LONELINESS": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "LPA": [
+      "KY",
+      "PA"
+    ],
+    "MHLTH": [
+      "KY",
+      "PA"
+    ],
+    "MOBILITY": [
+      "KY",
+      "PA"
+    ],
+    "OBESITY": [
+      "KY",
+      "PA"
+    ],
+    "PHLTH": [
+      "KY",
+      "PA"
+    ],
+    "SELFCARE": [
+      "KY",
+      "PA"
+    ],
+    "SHUTUTILITY": [
+      "CO",
+      "FL",
+      "KY",
+      "OR",
+      "PA",
+      "SD",
+      "TN",
+      "TX",
+      "VT",
+      "WA",
+      "WY"
+    ],
+    "STROKE": [
+      "KY",
+      "PA"
+    ],
+    "VISION": [
+      "KY",
+      "PA"
+    ]
+  },
+  "whitespace_only_cells": 0,
+  "edge_whitespace_cells": 0,
+  "sentinel_cells": 0,
+  "formula_like_cells": 0,
+  "numeric_parse_failures": 0,
+  "prevalence_out_of_range": 0,
+  "candidate_keys": [
+    {
+      "candidate_key": "CountyFIPS",
+      "n_rows": 3143,
+      "n_distinct": 3143,
+      "n_duplicate_key_values": 0,
+      "n_rows_in_duplicate_groups": 0,
+      "is_unique": "yes",
+      "notes": "Five-character county FIPS, including state prefix. Tested, not assumed from the name."
+    },
+    {
+      "candidate_key": "StateAbbr",
+      "n_rows": 3143,
+      "n_distinct": 51,
+      "n_duplicate_key_values": 50,
+      "n_rows_in_duplicate_groups": 3142,
+      "is_unique": "no",
+      "notes": "State abbreviation is a grouping field. Duplicate values are expected."
+    },
+    {
+      "candidate_key": "StateDesc",
+      "n_rows": 3143,
+      "n_distinct": 51,
+      "n_duplicate_key_values": 50,
+      "n_rows_in_duplicate_groups": 3142,
+      "is_unique": "no",
+      "notes": "State name is a grouping field. Duplicate values are expected."
+    },
+    {
+      "candidate_key": "CountyName",
+      "n_rows": 3143,
+      "n_distinct": 1837,
+      "n_duplicate_key_values": 442,
+      "n_rows_in_duplicate_groups": 1748,
+      "is_unique": "no",
+      "notes": "County name is not nationally unique. Duplicate names are expected."
+    },
+    {
+      "candidate_key": "StateAbbr+CountyName",
+      "n_rows": 3143,
+      "n_distinct": 3137,
+      "n_duplicate_key_values": 6,
+      "n_rows_in_duplicate_groups": 12,
+      "is_unique": "no",
+      "notes": "Not unique. Six short names each refer to both a county and a county-equivalent in the same state."
+    },
+    {
+      "candidate_key": "StateAbbr+CountyFIPS",
+      "n_rows": 3143,
+      "n_distinct": 3143,
+      "n_duplicate_key_values": 0,
+      "n_rows_in_duplicate_groups": 0,
+      "is_unique": "yes",
+      "notes": "Redundant with CountyFIPS if the state prefix agrees with StateAbbr."
+    },
+    {
+      "candidate_key": "Geolocation",
+      "n_rows": 3143,
+      "n_distinct": 3143,
+      "n_duplicate_key_values": 0,
+      "n_rows_in_duplicate_groups": 0,
+      "is_unique": "yes",
+      "notes": "WKT county centroid. Uniqueness is empirical, not an official key."
+    },
+    {
+      "candidate_key": "full_record_sha256",
+      "n_rows": 3143,
+      "n_distinct": 3143,
+      "n_duplicate_key_values": 0,
+      "n_rows_in_duplicate_groups": 0,
+      "is_unique": "yes",
+      "notes": "Exact duplicate records, including every measure field."
+    }
+  ],
+  "metadata_column_count": 168,
+  "metadata_only_columns": [
+    {
+      "name": "Counties",
+      "fieldName": ":@computed_region_skr5_azej",
+      "dataTypeName": "number"
+    }
+  ],
+  "csv_columns_missing_from_metadata": [],
+  "view_id": "i46a-9kgh",
+  "view_name": "PLACES: County Data (GIS Friendly Format), 2025 release",
+  "schema_row_count": 168
+}

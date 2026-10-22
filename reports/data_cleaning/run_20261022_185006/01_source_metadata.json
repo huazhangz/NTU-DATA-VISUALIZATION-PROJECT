@@ -1,0 +1,105 @@
+{
+  "dataset_id": "i46a-9kgh",
+  "dataset_name": "PLACES: County Data (GIS Friendly Format), 2025 release",
+  "attribution": "Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Division of Population Health",
+  "license": {
+    "name": "Public Domain"
+  },
+  "description": "This dataset contains model-based county-level estimates in GIS-friendly format. PLACES covers the entire United States—50 states and the District of Columbia—at county, place, census tract, and ZIP Code Tabulation Area levels. It provides information uniformly on this large scale for local areas at four geographic levels. Estimates were provided by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. Project was funded by the Robert Wood Johnson Foundation in conjunction with the CDC Foundation. Data sources used to generate these model-based estimates are Behavioral Risk Factor Surveillance System (BRFSS) 2023 or 2022 data, Census Bureau 2023 county population estimates, and American Community Survey (ACS) 2019-2023 or 2018–2022 estimates. The 2025 release uses 2023 BRFSS data for 35 measures and 2022 BRFSS data for 5 measures (all teeth lost, dental visits, mammograms, colorectal cancer screening, and short sleep duration) that the survey collects data on every other year. These data can be joined with the census 2023 county boundary file in a GIS system to produce maps for 40 measures at the county level. An ArcGIS Online feature service is also available for users to make maps online or to add data to desktop GIS software. https://cdcarcgis.maps.arcgis.com/home/item.html?id=3b7221d4e47740cab9235b839fa55cd7",
+  "category": "500 Cities & Places",
+  "tags": [
+    "places",
+    "county",
+    "gis",
+    "prevalence",
+    "risk",
+    "behaviors",
+    "outcomes",
+    "prevention",
+    "health",
+    "status",
+    "disability",
+    "social needs"
+  ],
+  "rowsUpdatedAt": 1764844982,
+  "createdAt": 1600094867,
+  "publicationDate": 1764845015,
+  "viewLastModified": 1790116963,
+  "custom_fields": {
+    "Common Core": {
+      "Contact Email": "places@cdc.gov",
+      "Homepage": "http://www.cdc.gov/nccdphp/dph/",
+      "References": "https://www.cdc.gov/places/measure-definitions/index.html",
+      "Contact Name": "PLACES Public Inquiries",
+      "Issued": "7/27/2023",
+      "Program Code": "009:020",
+      "Publisher": "Centers for Disease Control and Prevention",
+      "Bureau Code": "009:20",
+      "Public Access Level": "public"
+    },
+    "Common Core 3": {
+      "Contact Email": "places@cdc.gov",
+      "Contact Name": "PLACES Public Inquiries",
+      "Program Code": "009:020",
+      "Restriction Status": "public",
+      "Publisher": "Centers for Disease Control and Prevention",
+      "Bureau Code": "009:20",
+      "Public Access Level": "public"
+    },
+    "Dataset Information": {
+      "Glossary/Methodology ": "http://www.cdc.gov/places/"
+    }
+  },
+  "retrieval": {
+    "csv_url": "https://data.cdc.gov/api/views/i46a-9kgh/rows.csv?accessType=DOWNLOAD",
+    "view_metadata_url": "https://data.cdc.gov/api/views/i46a-9kgh.json",
+    "columns_metadata_url": "https://data.cdc.gov/api/views/i46a-9kgh/columns.json",
+    "about_page": "https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2025-releas/i46a-9kgh/about_data",
+    "methodology": "https://www.cdc.gov/places/methodology/",
+    "measure_definitions": "https://www.cdc.gov/places/measure-definitions/index.html",
+    "faqs": "https://www.cdc.gov/places/faqs/index.html",
+    "started_utc": "2026-10-22T10:50:06.897730+00:00",
+    "started_sgt": "2026-10-22T18:50:06.897730+08:00",
+    "http_status": 200,
+    "csv_content_type": "text/csv; charset=utf-8",
+    "csv_last_modified_header": "Thu, 04 Dec 2025 10:43:36 GMT",
+    "user_agent": "academic-data-cleaning/1.0 (CDC PLACES county GIS 2025 reproducibility)"
+  },
+  "files": {
+    "raw_csv": {
+      "path": "data/raw/places_county_gis_2025_i46a-9kgh.csv",
+      "bytes": 4808551,
+      "sha256": "a47cad3a852c5b35a031d548bc6dd4e9b5f7836bb7c851b84382160beafe15ef",
+      "encoding": "utf-8",
+      "bom": false,
+      "delimiter": ",",
+      "newline": "\\n",
+      "header": true,
+      "n_rows_observed": 3143,
+      "n_columns_observed": 167
+    },
+    "view_metadata": {
+      "path": "data/metadata/i46a-9kgh_view_metadata.json",
+      "bytes": 313141,
+      "sha256": "a258a9828b32056bfb101dafdab890f0f2baf56f3aff26afcb7d2654f616e76f"
+    },
+    "columns_metadata": {
+      "path": "data/metadata/i46a-9kgh_columns.json",
+      "bytes": 281217,
+      "sha256": "f1ef486b89f26097b92bee4f8b128a25db9c4b8000eacb47e2d19f431525ba91"
+    }
+  },
+  "user_supplied_file": {
+    "cited_path": "c:\\Users\\ASUS\\Downloads\\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv",
+    "present_in_session": false,
+    "byte_comparison": "not performed",
+    "note": "The follow-up asked to treat this local Windows file as authoritative. It was not attached to the session workspace, so the preserved official download remains the raw source."
+  },
+  "comparison_point_not_a_rule": {
+    "stated_benchmark_rows": 3143,
+    "stated_benchmark_columns": 167,
+    "observed_rows": 3143,
+    "observed_columns": 167,
+    "matches_benchmark": true
+  }
+}

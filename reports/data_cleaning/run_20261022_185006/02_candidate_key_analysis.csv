@@ -1,0 +1,9 @@
+candidate_key,n_rows,n_distinct,n_duplicate_key_values,n_rows_in_duplicate_groups,is_unique,notes
+CountyFIPS,3143,3143,0,0,yes,"Five-character county FIPS, including state prefix. Tested, not assumed from the name."
+StateAbbr,3143,51,50,3142,no,State abbreviation is a grouping field. Duplicate values are expected.
+StateDesc,3143,51,50,3142,no,State name is a grouping field. Duplicate values are expected.
+CountyName,3143,1837,442,1748,no,County name is not nationally unique. Duplicate names are expected.
+StateAbbr+CountyName,3143,3137,6,12,no,Not unique. Six short names each refer to both a county and a county-equivalent in the same state.
+StateAbbr+CountyFIPS,3143,3143,0,0,yes,Redundant with CountyFIPS if the state prefix agrees with StateAbbr.
+Geolocation,3143,3143,0,0,yes,"WKT county centroid. Uniqueness is empirical, not an official key."
+full_record_sha256,3143,3143,0,0,yes,"Exact duplicate records, including every measure field."

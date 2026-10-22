@@ -1,0 +1,14 @@
+{
+  "raw_sha256": "a47cad3a852c5b35a031d548bc6dd4e9b5f7836bb7c851b84382160beafe15ef",
+  "raw_bytes": 4808551,
+  "encoding_check": "utf-8 strict read succeeded",
+  "delimiter": ",",
+  "header_present": true,
+  "n_rows": 3143,
+  "n_columns": 167,
+  "ragged_rows": 0,
+  "duplicate_column_names": [],
+  "dataset_id_in_metadata": "i46a-9kgh",
+  "dataset_name_in_metadata": "PLACES: County Data (GIS Friendly Format), 2025 release",
+  "identifier_confirmed": true
+}
