@@ -1,0 +1,5 @@
+Local source filename: PLACES__County_Data__GIS_Friendly_Format___2025_release.csv
+Adopted from the file uploaded in the session on 22 October 2026.
+Windows path C:\Users\ASUS\Downloads\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv is not readable in this environment.
+The preserved project file data/raw/places_county_gis_2025_i46a-9kgh.csv is this local document.
+Official rules: CDC PLACES 2025 release notes, column metadata for i46a-9kgh, and the PLACES FAQ.
