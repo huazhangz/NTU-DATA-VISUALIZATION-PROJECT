@@ -43,11 +43,3 @@ The cleaner will not run if the raw file hash changes.
 `reports/data_cleaning/run_20261022_185006/06_cleaning_handoff.md`
 
 In short: join on `CountyFIPS`; do not treat blanks as zero; keep crude and age-adjusted estimates apart; the estimates are model-based percents with published 95% intervals.
-
-## 汇总文档
-
-仓库中的 Markdown 汇总在 `docs/MD.doc`，用 WPS 或 Word 打开。各 `.md` 文件仍单独保存。更新 Markdown 后，在仓库根目录运行：
-
-```bash
-python3 scripts/sync_md_to_doc.py
-```
