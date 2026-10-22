@@ -45,9 +45,9 @@ None. No field was filled by mean, model, carry-forward, or zero. Blank stays bl
 ## 7. Limitations
 
 - The user's Windows file was not available to hash (`Q01`).
-- The official sentence on Kentucky and Pennsylvania was not re-read (`Q02`). The blank pattern is complete and should be respected anyway.
+- Kentucky and Pennsylvania are confirmed by the CDC December 2025 release notes: 2023 measures are unavailable, and the five 2022 measures were carried over (`Q02`, resolved on the resume check).
 - The 11-state HRSN list is empirical. It matches the CDC coverage count and does not match a 2024 secondary list (`Q03`).
-- County legal-class words were not joined from a gazetteer (`Q04`).
+- Census 2023 gazetteer names now confirm every FIPS code. Legal-class suffixes are in `data/reference/places_to_2023_gazetteer.csv` and were not written into `CountyName` (`Q04`, resolved). Loving County, Texas (`48301`) is absent (`Q08`).
 - Estimates are model-based small-area estimates, not direct survey percentages. Intervals can be wide. CDC says not to rank areas on the point estimate alone.
 - Crude and age-adjusted estimates answer different questions.
 - Measures do not all refer to the same people or the same year. Insurance is adults 18–64. Blood-pressure medication is adults with high blood pressure. Mammography is women 50–74. All teeth lost is adults 65 and older. Five measures are 2022 BRFSS; the rest are 2023. Population columns are Census 2023 total and age-18-plus counts, not the denominator of every measure.
@@ -58,10 +58,10 @@ None. No field was filled by mean, model, carry-forward, or zero. Blank stays bl
 
 ## 8. Tests
 
-- PASS: V01–V21 and V25 (22 checks), plus 4 pytest tests.
+- PASS: 24 checks, including the gazetteer match (V22) and the saved release-notes excerpt (V24), plus 4 pytest tests.
 - FAIL: none.
-- WARNING: none.
-- NOT TESTED: V22 gazetteer join, V23 user-file bytes, V24 release-notes sentence.
+- WARNING: V26. Loving County, Texas is missing from the file. The cause was not verified against a population table.
+- NOT TESTED: V23, the user-file bytes.
 
 Reproducibility: rebuilding the cleaned file from the raw file produced the same SHA-256.
 
@@ -73,4 +73,4 @@ SHA-256 `58a324b2918d1e6571056235afc4f1d8fd2817e00c09f1833355de515fadf201`
 
 ## 10. Can another student reproduce this?
 
-Yes, from this repository, if they use the preserved raw file and do not replace it. The commands are in `06_cleaning_handoff.md`. They do not need network access to rerun the profile, cleaner, or tests. They cannot reproduce a comparison to the unread Windows file or to the unread release-notes page.
+Yes, from this repository, if they use the preserved raw file and do not replace it. The commands are in `06_cleaning_handoff.md`. They do not need network access to rerun the profile, cleaner, or tests. They cannot reproduce a comparison to the unread Windows file. The release-notes sentence and the 2023 gazetteer are now stored in `data/reference/`.

@@ -50,8 +50,9 @@ Cleaned dimensions: 3,143 rows, 332 columns. Raw dimensions: 3,143 rows, 167 col
 ## Unresolved items the next stage inherits
 
 - The Windows download named in the follow-up was never hashed against this raw file.
-- The CDC release-notes sentence on Kentucky and Pennsylvania was not retrieved. The blank pattern is still binding.
-- A full Census name gazetteer was not attached, so legal-class suffixes were not added.
+- Loving County, Texas (FIPS `48301`) is in the Census 2023 county gazetteer and is not in this file. Do not invent a row for it.
+
+Kentucky and Pennsylvania are now confirmed by the CDC current release notes: 2023 measures were not available, and the five 2022 measures were carried over. The Census 2023 gazetteer crosswalk is `data/reference/places_to_2023_gazetteer.csv`. County legal-class suffixes live there. They were not copied onto `CountyName`.
 
 ## Not in this task
 

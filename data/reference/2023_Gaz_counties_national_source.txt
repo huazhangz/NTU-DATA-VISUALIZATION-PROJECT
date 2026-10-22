@@ -1,0 +1,9 @@
+U.S. Census Bureau 2023 Gazetteer Files, National Counties.
+URL: https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip
+Retrieved: 22 October 2026.
+Zip SHA-256: 919df59ba90759cce85468c0337e898e4b39c08eaffce86ddd88fa41f1f7f0c8
+Extracted text SHA-256: b0aecde6748947236e931faeb6a619b89aea0346e54a454239aac76abcd2ef82
+
+The earlier attempt used the .txt URL and received HTTP 404. The .zip URL succeeded.
+This file is a geographic reference. It is not a CDC PLACES extract.
+The crosswalk to the PLACES county file is data/reference/places_to_2023_gazetteer.csv.

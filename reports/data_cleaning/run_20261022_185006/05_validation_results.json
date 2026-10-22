@@ -1,7 +1,8 @@
 {
   "counts": {
-    "PASS": 22,
-    "NOT TESTED": 3
+    "PASS": 24,
+    "NOT TESTED": 1,
+    "WARNING": 1
   },
   "results": [
     {
@@ -132,21 +133,27 @@
     },
     {
       "test_id": "V22",
-      "status": "NOT TESTED",
-      "validates": "County short names were not matched to a Census county gazetteer.",
-      "detail": "The 2023 national gazetteer URL returned HTTP 404 in this environment, so county legal-class suffixes were not added."
+      "status": "PASS",
+      "validates": "Every CountyFIPS is in the Census 2023 county gazetteer, and the short name matches that gazetteer name apart from the legal-class suffix. FIPS 35013 is the mojibake of Doña Ana County.",
+      "detail": "matched=3143; mismatches=0; state_dc_gazetteer_rows_absent=['48301 Loving County']"
     },
     {
       "test_id": "V23",
       "status": "NOT TESTED",
       "validates": "Byte identity with the Windows file cited in the follow-up.",
-      "detail": "c:\\Users\\ASUS\\Downloads\\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv was not present in the session."
+      "detail": "c:\\Users\\ASUS\\Downloads\\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv was not present in the session on the resume check either."
     },
     {
       "test_id": "V24",
-      "status": "NOT TESTED",
-      "validates": "The CDC current-release-notes page naming Kentucky and Pennsylvania was not retrieved.",
-      "detail": "data.cdc.gov metadata and the empirical blank pattern are tested. https://www.cdc.gov/places/current-release-notes/index.html returned HTTP 403 to the downloader and timed out in the page fetcher."
+      "status": "PASS",
+      "validates": "The saved CDC current-release-notes excerpt says Kentucky and Pennsylvania lack 2023 BRFSS measures and keep the five 2022 measures.",
+      "detail": "Source page https://www.cdc.gov/places/current-release-notes/index.html retrieved on this resume. The checker reads the saved excerpt; it does not download the page again."
+    },
+    {
+      "test_id": "V26",
+      "status": "WARNING",
+      "validates": "Census 2023 county coverage of the 50 states and DC versus this file.",
+      "detail": "Loving County, Texas (FIPS 48301) is the only such county in the gazetteer that is absent from PLACES. CDC does not report estimates for geographic units with fewer than 50 adults. This run did not load a 2023 population table for Loving County, so that threshold is a documented possible reason, not a verified cause."
     },
     {
       "test_id": "V25",

@@ -25,6 +25,7 @@ from places_common import (
     POINT_RE,
     RAW_CSV,
     RAW_SHA_PATH,
+    ROOT,
     RUN_DIR,
     append_log,
     decimal_or_none,
@@ -32,6 +33,9 @@ from places_common import (
     sha256_file,
     write_csv,
 )
+
+GAZETTEER_PATH = ROOT / "data" / "reference" / "2023_Gaz_counties_national.txt"
+RELEASE_NOTES_EXCERPT = ROOT / "data" / "reference" / "cdc_places_2025_release_notes_excerpt.txt"
 
 HRSN_MEASURES = {
     "LONELINESS",
@@ -55,6 +59,58 @@ def check(results: list[dict], test_id: str, status: str, validates: str, detail
             "detail": detail,
         }
     )
+
+
+def load_gazetteer(path: Path) -> dict[str, dict[str, str]]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    header = [item.strip() for item in lines[0].split("\t")]
+    table = {}
+    for line in lines[1:]:
+        if not line.strip():
+            continue
+        parts = [item.strip() for item in line.split("\t")]
+        row = dict(zip(header, parts))
+        table[row["GEOID"]] = row
+    return table
+
+
+def gazetteer_name_check(cleaned_rows: list[dict[str, str]]) -> tuple[str, bool, bool]:
+    """Return detail, whether every PLACES county matches, and whether Loving County is absent."""
+    if not GAZETTEER_PATH.exists():
+        return (f"missing gazetteer: {GAZETTEER_PATH}", False, False)
+    gazetteer = load_gazetteer(GAZETTEER_PATH)
+    bad = []
+    for row in cleaned_rows:
+        census = gazetteer.get(row["CountyFIPS"])
+        if census is None:
+            bad.append(row["CountyFIPS"])
+            continue
+        short = row["CountyName"]
+        official = census["NAME"]
+        if row["CountyFIPS"] == "35013":
+            ok = short == MOJIBAKE_DONA_ANA and official == "Doña Ana County"
+        else:
+            ok = official == short or official.startswith(short + " ")
+        if not ok or census["USPS"] != row["StateAbbr"]:
+            bad.append(row["CountyFIPS"])
+    states = {
+        "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+        "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
+        "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
+        "WV", "WI", "WY",
+    }
+    present = {row["CountyFIPS"] for row in cleaned_rows}
+    absent = [
+        f"{row['GEOID']} {row['NAME']}"
+        for row in gazetteer.values()
+        if row["USPS"] in states and row["GEOID"] not in present
+    ]
+    loving = absent == ["48301 Loving County"]
+    detail = (
+        f"matched={len(cleaned_rows) - len(bad)}; mismatches={len(bad)}; "
+        f"state_dc_gazetteer_rows_absent={absent}"
+    )
+    return detail, len(bad) == 0, loving
 
 
 def run_checks(raw_path: Path, cleaned_path: Path) -> list[dict]:
@@ -336,26 +392,40 @@ def run_checks(raw_path: Path, cleaned_path: Path) -> list[dict]:
         "The raw hash is unchanged after cleaning and after the reproducibility rebuild.",
         expected_hash,
     )
+    gazetteer_detail, gazetteer_ok, loving_absent = gazetteer_name_check(cleaned_rows)
     check(
         results,
         "V22",
-        "NOT TESTED",
-        "County short names were not matched to a Census county gazetteer.",
-        "The 2023 national gazetteer URL returned HTTP 404 in this environment, so county legal-class suffixes were not added.",
+        "PASS" if gazetteer_ok else "FAIL",
+        "Every CountyFIPS is in the Census 2023 county gazetteer, and the short name matches that gazetteer name apart from the legal-class suffix. FIPS 35013 is the mojibake of Doña Ana County.",
+        gazetteer_detail,
     )
     check(
         results,
         "V23",
         "NOT TESTED",
         "Byte identity with the Windows file cited in the follow-up.",
-        r"c:\Users\ASUS\Downloads\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv was not present in the session.",
+        r"c:\Users\ASUS\Downloads\PLACES__County_Data__GIS_Friendly_Format___2025_release.csv was not present in the session on the resume check either.",
+    )
+    excerpt = RELEASE_NOTES_EXCERPT.read_text(encoding="utf-8") if RELEASE_NOTES_EXCERPT.exists() else ""
+    notes_ok = (
+        "Kentucky and Pennsylvania" in excerpt
+        and "2023 BRFSS" in excerpt
+        and "five measures based on the 2022 BRFSS" in excerpt
     )
     check(
         results,
         "V24",
-        "NOT TESTED",
-        "The CDC current-release-notes page naming Kentucky and Pennsylvania was not retrieved.",
-        "data.cdc.gov metadata and the empirical blank pattern are tested. https://www.cdc.gov/places/current-release-notes/index.html returned HTTP 403 to the downloader and timed out in the page fetcher.",
+        "PASS" if notes_ok else "FAIL",
+        "The saved CDC current-release-notes excerpt says Kentucky and Pennsylvania lack 2023 BRFSS measures and keep the five 2022 measures.",
+        "Source page https://www.cdc.gov/places/current-release-notes/index.html retrieved on this resume. The checker reads the saved excerpt; it does not download the page again.",
+    )
+    check(
+        results,
+        "V26",
+        "WARNING" if loving_absent else "FAIL",
+        "Census 2023 county coverage of the 50 states and DC versus this file.",
+        "Loving County, Texas (FIPS 48301) is the only such county in the gazetteer that is absent from PLACES. CDC does not report estimates for geographic units with fewer than 50 adults. This run did not load a 2023 population table for Loving County, so that threshold is a documented possible reason, not a verified cause.",
     )
     check(
         results,

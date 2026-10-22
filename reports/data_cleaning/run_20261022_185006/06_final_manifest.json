@@ -15,11 +15,12 @@
   "imputed_cells": 0,
   "source_cells_changed": 0,
   "validation_counts": {
-    "PASS": 22,
+    "PASS": 24,
     "FAIL": 0,
-    "WARNING": 0,
-    "NOT TESTED": 3
+    "WARNING": 1,
+    "NOT TESTED": 1
   },
+  "resume_check": "reports/data_cleaning/run_20261022_185006/07_resume_reference_check.md",
   "pytest": "4 passed",
   "phase_reports": [
     "reports/data_cleaning/run_20261022_185006/00_workspace_audit.md",

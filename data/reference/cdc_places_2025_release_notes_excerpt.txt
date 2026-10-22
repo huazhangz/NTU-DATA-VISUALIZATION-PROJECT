@@ -1,0 +1,12 @@
+Source: CDC PLACES, Current Release Notes
+URL: https://www.cdc.gov/places/current-release-notes/index.html
+Retrieved: 22 October 2026, during the resume check (Asia/Singapore).
+The direct download returned HTTP 403. The page text was retrieved through the project page fetcher.
+
+Quoted passage for the December 2025 release:
+
+"Estimates for Kentucky and Pennsylvania were not available for measures based on the 2023 BRFSS. However, the five measures based on the 2022 BRFSS were carried over for Kentucky and Pennsylvania."
+
+The same page says the five carried measures are colorectal cancer screening, mammography, short sleep duration, dental visit, and all teeth lost.
+
+The 2024 section of the same page says that release was the first to use Connecticut planning regions for county equivalents. This 2025 county file uses those planning-region FIPS codes (09110-09190).
