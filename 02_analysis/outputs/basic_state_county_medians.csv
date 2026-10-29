@@ -1,0 +1,52 @@
+StateAbbr,StateDesc,DIABETES_AdjPrev,OBESITY_AdjPrev,LPA_AdjPrev
+VT,Vermont,7.2,30.35,18.3
+NH,New Hampshire,7.6,31.75,19.0
+RI,Rhode Island,7.9,28.0,18.4
+MA,Massachusetts,8.149999999999999,26.85,19.799999999999997
+CO,Colorado,8.25,27.15,18.95
+MT,Montana,8.5,32.95,21.9
+DC,District of Columbia,8.5,25.1,15.3
+CT,Connecticut,8.8,30.7,23.5
+NJ,New Jersey,8.9,29.7,23.8
+ND,North Dakota,9.0,38.5,23.1
+NY,New York,9.0,32.9,24.5
+WA,Washington,9.1,35.0,19.0
+AK,Alaska,9.1,35.0,22.65
+ME,Maine,9.100000000000001,34.2,23.25
+ID,Idaho,9.2,33.5,23.45
+UT,Utah,9.3,32.8,19.2
+MN,Minnesota,9.3,37.1,24.0
+WY,Wyoming,9.3,34.8,25.5
+WI,Wisconsin,9.5,39.15,27.3
+HI,Hawaii,9.6,26.2,20.7
+NE,Nebraska,9.6,39.8,26.3
+IA,Iowa,9.7,39.7,25.2
+SD,South Dakota,9.9,35.9,23.65
+KS,Kansas,10.0,39.3,27.1
+OR,Oregon,10.05,35.75,20.85
+MI,Michigan,10.1,38.3,25.0
+CA,California,10.1,30.35,23.5
+IL,Illinois,10.149999999999999,38.95,23.6
+NV,Nevada,10.2,35.0,25.6
+MD,Maryland,10.350000000000001,36.8,22.85
+AZ,Arizona,10.6,33.3,24.7
+DE,Delaware,10.7,34.2,25.2
+NC,North Carolina,10.75,37.150000000000006,24.9
+MO,Missouri,11.0,38.9,31.3
+FL,Florida,11.2,34.5,25.5
+IN,Indiana,11.2,39.65,25.6
+OH,Ohio,11.3,39.3,28.15
+VA,Virginia,11.5,38.3,25.7
+OK,Oklahoma,11.9,40.4,32.5
+AR,Arkansas,12.0,40.6,34.4
+TX,Texas,12.2,37.5,29.6
+TN,Tennessee,12.3,39.8,28.8
+NM,New Mexico,12.4,35.6,27.6
+WV,West Virginia,13.1,41.3,32.6
+AL,Alabama,13.1,40.8,30.5
+SC,South Carolina,13.2,38.349999999999994,28.799999999999997
+GA,Georgia,13.4,39.1,30.5
+LA,Louisiana,14.3,42.349999999999994,32.349999999999994
+MS,Mississippi,14.4,42.599999999999994,35.650000000000006
+KY,Kentucky,,,
+PA,Pennsylvania,,,

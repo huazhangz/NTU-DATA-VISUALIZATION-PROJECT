@@ -1,0 +1,256 @@
+StateAbbr,StateDesc,metric,county_rows,missing,missing_pct
+AK,Alaska,DIABETES_AdjPrev,30,0,0.0
+AK,Alaska,OBESITY_AdjPrev,30,0,0.0
+AK,Alaska,LPA_AdjPrev,30,0,0.0
+AK,Alaska,CSMOKING_AdjPrev,30,0,0.0
+AK,Alaska,ACCESS2_AdjPrev,30,0,0.0
+AL,Alabama,DIABETES_AdjPrev,67,0,0.0
+AL,Alabama,OBESITY_AdjPrev,67,0,0.0
+AL,Alabama,LPA_AdjPrev,67,0,0.0
+AL,Alabama,CSMOKING_AdjPrev,67,0,0.0
+AL,Alabama,ACCESS2_AdjPrev,67,0,0.0
+AR,Arkansas,DIABETES_AdjPrev,75,0,0.0
+AR,Arkansas,OBESITY_AdjPrev,75,0,0.0
+AR,Arkansas,LPA_AdjPrev,75,0,0.0
+AR,Arkansas,CSMOKING_AdjPrev,75,0,0.0
+AR,Arkansas,ACCESS2_AdjPrev,75,0,0.0
+AZ,Arizona,DIABETES_AdjPrev,15,0,0.0
+AZ,Arizona,OBESITY_AdjPrev,15,0,0.0
+AZ,Arizona,LPA_AdjPrev,15,0,0.0
+AZ,Arizona,CSMOKING_AdjPrev,15,0,0.0
+AZ,Arizona,ACCESS2_AdjPrev,15,0,0.0
+CA,California,DIABETES_AdjPrev,58,0,0.0
+CA,California,OBESITY_AdjPrev,58,0,0.0
+CA,California,LPA_AdjPrev,58,0,0.0
+CA,California,CSMOKING_AdjPrev,58,0,0.0
+CA,California,ACCESS2_AdjPrev,58,0,0.0
+CO,Colorado,DIABETES_AdjPrev,64,0,0.0
+CO,Colorado,OBESITY_AdjPrev,64,0,0.0
+CO,Colorado,LPA_AdjPrev,64,0,0.0
+CO,Colorado,CSMOKING_AdjPrev,64,0,0.0
+CO,Colorado,ACCESS2_AdjPrev,64,0,0.0
+CT,Connecticut,DIABETES_AdjPrev,9,0,0.0
+CT,Connecticut,OBESITY_AdjPrev,9,0,0.0
+CT,Connecticut,LPA_AdjPrev,9,0,0.0
+CT,Connecticut,CSMOKING_AdjPrev,9,0,0.0
+CT,Connecticut,ACCESS2_AdjPrev,9,0,0.0
+DC,District of Columbia,DIABETES_AdjPrev,1,0,0.0
+DC,District of Columbia,OBESITY_AdjPrev,1,0,0.0
+DC,District of Columbia,LPA_AdjPrev,1,0,0.0
+DC,District of Columbia,CSMOKING_AdjPrev,1,0,0.0
+DC,District of Columbia,ACCESS2_AdjPrev,1,0,0.0
+DE,Delaware,DIABETES_AdjPrev,3,0,0.0
+DE,Delaware,OBESITY_AdjPrev,3,0,0.0
+DE,Delaware,LPA_AdjPrev,3,0,0.0
+DE,Delaware,CSMOKING_AdjPrev,3,0,0.0
+DE,Delaware,ACCESS2_AdjPrev,3,0,0.0
+FL,Florida,DIABETES_AdjPrev,67,0,0.0
+FL,Florida,OBESITY_AdjPrev,67,0,0.0
+FL,Florida,LPA_AdjPrev,67,0,0.0
+FL,Florida,CSMOKING_AdjPrev,67,0,0.0
+FL,Florida,ACCESS2_AdjPrev,67,0,0.0
+GA,Georgia,DIABETES_AdjPrev,159,0,0.0
+GA,Georgia,OBESITY_AdjPrev,159,0,0.0
+GA,Georgia,LPA_AdjPrev,159,0,0.0
+GA,Georgia,CSMOKING_AdjPrev,159,0,0.0
+GA,Georgia,ACCESS2_AdjPrev,159,0,0.0
+HI,Hawaii,DIABETES_AdjPrev,5,0,0.0
+HI,Hawaii,OBESITY_AdjPrev,5,0,0.0
+HI,Hawaii,LPA_AdjPrev,5,0,0.0
+HI,Hawaii,CSMOKING_AdjPrev,5,0,0.0
+HI,Hawaii,ACCESS2_AdjPrev,5,0,0.0
+IA,Iowa,DIABETES_AdjPrev,99,0,0.0
+IA,Iowa,OBESITY_AdjPrev,99,0,0.0
+IA,Iowa,LPA_AdjPrev,99,0,0.0
+IA,Iowa,CSMOKING_AdjPrev,99,0,0.0
+IA,Iowa,ACCESS2_AdjPrev,99,0,0.0
+ID,Idaho,DIABETES_AdjPrev,44,0,0.0
+ID,Idaho,OBESITY_AdjPrev,44,0,0.0
+ID,Idaho,LPA_AdjPrev,44,0,0.0
+ID,Idaho,CSMOKING_AdjPrev,44,0,0.0
+ID,Idaho,ACCESS2_AdjPrev,44,0,0.0
+IL,Illinois,DIABETES_AdjPrev,102,0,0.0
+IL,Illinois,OBESITY_AdjPrev,102,0,0.0
+IL,Illinois,LPA_AdjPrev,102,0,0.0
+IL,Illinois,CSMOKING_AdjPrev,102,0,0.0
+IL,Illinois,ACCESS2_AdjPrev,102,0,0.0
+IN,Indiana,DIABETES_AdjPrev,92,0,0.0
+IN,Indiana,OBESITY_AdjPrev,92,0,0.0
+IN,Indiana,LPA_AdjPrev,92,0,0.0
+IN,Indiana,CSMOKING_AdjPrev,92,0,0.0
+IN,Indiana,ACCESS2_AdjPrev,92,0,0.0
+KS,Kansas,DIABETES_AdjPrev,105,0,0.0
+KS,Kansas,OBESITY_AdjPrev,105,0,0.0
+KS,Kansas,LPA_AdjPrev,105,0,0.0
+KS,Kansas,CSMOKING_AdjPrev,105,0,0.0
+KS,Kansas,ACCESS2_AdjPrev,105,0,0.0
+KY,Kentucky,DIABETES_AdjPrev,120,120,100.0
+KY,Kentucky,OBESITY_AdjPrev,120,120,100.0
+KY,Kentucky,LPA_AdjPrev,120,120,100.0
+KY,Kentucky,CSMOKING_AdjPrev,120,120,100.0
+KY,Kentucky,ACCESS2_AdjPrev,120,120,100.0
+LA,Louisiana,DIABETES_AdjPrev,64,0,0.0
+LA,Louisiana,OBESITY_AdjPrev,64,0,0.0
+LA,Louisiana,LPA_AdjPrev,64,0,0.0
+LA,Louisiana,CSMOKING_AdjPrev,64,0,0.0
+LA,Louisiana,ACCESS2_AdjPrev,64,0,0.0
+MA,Massachusetts,DIABETES_AdjPrev,14,0,0.0
+MA,Massachusetts,OBESITY_AdjPrev,14,0,0.0
+MA,Massachusetts,LPA_AdjPrev,14,0,0.0
+MA,Massachusetts,CSMOKING_AdjPrev,14,0,0.0
+MA,Massachusetts,ACCESS2_AdjPrev,14,0,0.0
+MD,Maryland,DIABETES_AdjPrev,24,0,0.0
+MD,Maryland,OBESITY_AdjPrev,24,0,0.0
+MD,Maryland,LPA_AdjPrev,24,0,0.0
+MD,Maryland,CSMOKING_AdjPrev,24,0,0.0
+MD,Maryland,ACCESS2_AdjPrev,24,0,0.0
+ME,Maine,DIABETES_AdjPrev,16,0,0.0
+ME,Maine,OBESITY_AdjPrev,16,0,0.0
+ME,Maine,LPA_AdjPrev,16,0,0.0
+ME,Maine,CSMOKING_AdjPrev,16,0,0.0
+ME,Maine,ACCESS2_AdjPrev,16,0,0.0
+MI,Michigan,DIABETES_AdjPrev,83,0,0.0
+MI,Michigan,OBESITY_AdjPrev,83,0,0.0
+MI,Michigan,LPA_AdjPrev,83,0,0.0
+MI,Michigan,CSMOKING_AdjPrev,83,0,0.0
+MI,Michigan,ACCESS2_AdjPrev,83,0,0.0
+MN,Minnesota,DIABETES_AdjPrev,87,0,0.0
+MN,Minnesota,OBESITY_AdjPrev,87,0,0.0
+MN,Minnesota,LPA_AdjPrev,87,0,0.0
+MN,Minnesota,CSMOKING_AdjPrev,87,0,0.0
+MN,Minnesota,ACCESS2_AdjPrev,87,0,0.0
+MO,Missouri,DIABETES_AdjPrev,115,0,0.0
+MO,Missouri,OBESITY_AdjPrev,115,0,0.0
+MO,Missouri,LPA_AdjPrev,115,0,0.0
+MO,Missouri,CSMOKING_AdjPrev,115,0,0.0
+MO,Missouri,ACCESS2_AdjPrev,115,0,0.0
+MS,Mississippi,DIABETES_AdjPrev,82,0,0.0
+MS,Mississippi,OBESITY_AdjPrev,82,0,0.0
+MS,Mississippi,LPA_AdjPrev,82,0,0.0
+MS,Mississippi,CSMOKING_AdjPrev,82,0,0.0
+MS,Mississippi,ACCESS2_AdjPrev,82,0,0.0
+MT,Montana,DIABETES_AdjPrev,56,0,0.0
+MT,Montana,OBESITY_AdjPrev,56,0,0.0
+MT,Montana,LPA_AdjPrev,56,0,0.0
+MT,Montana,CSMOKING_AdjPrev,56,0,0.0
+MT,Montana,ACCESS2_AdjPrev,56,0,0.0
+NC,North Carolina,DIABETES_AdjPrev,100,0,0.0
+NC,North Carolina,OBESITY_AdjPrev,100,0,0.0
+NC,North Carolina,LPA_AdjPrev,100,0,0.0
+NC,North Carolina,CSMOKING_AdjPrev,100,0,0.0
+NC,North Carolina,ACCESS2_AdjPrev,100,0,0.0
+ND,North Dakota,DIABETES_AdjPrev,53,0,0.0
+ND,North Dakota,OBESITY_AdjPrev,53,0,0.0
+ND,North Dakota,LPA_AdjPrev,53,0,0.0
+ND,North Dakota,CSMOKING_AdjPrev,53,0,0.0
+ND,North Dakota,ACCESS2_AdjPrev,53,0,0.0
+NE,Nebraska,DIABETES_AdjPrev,93,0,0.0
+NE,Nebraska,OBESITY_AdjPrev,93,0,0.0
+NE,Nebraska,LPA_AdjPrev,93,0,0.0
+NE,Nebraska,CSMOKING_AdjPrev,93,0,0.0
+NE,Nebraska,ACCESS2_AdjPrev,93,0,0.0
+NH,New Hampshire,DIABETES_AdjPrev,10,0,0.0
+NH,New Hampshire,OBESITY_AdjPrev,10,0,0.0
+NH,New Hampshire,LPA_AdjPrev,10,0,0.0
+NH,New Hampshire,CSMOKING_AdjPrev,10,0,0.0
+NH,New Hampshire,ACCESS2_AdjPrev,10,0,0.0
+NJ,New Jersey,DIABETES_AdjPrev,21,0,0.0
+NJ,New Jersey,OBESITY_AdjPrev,21,0,0.0
+NJ,New Jersey,LPA_AdjPrev,21,0,0.0
+NJ,New Jersey,CSMOKING_AdjPrev,21,0,0.0
+NJ,New Jersey,ACCESS2_AdjPrev,21,0,0.0
+NM,New Mexico,DIABETES_AdjPrev,33,0,0.0
+NM,New Mexico,OBESITY_AdjPrev,33,0,0.0
+NM,New Mexico,LPA_AdjPrev,33,0,0.0
+NM,New Mexico,CSMOKING_AdjPrev,33,0,0.0
+NM,New Mexico,ACCESS2_AdjPrev,33,0,0.0
+NV,Nevada,DIABETES_AdjPrev,17,0,0.0
+NV,Nevada,OBESITY_AdjPrev,17,0,0.0
+NV,Nevada,LPA_AdjPrev,17,0,0.0
+NV,Nevada,CSMOKING_AdjPrev,17,0,0.0
+NV,Nevada,ACCESS2_AdjPrev,17,0,0.0
+NY,New York,DIABETES_AdjPrev,62,0,0.0
+NY,New York,OBESITY_AdjPrev,62,0,0.0
+NY,New York,LPA_AdjPrev,62,0,0.0
+NY,New York,CSMOKING_AdjPrev,62,0,0.0
+NY,New York,ACCESS2_AdjPrev,62,0,0.0
+OH,Ohio,DIABETES_AdjPrev,88,0,0.0
+OH,Ohio,OBESITY_AdjPrev,88,0,0.0
+OH,Ohio,LPA_AdjPrev,88,0,0.0
+OH,Ohio,CSMOKING_AdjPrev,88,0,0.0
+OH,Ohio,ACCESS2_AdjPrev,88,0,0.0
+OK,Oklahoma,DIABETES_AdjPrev,77,0,0.0
+OK,Oklahoma,OBESITY_AdjPrev,77,0,0.0
+OK,Oklahoma,LPA_AdjPrev,77,0,0.0
+OK,Oklahoma,CSMOKING_AdjPrev,77,0,0.0
+OK,Oklahoma,ACCESS2_AdjPrev,77,0,0.0
+OR,Oregon,DIABETES_AdjPrev,36,0,0.0
+OR,Oregon,OBESITY_AdjPrev,36,0,0.0
+OR,Oregon,LPA_AdjPrev,36,0,0.0
+OR,Oregon,CSMOKING_AdjPrev,36,0,0.0
+OR,Oregon,ACCESS2_AdjPrev,36,0,0.0
+PA,Pennsylvania,DIABETES_AdjPrev,67,67,100.0
+PA,Pennsylvania,OBESITY_AdjPrev,67,67,100.0
+PA,Pennsylvania,LPA_AdjPrev,67,67,100.0
+PA,Pennsylvania,CSMOKING_AdjPrev,67,67,100.0
+PA,Pennsylvania,ACCESS2_AdjPrev,67,67,100.0
+RI,Rhode Island,DIABETES_AdjPrev,5,0,0.0
+RI,Rhode Island,OBESITY_AdjPrev,5,0,0.0
+RI,Rhode Island,LPA_AdjPrev,5,0,0.0
+RI,Rhode Island,CSMOKING_AdjPrev,5,0,0.0
+RI,Rhode Island,ACCESS2_AdjPrev,5,0,0.0
+SC,South Carolina,DIABETES_AdjPrev,46,0,0.0
+SC,South Carolina,OBESITY_AdjPrev,46,0,0.0
+SC,South Carolina,LPA_AdjPrev,46,0,0.0
+SC,South Carolina,CSMOKING_AdjPrev,46,0,0.0
+SC,South Carolina,ACCESS2_AdjPrev,46,0,0.0
+SD,South Dakota,DIABETES_AdjPrev,66,0,0.0
+SD,South Dakota,OBESITY_AdjPrev,66,0,0.0
+SD,South Dakota,LPA_AdjPrev,66,0,0.0
+SD,South Dakota,CSMOKING_AdjPrev,66,0,0.0
+SD,South Dakota,ACCESS2_AdjPrev,66,0,0.0
+TN,Tennessee,DIABETES_AdjPrev,95,0,0.0
+TN,Tennessee,OBESITY_AdjPrev,95,0,0.0
+TN,Tennessee,LPA_AdjPrev,95,0,0.0
+TN,Tennessee,CSMOKING_AdjPrev,95,0,0.0
+TN,Tennessee,ACCESS2_AdjPrev,95,0,0.0
+TX,Texas,DIABETES_AdjPrev,253,0,0.0
+TX,Texas,OBESITY_AdjPrev,253,0,0.0
+TX,Texas,LPA_AdjPrev,253,0,0.0
+TX,Texas,CSMOKING_AdjPrev,253,0,0.0
+TX,Texas,ACCESS2_AdjPrev,253,0,0.0
+UT,Utah,DIABETES_AdjPrev,29,0,0.0
+UT,Utah,OBESITY_AdjPrev,29,0,0.0
+UT,Utah,LPA_AdjPrev,29,0,0.0
+UT,Utah,CSMOKING_AdjPrev,29,0,0.0
+UT,Utah,ACCESS2_AdjPrev,29,0,0.0
+VA,Virginia,DIABETES_AdjPrev,133,0,0.0
+VA,Virginia,OBESITY_AdjPrev,133,0,0.0
+VA,Virginia,LPA_AdjPrev,133,0,0.0
+VA,Virginia,CSMOKING_AdjPrev,133,0,0.0
+VA,Virginia,ACCESS2_AdjPrev,133,0,0.0
+VT,Vermont,DIABETES_AdjPrev,14,0,0.0
+VT,Vermont,OBESITY_AdjPrev,14,0,0.0
+VT,Vermont,LPA_AdjPrev,14,0,0.0
+VT,Vermont,CSMOKING_AdjPrev,14,0,0.0
+VT,Vermont,ACCESS2_AdjPrev,14,0,0.0
+WA,Washington,DIABETES_AdjPrev,39,0,0.0
+WA,Washington,OBESITY_AdjPrev,39,0,0.0
+WA,Washington,LPA_AdjPrev,39,0,0.0
+WA,Washington,CSMOKING_AdjPrev,39,0,0.0
+WA,Washington,ACCESS2_AdjPrev,39,0,0.0
+WI,Wisconsin,DIABETES_AdjPrev,72,0,0.0
+WI,Wisconsin,OBESITY_AdjPrev,72,0,0.0
+WI,Wisconsin,LPA_AdjPrev,72,0,0.0
+WI,Wisconsin,CSMOKING_AdjPrev,72,0,0.0
+WI,Wisconsin,ACCESS2_AdjPrev,72,0,0.0
+WV,West Virginia,DIABETES_AdjPrev,55,0,0.0
+WV,West Virginia,OBESITY_AdjPrev,55,0,0.0
+WV,West Virginia,LPA_AdjPrev,55,0,0.0
+WV,West Virginia,CSMOKING_AdjPrev,55,0,0.0
+WV,West Virginia,ACCESS2_AdjPrev,55,0,0.0
+WY,Wyoming,DIABETES_AdjPrev,23,0,0.0
+WY,Wyoming,OBESITY_AdjPrev,23,0,0.0
+WY,Wyoming,LPA_AdjPrev,23,0,0.0
+WY,Wyoming,CSMOKING_AdjPrev,23,0,0.0
+WY,Wyoming,ACCESS2_AdjPrev,23,0,0.0

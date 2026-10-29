@@ -1,6 +1,6 @@
-# CDC PLACES county data, 2025 release — cleaning
+# CDC PLACES county data, 2025 release — cleaning and EDA
 
-Reproducible cleaning of the CDC PLACES county file in GIS-friendly format, dataset `i46a-9kgh`. The work stops at a validated table. It does not include charts.
+Reproducible cleaning and exploratory analysis of the CDC PLACES county file in GIS-friendly format, dataset `i46a-9kgh`.
 
 The raw file is the official CSV from:
 
@@ -21,6 +21,8 @@ A local Windows copy was cited during the run and was not present in this enviro
 | `data/processed/places_county_gis_2025_field_dictionary.csv` | Source and derived column descriptions |
 | `scripts/clean_places_county.py` | Cleaning program |
 | `reports/data_cleaning/run_20261022_185006/` | Phase reports, profiles, and the execution log |
+| `02_analysis/` | EDA input acceptance, current Chinese EDA report, and reproducible analysis scripts |
+| `03_visualisations/exploratory/` | Current exploratory SVG charts |
 
 Source columns are copied unchanged. Derived columns are prefixed with `derived__` and hold parsed confidence limits, centroid coordinates, a display name, a short-name collision flag, and the raw row number.
 
@@ -37,6 +39,20 @@ PYTHONPATH=scripts python3 -m pytest tests/test_places_cleaning.py -q
 ```
 
 The cleaner will not run if the raw file hash changes.
+
+## Run the accepted basic EDA
+
+The formal EDA currently covers the 2023 age-adjusted estimates for diagnosed
+diabetes, obesity, and no leisure-time physical activity.
+
+```bash
+python3 02_analysis/validate_eda_input.py
+python3 02_analysis/basic_eda.py
+```
+
+Read `02_analysis/EDA_report.md` for the current results. The scripts stop if
+the accepted input is missing, validation fails, or the cleaned-file hash
+changes after validation.
 
 ## Read this before visualising
 

@@ -1,0 +1,61 @@
+metric,label,review_group,CountyFIPS,StateAbbr,StateDesc,CountyName_display,estimate_pct
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08035,CO,Colorado,Douglas,6.0
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,50007,VT,Vermont,Chittenden,6.2
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08053,CO,Colorado,Hinsdale,6.4
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08014,CO,Colorado,Broomfield,6.5
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,50001,VT,Vermont,Addison,6.5
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08097,CO,Colorado,Pitkin,6.5
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08091,CO,Colorado,Ouray,6.6
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,08013,CO,Colorado,Boulder,6.7
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,35028,NM,New Mexico,Los Alamos,6.7
+DIABETES_AdjPrev,Diagnosed diabetes,lower_tail_review,50015,VT,Vermont,Lamoille,6.8
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,46102,SD,South Dakota,Oglala Lakota,23.8
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,46121,SD,South Dakota,Todd,22.9
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,48127,TX,Texas,Dimmit,21.5
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,48507,TX,Texas,Zavala,21.4
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,01011,AL,Alabama,Bullock,21.3
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,22035,LA,Louisiana,East Carroll,21.3
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,01063,AL,Alabama,Greene,21.1
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,28051,MS,Mississippi,Holmes,21.0
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,28053,MS,Mississippi,Humphreys,20.6
+DIABETES_AdjPrev,Diagnosed diabetes,upper_tail_review,01105,AL,Alabama,Perry,20.5
+OBESITY_AdjPrev,Obesity,lower_tail_review,06075,CA,California,San Francisco,17.1
+OBESITY_AdjPrev,Obesity,lower_tail_review,08013,CO,Colorado,Boulder,17.4
+OBESITY_AdjPrev,Obesity,lower_tail_review,49043,UT,Utah,Summit,19.3
+OBESITY_AdjPrev,Obesity,lower_tail_review,36061,NY,New York,New York,19.5
+OBESITY_AdjPrev,Obesity,lower_tail_review,08097,CO,Colorado,Pitkin,20.3
+OBESITY_AdjPrev,Obesity,lower_tail_review,08067,CO,Colorado,La Plata,20.8
+OBESITY_AdjPrev,Obesity,lower_tail_review,06041,CA,California,Marin,21.3
+OBESITY_AdjPrev,Obesity,lower_tail_review,08031,CO,Colorado,Denver,21.6
+OBESITY_AdjPrev,Obesity,lower_tail_review,06085,CA,California,Santa Clara,21.9
+OBESITY_AdjPrev,Obesity,lower_tail_review,06081,CA,California,San Mateo,22.0
+OBESITY_AdjPrev,Obesity,upper_tail_review,01105,AL,Alabama,Perry,54.0
+OBESITY_AdjPrev,Obesity,upper_tail_review,01063,AL,Alabama,Greene,53.4
+OBESITY_AdjPrev,Obesity,upper_tail_review,28053,MS,Mississippi,Humphreys,53.0
+OBESITY_AdjPrev,Obesity,upper_tail_review,01131,AL,Alabama,Wilcox,51.9
+OBESITY_AdjPrev,Obesity,upper_tail_review,22035,LA,Louisiana,East Carroll,51.7
+OBESITY_AdjPrev,Obesity,upper_tail_review,28063,MS,Mississippi,Jefferson,51.7
+OBESITY_AdjPrev,Obesity,upper_tail_review,28051,MS,Mississippi,Holmes,51.5
+OBESITY_AdjPrev,Obesity,upper_tail_review,01085,AL,Alabama,Lowndes,51.3
+OBESITY_AdjPrev,Obesity,upper_tail_review,28119,MS,Mississippi,Quitman,51.1
+OBESITY_AdjPrev,Obesity,upper_tail_review,01011,AL,Alabama,Bullock,51.0
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08013,CO,Colorado,Boulder,12.2
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08097,CO,Colorado,Pitkin,12.6
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,35028,NM,New Mexico,Los Alamos,12.7
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08059,CO,Colorado,Jefferson,12.8
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08053,CO,Colorado,Hinsdale,12.9
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08014,CO,Colorado,Broomfield,13.1
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08035,CO,Colorado,Douglas,13.3
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,08091,CO,Colorado,Ouray,13.5
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,53055,WA,Washington,San Juan,13.6
+LPA_AdjPrev,No leisure-time physical activity,lower_tail_review,49043,UT,Utah,Summit,13.7
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48127,TX,Texas,Dimmit,48.9
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48507,TX,Texas,Zavala,48.2
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48427,TX,Texas,Starr,47.6
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48505,TX,Texas,Zapata,47.1
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48247,TX,Texas,Jim Hogg,46.6
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,28053,MS,Mississippi,Humphreys,46.2
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,28143,MS,Mississippi,Tunica,44.8
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,48489,TX,Texas,Willacy,44.5
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,28051,MS,Mississippi,Holmes,44.4
+LPA_AdjPrev,No leisure-time physical activity,upper_tail_review,28125,MS,Mississippi,Sharkey,44.3

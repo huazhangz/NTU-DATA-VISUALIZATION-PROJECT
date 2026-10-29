@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="670" viewBox="0 0 1120 670" role="img" aria-labelledby="title desc">
+<title id="title">State distributions of county-level medians</title>
+<desc id="desc">Each dot is a state&#x27;s median across its counties—not a population-weighted state prevalence. KY and PA have no 2023 values.</desc>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.title{font-size:24px;font-weight:700}.subtitle{font-size:13px;fill:#5C667A}.panel{font-size:15px;font-weight:700}.axis{font-size:11px;fill:#5C667A}.value{font-size:12px;font-weight:700}.note{font-size:11px;fill:#5C667A}.grid{stroke:#E5E9F0;stroke-width:1}.frame{fill:none;stroke:#AAB2C0;stroke-width:1}</style>
+<text x="60" y="42" class="title">State distributions of county-level medians</text>
+<text x="60" y="66" class="subtitle">Each dot is a state&#x27;s median across its counties—not a population-weighted state prevalence. KY and PA have no 2023 values.</text>
+<text x="60" y="98" class="panel">Diagnosed diabetes</text>
+<line x1="115.0" y1="120" x2="115.0" y2="245" class="grid"/>
+<text x="115.0" y="264" text-anchor="middle" class="axis">5%</text>
+<line x1="577.5" y1="120" x2="577.5" y2="245" class="grid"/>
+<text x="577.5" y="264" text-anchor="middle" class="axis">10%</text>
+<line x1="1040.0" y1="120" x2="1040.0" y2="245" class="grid"/>
+<text x="1040.0" y="264" text-anchor="middle" class="axis">15%</text>
+<circle cx="318.5" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>VT: 7.2%</title></circle>
+<circle cx="355.5" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NH: 7.6%</title></circle>
+<circle cx="383.3" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>RI: 7.9%</title></circle>
+<circle cx="406.4" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MA: 8.1%</title></circle>
+<circle cx="415.6" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>CO: 8.2%</title></circle>
+<circle cx="438.8" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MT: 8.5%</title></circle>
+<circle cx="438.8" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>DC: 8.5%</title></circle>
+<circle cx="466.5" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>CT: 8.8%</title></circle>
+<circle cx="475.8" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NJ: 8.9%</title></circle>
+<circle cx="485.0" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>ND: 9.0%</title></circle>
+<circle cx="485.0" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NY: 9.0%</title></circle>
+<circle cx="494.2" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>AK: 9.1%</title></circle>
+<circle cx="494.2" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>WA: 9.1%</title></circle>
+<circle cx="494.3" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>ME: 9.1%</title></circle>
+<circle cx="503.5" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>ID: 9.2%</title></circle>
+<circle cx="512.8" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>UT: 9.3%</title></circle>
+<circle cx="512.8" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MN: 9.3%</title></circle>
+<circle cx="512.8" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>WY: 9.3%</title></circle>
+<circle cx="531.2" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>WI: 9.5%</title></circle>
+<circle cx="540.5" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>HI: 9.6%</title></circle>
+<circle cx="540.5" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NE: 9.6%</title></circle>
+<circle cx="549.7" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>IA: 9.7%</title></circle>
+<circle cx="568.2" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>SD: 9.9%</title></circle>
+<circle cx="577.5" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>KS: 10.0%</title></circle>
+<circle cx="582.1" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>OR: 10.1%</title></circle>
+<circle cx="586.8" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MI: 10.1%</title></circle>
+<circle cx="586.8" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>CA: 10.1%</title></circle>
+<circle cx="591.4" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>IL: 10.1%</title></circle>
+<circle cx="596.0" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NV: 10.2%</title></circle>
+<circle cx="609.9" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MD: 10.4%</title></circle>
+<circle cx="633.0" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>AZ: 10.6%</title></circle>
+<circle cx="642.2" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>DE: 10.7%</title></circle>
+<circle cx="646.9" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NC: 10.8%</title></circle>
+<circle cx="670.0" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MO: 11.0%</title></circle>
+<circle cx="688.5" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>FL: 11.2%</title></circle>
+<circle cx="688.5" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>IN: 11.2%</title></circle>
+<circle cx="697.8" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>OH: 11.3%</title></circle>
+<circle cx="716.2" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>VA: 11.5%</title></circle>
+<circle cx="753.2" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>OK: 11.9%</title></circle>
+<circle cx="762.5" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>AR: 12.0%</title></circle>
+<circle cx="781.0" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>TX: 12.2%</title></circle>
+<circle cx="790.3" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>TN: 12.3%</title></circle>
+<circle cx="799.5" cy="138" r="4.2" fill="#31688E" fill-opacity="0.72"><title>NM: 12.4%</title></circle>
+<circle cx="864.2" cy="151" r="4.2" fill="#31688E" fill-opacity="0.72"><title>WV: 13.1%</title></circle>
+<circle cx="864.2" cy="164" r="4.2" fill="#31688E" fill-opacity="0.72"><title>AL: 13.1%</title></circle>
+<circle cx="873.5" cy="177" r="4.2" fill="#31688E" fill-opacity="0.72"><title>SC: 13.2%</title></circle>
+<circle cx="892.0" cy="190" r="4.2" fill="#31688E" fill-opacity="0.72"><title>GA: 13.4%</title></circle>
+<circle cx="975.2" cy="203" r="4.2" fill="#31688E" fill-opacity="0.72"><title>LA: 14.3%</title></circle>
+<circle cx="984.5" cy="216" r="4.2" fill="#31688E" fill-opacity="0.72"><title>MS: 14.4%</title></circle>
+<line x1="582.1" y1="120" x2="582.1" y2="245" stroke="#172033" stroke-width="2"/>
+<text x="589.1" y="133" class="value">median state: 10.1%</text>
+<rect x="115" y="120" width="925" height="125" class="frame"/>
+<text x="60" y="288" class="panel">Obesity</text>
+<line x1="115.0" y1="310" x2="115.0" y2="435" class="grid"/>
+<text x="115.0" y="454" text-anchor="middle" class="axis">25%</text>
+<line x1="346.2" y1="310" x2="346.2" y2="435" class="grid"/>
+<text x="346.2" y="454" text-anchor="middle" class="axis">30%</text>
+<line x1="577.5" y1="310" x2="577.5" y2="435" class="grid"/>
+<text x="577.5" y="454" text-anchor="middle" class="axis">35%</text>
+<line x1="808.8" y1="310" x2="808.8" y2="435" class="grid"/>
+<text x="808.8" y="454" text-anchor="middle" class="axis">40%</text>
+<line x1="1040.0" y1="310" x2="1040.0" y2="435" class="grid"/>
+<text x="1040.0" y="454" text-anchor="middle" class="axis">45%</text>
+<circle cx="119.6" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>DC: 25.1%</title></circle>
+<circle cx="170.5" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>HI: 26.2%</title></circle>
+<circle cx="200.6" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MA: 26.9%</title></circle>
+<circle cx="214.4" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>CO: 27.1%</title></circle>
+<circle cx="253.8" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>RI: 28.0%</title></circle>
+<circle cx="332.4" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NJ: 29.7%</title></circle>
+<circle cx="362.4" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>VT: 30.4%</title></circle>
+<circle cx="362.4" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>CA: 30.4%</title></circle>
+<circle cx="378.6" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>CT: 30.7%</title></circle>
+<circle cx="427.2" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NH: 31.8%</title></circle>
+<circle cx="475.7" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>UT: 32.8%</title></circle>
+<circle cx="480.4" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NY: 32.9%</title></circle>
+<circle cx="482.7" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MT: 33.0%</title></circle>
+<circle cx="498.9" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>AZ: 33.3%</title></circle>
+<circle cx="508.1" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>ID: 33.5%</title></circle>
+<circle cx="540.5" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>ME: 34.2%</title></circle>
+<circle cx="540.5" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>DE: 34.2%</title></circle>
+<circle cx="554.4" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>FL: 34.5%</title></circle>
+<circle cx="568.2" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>WY: 34.8%</title></circle>
+<circle cx="577.5" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NV: 35.0%</title></circle>
+<circle cx="577.5" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>AK: 35.0%</title></circle>
+<circle cx="577.5" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>WA: 35.0%</title></circle>
+<circle cx="605.3" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NM: 35.6%</title></circle>
+<circle cx="612.2" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>OR: 35.8%</title></circle>
+<circle cx="619.1" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>SD: 35.9%</title></circle>
+<circle cx="660.7" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MD: 36.8%</title></circle>
+<circle cx="674.6" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MN: 37.1%</title></circle>
+<circle cx="676.9" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NC: 37.2%</title></circle>
+<circle cx="693.1" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>TX: 37.5%</title></circle>
+<circle cx="730.1" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MI: 38.3%</title></circle>
+<circle cx="730.1" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>VA: 38.3%</title></circle>
+<circle cx="732.4" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>SC: 38.3%</title></circle>
+<circle cx="739.4" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>ND: 38.5%</title></circle>
+<circle cx="757.9" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MO: 38.9%</title></circle>
+<circle cx="760.2" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>IL: 39.0%</title></circle>
+<circle cx="767.1" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>GA: 39.1%</title></circle>
+<circle cx="769.4" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>WI: 39.1%</title></circle>
+<circle cx="776.4" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>OH: 39.3%</title></circle>
+<circle cx="776.4" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>KS: 39.3%</title></circle>
+<circle cx="792.6" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>IN: 39.6%</title></circle>
+<circle cx="794.9" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>IA: 39.7%</title></circle>
+<circle cx="799.5" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>NE: 39.8%</title></circle>
+<circle cx="799.5" cy="328" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>TN: 39.8%</title></circle>
+<circle cx="827.2" cy="341" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>OK: 40.4%</title></circle>
+<circle cx="836.5" cy="354" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>AR: 40.6%</title></circle>
+<circle cx="845.7" cy="367" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>AL: 40.8%</title></circle>
+<circle cx="868.9" cy="380" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>WV: 41.3%</title></circle>
+<circle cx="917.4" cy="393" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>LA: 42.3%</title></circle>
+<circle cx="929.0" cy="406" r="4.2" fill="#B14A67" fill-opacity="0.72"><title>MS: 42.6%</title></circle>
+<line x1="619.1" y1="310" x2="619.1" y2="435" stroke="#172033" stroke-width="2"/>
+<text x="626.1" y="323" class="value">median state: 35.9%</text>
+<rect x="115" y="310" width="925" height="125" class="frame"/>
+<text x="60" y="478" class="panel">No leisure-time physical activity</text>
+<line x1="115.0" y1="500" x2="115.0" y2="625" class="grid"/>
+<text x="115.0" y="644" text-anchor="middle" class="axis">15%</text>
+<line x1="300.0" y1="500" x2="300.0" y2="625" class="grid"/>
+<text x="300.0" y="644" text-anchor="middle" class="axis">20%</text>
+<line x1="485.0" y1="500" x2="485.0" y2="625" class="grid"/>
+<text x="485.0" y="644" text-anchor="middle" class="axis">25%</text>
+<line x1="670.0" y1="500" x2="670.0" y2="625" class="grid"/>
+<text x="670.0" y="644" text-anchor="middle" class="axis">30%</text>
+<line x1="855.0" y1="500" x2="855.0" y2="625" class="grid"/>
+<text x="855.0" y="644" text-anchor="middle" class="axis">35%</text>
+<line x1="1040.0" y1="500" x2="1040.0" y2="625" class="grid"/>
+<text x="1040.0" y="644" text-anchor="middle" class="axis">40%</text>
+<circle cx="126.1" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>DC: 15.3%</title></circle>
+<circle cx="237.1" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>VT: 18.3%</title></circle>
+<circle cx="240.8" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>RI: 18.4%</title></circle>
+<circle cx="261.1" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>CO: 18.9%</title></circle>
+<circle cx="263.0" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NH: 19.0%</title></circle>
+<circle cx="263.0" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>WA: 19.0%</title></circle>
+<circle cx="270.4" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>UT: 19.2%</title></circle>
+<circle cx="292.6" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MA: 19.8%</title></circle>
+<circle cx="325.9" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>HI: 20.7%</title></circle>
+<circle cx="331.5" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>OR: 20.9%</title></circle>
+<circle cx="370.3" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MT: 21.9%</title></circle>
+<circle cx="398.0" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>AK: 22.6%</title></circle>
+<circle cx="405.5" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MD: 22.9%</title></circle>
+<circle cx="414.7" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>ND: 23.1%</title></circle>
+<circle cx="420.2" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>ME: 23.2%</title></circle>
+<circle cx="427.6" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>ID: 23.4%</title></circle>
+<circle cx="429.5" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>CT: 23.5%</title></circle>
+<circle cx="429.5" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>CA: 23.5%</title></circle>
+<circle cx="433.2" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>IL: 23.6%</title></circle>
+<circle cx="435.0" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>SD: 23.6%</title></circle>
+<circle cx="440.6" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NJ: 23.8%</title></circle>
+<circle cx="448.0" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MN: 24.0%</title></circle>
+<circle cx="466.5" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NY: 24.5%</title></circle>
+<circle cx="473.9" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>AZ: 24.7%</title></circle>
+<circle cx="481.3" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NC: 24.9%</title></circle>
+<circle cx="485.0" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MI: 25.0%</title></circle>
+<circle cx="492.4" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>IA: 25.2%</title></circle>
+<circle cx="492.4" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>DE: 25.2%</title></circle>
+<circle cx="503.5" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>WY: 25.5%</title></circle>
+<circle cx="503.5" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>FL: 25.5%</title></circle>
+<circle cx="507.2" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>IN: 25.6%</title></circle>
+<circle cx="507.2" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NV: 25.6%</title></circle>
+<circle cx="510.9" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>VA: 25.7%</title></circle>
+<circle cx="533.1" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NE: 26.3%</title></circle>
+<circle cx="562.7" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>KS: 27.1%</title></circle>
+<circle cx="570.1" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>WI: 27.3%</title></circle>
+<circle cx="581.2" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>NM: 27.6%</title></circle>
+<circle cx="601.5" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>OH: 28.1%</title></circle>
+<circle cx="625.6" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>SC: 28.8%</title></circle>
+<circle cx="625.6" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>TN: 28.8%</title></circle>
+<circle cx="655.2" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>TX: 29.6%</title></circle>
+<circle cx="688.5" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>AL: 30.5%</title></circle>
+<circle cx="688.5" cy="518" r="4.2" fill="#26828E" fill-opacity="0.72"><title>GA: 30.5%</title></circle>
+<circle cx="718.1" cy="531" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MO: 31.3%</title></circle>
+<circle cx="756.9" cy="544" r="4.2" fill="#26828E" fill-opacity="0.72"><title>LA: 32.3%</title></circle>
+<circle cx="762.5" cy="557" r="4.2" fill="#26828E" fill-opacity="0.72"><title>OK: 32.5%</title></circle>
+<circle cx="766.2" cy="570" r="4.2" fill="#26828E" fill-opacity="0.72"><title>WV: 32.6%</title></circle>
+<circle cx="832.8" cy="583" r="4.2" fill="#26828E" fill-opacity="0.72"><title>AR: 34.4%</title></circle>
+<circle cx="879.1" cy="596" r="4.2" fill="#26828E" fill-opacity="0.72"><title>MS: 35.7%</title></circle>
+<line x1="481.3" y1="500" x2="481.3" y2="625" stroke="#172033" stroke-width="2"/>
+<text x="488.3" y="513" class="value">median state: 24.9%</text>
+<rect x="115" y="500" width="925" height="125" class="frame"/>
+</svg>

@@ -1,0 +1,6 @@
+metric,non_missing,missing,missing_pct,missing_states
+DIABETES_AdjPrev,2956,187,5.95,KY;PA
+OBESITY_AdjPrev,2956,187,5.95,KY;PA
+LPA_AdjPrev,2956,187,5.95,KY;PA
+CSMOKING_AdjPrev,2956,187,5.95,KY;PA
+ACCESS2_AdjPrev,2956,187,5.95,KY;PA
