@@ -7,3 +7,5 @@
 ## 当前有效探索图
 
 `basic_*.svg` 由 `02_analysis/basic_eda.py` 从已验收的清洗表生成，是当前基础 EDA 图表。纯数字编号的 SVG 仍为历史产物。
+
+`relationship_*.svg` 由 `02_analysis/relationship_analysis.py` 生成，是当前关系分析图表。

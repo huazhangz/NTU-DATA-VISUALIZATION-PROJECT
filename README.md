@@ -48,11 +48,12 @@ diabetes, obesity, and no leisure-time physical activity.
 ```bash
 python3 02_analysis/validate_eda_input.py
 python3 02_analysis/basic_eda.py
+python3 02_analysis/relationship_analysis.py
 ```
 
-Read `02_analysis/EDA_report.md` for the current results. The scripts stop if
-the accepted input is missing, validation fails, or the cleaned-file hash
-changes after validation.
+Read `02_analysis/EDA_report.md` and `02_analysis/RELATIONSHIP_report.md` for
+the current results. The scripts stop if the accepted input is missing,
+validation fails, or the cleaned-file hash changes after validation.
 
 ## Read this before visualising
 

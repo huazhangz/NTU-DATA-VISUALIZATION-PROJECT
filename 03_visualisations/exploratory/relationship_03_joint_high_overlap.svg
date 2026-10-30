@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" role="img" aria-labelledby="title desc">
+<title id="title">Upper-quartile burden frequently overlaps</title>
+<desc id="desc">Count of counties above the metric-specific 75th percentile on exactly zero, one, two, or all three measures.</desc>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.title{font-size:24px;font-weight:700}.subtitle{font-size:13px;fill:#5C667A}.panel{font-size:15px;font-weight:700}.axis{font-size:11px;fill:#5C667A}.axis-title{font-size:12px;fill:#172033}.value{font-size:12px;font-weight:700}.note{font-size:11px;fill:#5C667A}.grid{stroke:#E5E9F0;stroke-width:1}.frame{fill:none;stroke:#AAB2C0;stroke-width:1}</style>
+<text x="60" y="42" class="title">Upper-quartile burden frequently overlaps</text>
+<text x="60" y="66" class="subtitle">Count of counties above the metric-specific 75th percentile on exactly zero, one, two, or all three measures.</text>
+<line x1="130" y1="440.0" x2="970" y2="440.0" class="grid"/>
+<text x="118" y="444.0" text-anchor="end" class="axis">0</text>
+<line x1="130" y1="350.5" x2="970" y2="350.5" class="grid"/>
+<text x="118" y="354.5" text-anchor="end" class="axis">500</text>
+<line x1="130" y1="261.0" x2="970" y2="261.0" class="grid"/>
+<text x="118" y="265.0" text-anchor="end" class="axis">1,000</text>
+<line x1="130" y1="171.5" x2="970" y2="171.5" class="grid"/>
+<text x="118" y="175.5" text-anchor="end" class="axis">1,500</text>
+<rect x="200" y="120.0" width="125" height="320.0" fill="#AAB2C0"/>
+<text x="262.5" y="110.0" text-anchor="middle" class="value">1,788 (60.5%)</text>
+<text x="262.5" y="468" text-anchor="middle" class="panel">0</text>
+<rect x="395" y="355.7" width="125" height="84.3" fill="#7AA6B8"/>
+<text x="457.5" y="345.7" text-anchor="middle" class="value">471 (15.9%)</text>
+<text x="457.5" y="468" text-anchor="middle" class="panel">1</text>
+<rect x="590" y="382.7" width="125" height="57.3" fill="#4C8198"/>
+<text x="652.5" y="372.7" text-anchor="middle" class="value">320 (10.8%)</text>
+<text x="652.5" y="468" text-anchor="middle" class="panel">2</text>
+<rect x="785" y="372.5" width="125" height="67.5" fill="#B14A67"/>
+<text x="847.5" y="362.5" text-anchor="middle" class="value">377 (12.8%)</text>
+<text x="847.5" y="468" text-anchor="middle" class="panel">All 3</text>
+<text x="550" y="505" text-anchor="middle" class="axis-title">Number of measures at or above its 75th-percentile threshold</text>
+<text x="24" y="280" transform="rotate(-90 24,280)" text-anchor="middle" class="axis-title">Counties</text>
+</svg>

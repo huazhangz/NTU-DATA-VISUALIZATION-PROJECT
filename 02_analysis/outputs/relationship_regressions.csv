@@ -1,0 +1,4 @@
+predictor,outcome,n,slope,intercept,r_squared,interpretation
+DIABETES_AdjPrev,OBESITY_AdjPrev,2956,1.391128,22.090876,0.466693,descriptive linear trend; not causal
+DIABETES_AdjPrev,LPA_AdjPrev,2956,2.020081,4.458178,0.762684,descriptive linear trend; not causal
+OBESITY_AdjPrev,LPA_AdjPrev,2956,0.846916,-4.84831,0.555892,descriptive linear trend; not causal

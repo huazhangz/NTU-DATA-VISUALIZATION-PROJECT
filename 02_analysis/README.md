@@ -27,4 +27,17 @@ python3 02_analysis/validate_eda_input.py
 python3 02_analysis/basic_eda.py
 ```
 
+关系分析已于 2026-10-30 完成，包括 Pearson/Spearman 相关、描述性线性趋势与三项指标上四分位重叠。
+
+- `relationship_analysis.py`：可复现的关系分析脚本。
+- `RELATIONSHIP_report.md`：中文关系分析报告，保留关键英文术语。
+- `outputs/relationship_*`：相关、回归趋势和共同高值明细。
+- `../03_visualisations/exploratory/relationship_*`：当前关系分析探索图。
+
+重新运行：
+
+```bash
+python3 02_analysis/relationship_analysis.py
+```
+
 新的正式 EDA 必须读取已验收的清洗 CSV。若清洗表不存在、验收未通过或文件哈希已变，分析流程应停止并明确报错，不得静默改用原始 CSV。

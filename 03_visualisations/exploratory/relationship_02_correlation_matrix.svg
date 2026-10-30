@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="610" viewBox="0 0 830 610" role="img" aria-labelledby="title desc">
+<title id="title">All three county estimates move together</title>
+<desc id="desc">Pearson correlations for 2,956 counties with complete 2023 age-adjusted estimates. Correlation does not establish causation.</desc>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172033}.title{font-size:24px;font-weight:700}.subtitle{font-size:13px;fill:#5C667A}.panel{font-size:15px;font-weight:700}.axis{font-size:11px;fill:#5C667A}.axis-title{font-size:12px;fill:#172033}.value{font-size:12px;font-weight:700}.note{font-size:11px;fill:#5C667A}.grid{stroke:#E5E9F0;stroke-width:1}.frame{fill:none;stroke:#AAB2C0;stroke-width:1}</style>
+<text x="60" y="42" class="title">All three county estimates move together</text>
+<text x="60" y="66" class="subtitle">Pearson correlations for 2,956 counties with complete 2023 age-adjusted estimates. Correlation does not establish causation.</text>
+<text x="337.5" y="147" text-anchor="middle" class="axis">Diabetes</text>
+<text x="267" y="221.5" text-anchor="end" class="axis">Diabetes</text>
+<text x="442.5" y="147" text-anchor="middle" class="axis">Obesity</text>
+<text x="267" y="326.5" text-anchor="end" class="axis">Obesity</text>
+<text x="547.5" y="147" text-anchor="middle" class="axis">Physical inactivity</text>
+<text x="267" y="431.5" text-anchor="end" class="axis">Physical inactivity</text>
+<rect x="285" y="165" width="102" height="102" fill="#2c5f87"/>
+<text x="337.5" y="223.5" text-anchor="middle" style="font:700 18px Arial;fill:#FFFFFF">1.000</text>
+<rect x="390" y="165" width="102" height="102" fill="#678daa"/>
+<text x="442.5" y="223.5" text-anchor="middle" style="font:700 18px Arial;fill:#172033">0.683</text>
+<rect x="495" y="165" width="102" height="102" fill="#447195"/>
+<text x="547.5" y="223.5" text-anchor="middle" style="font:700 18px Arial;fill:#FFFFFF">0.873</text>
+<rect x="285" y="270" width="102" height="102" fill="#678daa"/>
+<text x="337.5" y="328.5" text-anchor="middle" style="font:700 18px Arial;fill:#172033">0.683</text>
+<rect x="390" y="270" width="102" height="102" fill="#2c5f87"/>
+<text x="442.5" y="328.5" text-anchor="middle" style="font:700 18px Arial;fill:#FFFFFF">1.000</text>
+<rect x="495" y="270" width="102" height="102" fill="#5b84a3"/>
+<text x="547.5" y="328.5" text-anchor="middle" style="font:700 18px Arial;fill:#172033">0.746</text>
+<rect x="285" y="375" width="102" height="102" fill="#447195"/>
+<text x="337.5" y="433.5" text-anchor="middle" style="font:700 18px Arial;fill:#FFFFFF">0.873</text>
+<rect x="390" y="375" width="102" height="102" fill="#5b84a3"/>
+<text x="442.5" y="433.5" text-anchor="middle" style="font:700 18px Arial;fill:#172033">0.746</text>
+<rect x="495" y="375" width="102" height="102" fill="#2c5f87"/>
+<text x="547.5" y="433.5" text-anchor="middle" style="font:700 18px Arial;fill:#FFFFFF">1.000</text>
+<text x="285" y="525" class="note">Strongest pair: diabetes and physical inactivity (r = 0.873).</text>
+</svg>

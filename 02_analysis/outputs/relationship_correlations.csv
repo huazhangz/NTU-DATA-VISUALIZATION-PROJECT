@@ -1,0 +1,4 @@
+metric_x,metric_y,n,pearson_r,spearman_rho
+DIABETES_AdjPrev,OBESITY_AdjPrev,2956,0.683149,0.653118
+DIABETES_AdjPrev,LPA_AdjPrev,2956,0.873318,0.862922
+OBESITY_AdjPrev,LPA_AdjPrev,2956,0.745582,0.717014
