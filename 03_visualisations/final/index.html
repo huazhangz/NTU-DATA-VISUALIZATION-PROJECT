@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NTU data visualisation project — CDC PLACES 2025</title><style>
+.viz-root{color-scheme:light;--surface:#fcfcfb;--plane:#f9f9f7;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;
+--grid:#e1e0d9;--axis:#c3c2b7;--ring:rgba(11,11,11,.10);--accent:#2a78d6;--missing:#d9d8d3;--focus:#eda100}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface:#1a1a19;
+--plane:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);
+--accent:#3987e5;--missing:#454542}}
+:root[data-theme="dark"] .viz-root{color-scheme:dark;--surface:#1a1a19;--plane:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;
+--muted:#898781;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);--accent:#3987e5;--missing:#454542}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--plane);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.viz-root{background:var(--plane);min-height:100vh;color:var(--ink)}
+.app{max-width:1480px;margin:auto;padding:20px 24px 18px;display:flex;flex-direction:column;gap:14px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+h1{font-size:clamp(22px,2.1vw,32px);line-height:1.15;margin:4px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:14px;max-width:980px;line-height:1.45}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.controls label{font-size:13px;color:var(--ink2);display:flex;gap:6px;align-items:center}
+select,input[type=search],button{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);
+border:1px solid var(--axis);border-radius:8px;padding:6px 10px}
+button{cursor:pointer}button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.card{background:var(--surface);border-radius:14px;box-shadow:0 0 0 1px var(--ring);padding:14px;min-width:0}
+.card h2{font-size:15px;margin:0 0 4px}.card .note{font-size:12px;color:var(--ink2);margin:0 0 8px;line-height:1.4}
+svg text{fill:var(--ink2);font-size:11px;font-variant-numeric:tabular-nums}
+.tick{fill:var(--muted)}.gridline{stroke:var(--grid);stroke-width:1}.axisline{stroke:var(--axis);stroke-width:1}
+.tip{position:fixed;pointer-events:none;z-index:9;background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--ring),0 6px 20px rgba(0,0,0,.14);
+border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.45;max-width:300px;display:none}
+.tip strong{font-size:15px;display:block}.tip .k{color:var(--ink2)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stat{background:var(--plane);border-radius:10px;padding:9px 10px}.stat .lab{font-size:11px;color:var(--ink2)}
+.stat .val{font-size:20px;font-weight:650}.stat .ctx{font-size:11px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink2);align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-2px}
+.ramp{display:inline-block;width:160px;height:10px;border-radius:5px;vertical-align:middle;margin:0 6px}
+details{font-size:13px;color:var(--ink2)}details summary{cursor:pointer;font-weight:600;color:var(--ink)}
+table{border-collapse:collapse;font-size:12px;margin-top:8px;font-variant-numeric:tabular-nums}
+th,td{padding:4px 8px;border-bottom:1px solid var(--grid);text-align:left}td.n{text-align:right}
+.foot{font-size:12px;color:var(--muted);line-height:1.5}
+a{color:var(--accent)}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}a.g{text-decoration:none;color:var(--ink)}a.g:hover{box-shadow:0 0 0 2px var(--accent)}
+</style></head><body><div class="viz-root"><main class="app"><header><div class="kicker">SD6105 · CDC PLACES county data, 2025 release</div>
+<h1>Project visualisations</h1><div class="sub">Six interactive views of the cleaned and validated county table (3,143 counties, 40 age-adjusted measures).
+The first three cover the core EDA measures; the last three come from the extended preliminary analysis.</div></header>
+<section class="gal"><a class="card g" href="interactive_county_map/index.html"><div class="kicker">Choropleth</div><h2>County health choropleth</h2><p class="note">Diabetes, obesity and inactivity by county, with 95% intervals.</p></a><a class="card g" href="interactive_relationship/index.html"><div class="kicker">Scatter + LOWESS</div><h2>Diabetes vs physical inactivity</h2><p class="note">County scatterplot with LOWESS trend and region filter.</p></a><a class="card g" href="interactive_overlap/index.html"><div class="kicker">Categorical map + bars</div><h2>Upper-quartile overlap</h2><p class="note">Counties in the top quartile of 0–3 core measures.</p></a><a class="card g" href="interactive_measure_landscape/index.html"><div class="kicker">New · Heatmap + dendrogram + hexbin</div><h2>Measure landscape</h2><p class="note">How 35 measures co-vary: clustered heatmap, dendrogram, hexbin.</p></a><a class="card g" href="interactive_state_tiles/index.html"><div class="kicker">New · Tile-grid cartogram</div><h2>State profiles</h2><p class="note">Any of 40 measures by state on a tile-grid map, linked to a ranking.</p></a><a class="card g" href="interactive_age_gap/index.html"><div class="kicker">New · Ridgeline + dumbbell</div><h2>Age-adjustment gap</h2><p class="note">Crude vs age-adjusted rates: ridgeline and county dumbbells.</p></a></section>
+<p class="foot">Source: CDC PLACES County Data (GIS Friendly Format), 2025 release (i46a-9kgh); U.S. Census Bureau 2023 cartographic boundaries.
+County-level model-based estimates; descriptive, not causal.</p></main></div></body></html>

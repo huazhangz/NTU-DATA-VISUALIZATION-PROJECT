@@ -23,6 +23,7 @@ A local Windows copy was cited during the run and was not present in this enviro
 | `reports/data_cleaning/run_20261022_185006/` | Phase reports, profiles, and the execution log |
 | `02_analysis/` | EDA input acceptance, current Chinese EDA report, and reproducible analysis scripts |
 | `03_visualisations/exploratory/` | Current exploratory SVG charts |
+| `03_visualisations/final/` | Six interactive views, static SVGs, and `index.html` gallery |
 
 Source columns are copied unchanged. Derived columns are prefixed with `derived__` and hold parsed confidence limits, centroid coordinates, a display name, a short-name collision flag, and the raw row number.
 
@@ -51,8 +52,16 @@ python3 02_analysis/basic_eda.py
 python3 02_analysis/relationship_analysis.py
 ```
 
-Read `02_analysis/EDA_report.md` and `02_analysis/RELATIONSHIP_report.md` for
-the current results. The scripts stop if the accepted input is missing,
+Extended preliminary analysis of the other 37 measures, then the final views:
+
+```bash
+python3 02_analysis/extended_analysis.py
+python3 03_visualisations/final/build_extended_views.py
+python3 -m http.server 8000 --directory 03_visualisations/final
+```
+
+Read `02_analysis/EDA_report.md`, `02_analysis/RELATIONSHIP_report.md` and
+`02_analysis/EXTENDED_report.md` for the current results. The scripts stop if the accepted input is missing,
 validation fails, or the cleaned-file hash changes after validation.
 
 ## Read this before visualising
