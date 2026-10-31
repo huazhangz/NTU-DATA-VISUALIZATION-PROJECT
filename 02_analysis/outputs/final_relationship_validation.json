@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "input": "data/processed/places_county_gis_2025_i46a-9kgh_cleaned.csv",
+  "input_sha256": "58a324b2918d1e6571056235afc4f1d8fd2817e00c09f1833355de515fadf201",
+  "complete_counties": 2956,
+  "unique_fips": 2956,
+  "pearson_r": 0.8733175719183193,
+  "r_squared": 0.7626835814213088,
+  "lowess_span": 0.25,
+  "region_counts": {
+    "Northeast": 151,
+    "Midwest": 1055,
+    "South": 1301,
+    "West": 449
+  },
+  "outputs": [
+    "03_visualisations/final/diabetes_inactivity_relationship.svg",
+    "03_visualisations/final/interactive_relationship/index.html"
+  ]
+}
