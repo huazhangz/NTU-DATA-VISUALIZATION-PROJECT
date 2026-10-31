@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
 <title id="title">Counties with more physical inactivity tend to have higher diabetes estimates</title>
-<desc id="desc">Scatter plot of 2,956 U.S. counties using 2023 age-adjusted CDC PLACES estimates. Each point is a county. A LOWESS curve summarizes a strong positive association; it is not causal.</desc>
+<desc id="desc">Scatter plot of 2,956 U.S. counties using 2023 age-adjusted CDC PLACES estimates. Each point is a county. A smoothed trend curve summarizes a strong positive association; it is not causal.</desc>
 <rect width="1400" height="800" fill="#f4f7fa"/>
-<text x="48" y="37" class="kicker">CDC PLACES · 2023 MODEL-BASED ESTIMATES</text>
+<text x="48" y="37" class="kicker">CDC PLACES · 2023 ESTIMATES</text>
 <text x="48" y="73" class="title">More physical inactivity, higher diabetes estimates</text>
-<text x="48" y="100" class="subtitle">Each point is one county; the LOWESS curve summarizes the pattern without implying causation.</text>
+<text x="48" y="100" class="subtitle">Each point is one county; the smoothed trend line summarizes the pattern without implying causation.</text>
 <rect x="34" y="120" width="1094" height="650" rx="16" fill="#fff" stroke="#dce4ec"/>
 <g transform="translate(0,100)"><line x1="92.0" y1="48.0" x2="92.0" y2="650.0" class="grid"/>
 <text x="92.0" y="679.0" text-anchor="middle" class="tick">10%</text>
@@ -35,11 +35,11 @@
 <line x1="92.0" y1="48.0" x2="1107.0" y2="48.0" class="grid"/>
 <text x="77.0" y="53.0" text-anchor="end" class="tick">25%</text>
 <rect x="92.0" y="48.0" width="1015.0" height="602.0" class="frame"/>
-<text x="599.5" y="718.0" text-anchor="middle" class="axis-title">No leisure-time physical activity, age-adjusted prevalence</text>
-<text x="28" y="349.0" transform="rotate(-90 28,349.0)" text-anchor="middle" class="axis-title">Diagnosed diabetes, age-adjusted prevalence</text><g class="points"><circle class="county-point" data-fips="40061" data-region="South" cx="711.15" cy="427.26" r="3.05" fill="#D55E00" aria-label="Haskell County, Oklahoma"/>
+<text x="599.5" y="718.0" text-anchor="middle" class="axis-title">Physical inactivity (% of adults, age-adjusted)</text>
+<text x="28" y="349.0" transform="rotate(-90 28,349.0)" text-anchor="middle" class="axis-title">Diabetes (% of adults, age-adjusted)</text><g class="points"><circle class="county-point" data-fips="40061" data-region="South" cx="711.15" cy="427.26" r="3.05" fill="#D55E00" aria-label="Haskell County, Oklahoma"/>
 <circle class="county-point" data-fips="17097" data-region="Midwest" cx="330.52" cy="505.52" r="3.05" fill="#009E73" aria-label="Lake County, Illinois"/>
 <circle class="county-point" data-fips="20005" data-region="Midwest" cx="533.52" cy="499.50" r="3.05" fill="#009E73" aria-label="Atchison County, Kansas"/>
-<circle class="county-point" data-fips="02020" data-region="West" cx="345.75" cy="535.62" r="3.05" fill="#CC79A7" aria-label="Anchorage County, Alaska"/>
+<circle class="county-point" data-fips="02020" data-region="West" cx="345.75" cy="535.62" r="3.05" fill="#CC79A7" aria-label="Anchorage Municipality, Alaska"/>
 <circle class="county-point" data-fips="40133" data-region="South" cx="769.51" cy="388.13" r="3.05" fill="#D55E00" aria-label="Seminole County, Oklahoma"/>
 <circle class="county-point" data-fips="54057" data-region="South" cx="569.05" cy="448.33" r="3.05" fill="#D55E00" aria-label="Mineral County, West Virginia"/>
 <circle class="county-point" data-fips="27013" data-region="Midwest" cx="449.79" cy="499.50" r="3.05" fill="#009E73" aria-label="Blue Earth County, Minnesota"/>
@@ -67,7 +67,7 @@
 <circle class="county-point" data-fips="51143" data-region="South" cx="614.73" cy="409.20" r="3.05" fill="#D55E00" aria-label="Pittsylvania County, Virginia"/>
 <circle class="county-point" data-fips="35049" data-region="West" cx="340.68" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Santa Fe County, New Mexico"/>
 <circle class="county-point" data-fips="23023" data-region="Northeast" cx="350.82" cy="559.70" r="3.05" fill="#0072B2" aria-label="Sagadahoc County, Maine"/>
-<circle class="county-point" data-fips="22107" data-region="South" cx="848.17" cy="255.69" r="3.05" fill="#D55E00" aria-label="Tensas County, Louisiana"/>
+<circle class="county-point" data-fips="22107" data-region="South" cx="848.17" cy="255.69" r="3.05" fill="#D55E00" aria-label="Tensas Parish, Louisiana"/>
 <circle class="county-point" data-fips="55011" data-region="Midwest" cx="536.06" cy="517.56" r="3.05" fill="#009E73" aria-label="Buffalo County, Wisconsin"/>
 <circle class="county-point" data-fips="18123" data-region="Midwest" cx="459.94" cy="466.39" r="3.05" fill="#009E73" aria-label="Perry County, Indiana"/>
 <circle class="county-point" data-fips="45047" data-region="South" cx="530.99" cy="409.20" r="3.05" fill="#D55E00" aria-label="Greenwood County, South Carolina"/>
@@ -91,7 +91,7 @@
 <circle class="county-point" data-fips="26009" data-region="Midwest" cx="366.05" cy="535.62" r="3.05" fill="#009E73" aria-label="Antrim County, Michigan"/>
 <circle class="county-point" data-fips="19111" data-region="Midwest" cx="500.54" cy="499.50" r="3.05" fill="#009E73" aria-label="Lee County, Iowa"/>
 <circle class="county-point" data-fips="20039" data-region="Midwest" cx="465.01" cy="517.56" r="3.05" fill="#009E73" aria-label="Decatur County, Kansas"/>
-<circle class="county-point" data-fips="51570" data-region="South" cx="447.25" cy="484.45" r="3.05" fill="#D55E00" aria-label="Colonial Heights County, Virginia"/>
+<circle class="county-point" data-fips="51570" data-region="South" cx="447.25" cy="484.45" r="3.05" fill="#D55E00" aria-label="Colonial Heights city, Virginia"/>
 <circle class="county-point" data-fips="12023" data-region="South" cx="599.50" cy="427.26" r="3.05" fill="#D55E00" aria-label="Columbia County, Florida"/>
 <circle class="county-point" data-fips="17063" data-region="Midwest" cx="388.89" cy="526.59" r="3.05" fill="#009E73" aria-label="Grundy County, Illinois"/>
 <circle class="county-point" data-fips="08009" data-region="West" cx="439.64" cy="499.50" r="3.05" fill="#CC79A7" aria-label="Baca County, Colorado"/>
@@ -123,7 +123,7 @@
 <circle class="county-point" data-fips="26125" data-region="Midwest" cx="300.07" cy="544.65" r="3.05" fill="#009E73" aria-label="Oakland County, Michigan"/>
 <circle class="county-point" data-fips="37129" data-region="South" cx="353.36" cy="523.58" r="3.05" fill="#D55E00" aria-label="New Hanover County, North Carolina"/>
 <circle class="county-point" data-fips="37117" data-region="South" cx="563.98" cy="406.19" r="3.05" fill="#D55E00" aria-label="Martin County, North Carolina"/>
-<circle class="county-point" data-fips="02188" data-region="West" cx="619.80" cy="361.04" r="3.05" fill="#CC79A7" aria-label="Northwest Arctic County, Alaska"/>
+<circle class="county-point" data-fips="02188" data-region="West" cx="619.80" cy="361.04" r="3.05" fill="#CC79A7" aria-label="Northwest Arctic Borough, Alaska"/>
 <circle class="county-point" data-fips="29129" data-region="Midwest" cx="680.70" cy="445.32" r="3.05" fill="#009E73" aria-label="Mercer County, Missouri"/>
 <circle class="county-point" data-fips="29139" data-region="Midwest" cx="640.10" cy="472.41" r="3.05" fill="#009E73" aria-label="Montgomery County, Missouri"/>
 <circle class="county-point" data-fips="31061" data-region="Midwest" cx="538.60" cy="496.49" r="3.05" fill="#009E73" aria-label="Franklin County, Nebraska"/>
@@ -139,7 +139,7 @@
 <circle class="county-point" data-fips="05117" data-region="South" cx="652.79" cy="460.37" r="3.05" fill="#D55E00" aria-label="Prairie County, Arkansas"/>
 <circle class="county-point" data-fips="24035" data-region="South" cx="327.99" cy="535.62" r="3.05" fill="#D55E00" aria-label="Queen Anne&#x27;s County, Maryland"/>
 <circle class="county-point" data-fips="13273" data-region="South" cx="799.96" cy="279.77" r="3.05" fill="#D55E00" aria-label="Terrell County, Georgia"/>
-<circle class="county-point" data-fips="22087" data-region="South" cx="680.70" cy="370.07" r="3.05" fill="#D55E00" aria-label="St. Bernard County, Louisiana"/>
+<circle class="county-point" data-fips="22087" data-region="South" cx="680.70" cy="370.07" r="3.05" fill="#D55E00" aria-label="St. Bernard Parish, Louisiana"/>
 <circle class="county-point" data-fips="47165" data-region="South" cx="414.26" cy="484.45" r="3.05" fill="#D55E00" aria-label="Sumner County, Tennessee"/>
 <circle class="county-point" data-fips="16059" data-region="West" cx="426.95" cy="541.64" r="3.05" fill="#CC79A7" aria-label="Lemhi County, Idaho"/>
 <circle class="county-point" data-fips="53045" data-region="West" cx="340.68" cy="523.58" r="3.05" fill="#CC79A7" aria-label="Mason County, Washington"/>
@@ -149,7 +149,7 @@
 <circle class="county-point" data-fips="37065" data-region="South" cx="642.64" cy="370.07" r="3.05" fill="#D55E00" aria-label="Edgecombe County, North Carolina"/>
 <circle class="county-point" data-fips="41001" data-region="West" cx="322.91" cy="505.52" r="3.05" fill="#CC79A7" aria-label="Baker County, Oregon"/>
 <circle class="county-point" data-fips="39145" data-region="Midwest" cx="713.69" cy="412.21" r="3.05" fill="#009E73" aria-label="Scioto County, Ohio"/>
-<circle class="county-point" data-fips="51720" data-region="South" cx="604.58" cy="406.19" r="3.05" fill="#D55E00" aria-label="Norton County, Virginia"/>
+<circle class="county-point" data-fips="51720" data-region="South" cx="604.58" cy="406.19" r="3.05" fill="#D55E00" aria-label="Norton city, Virginia"/>
 <circle class="county-point" data-fips="29225" data-region="Midwest" cx="602.04" cy="481.44" r="3.05" fill="#009E73" aria-label="Webster County, Missouri"/>
 <circle class="county-point" data-fips="28007" data-region="South" cx="739.06" cy="382.11" r="3.05" fill="#D55E00" aria-label="Attala County, Mississippi"/>
 <circle class="county-point" data-fips="05007" data-region="South" cx="482.77" cy="505.52" r="3.05" fill="#D55E00" aria-label="Benton County, Arkansas"/>
@@ -177,13 +177,13 @@
 <circle class="county-point" data-fips="20209" data-region="Midwest" cx="716.23" cy="382.11" r="3.05" fill="#009E73" aria-label="Wyandotte County, Kansas"/>
 <circle class="county-point" data-fips="48005" data-region="South" cx="662.94" cy="409.20" r="3.05" fill="#D55E00" aria-label="Angelina County, Texas"/>
 <circle class="county-point" data-fips="54095" data-region="South" cx="645.18" cy="415.22" r="3.05" fill="#D55E00" aria-label="Tyler County, West Virginia"/>
-<circle class="county-point" data-fips="51840" data-region="South" cx="561.44" cy="412.21" r="3.05" fill="#D55E00" aria-label="Winchester County, Virginia"/>
+<circle class="county-point" data-fips="51840" data-region="South" cx="561.44" cy="412.21" r="3.05" fill="#D55E00" aria-label="Winchester city, Virginia"/>
 <circle class="county-point" data-fips="48131" data-region="South" cx="858.33" cy="288.80" r="3.05" fill="#D55E00" aria-label="Duval County, Texas"/>
 <circle class="county-point" data-fips="48293" data-region="South" cx="629.95" cy="406.19" r="3.05" fill="#D55E00" aria-label="Limestone County, Texas"/>
 <circle class="county-point" data-fips="27171" data-region="Midwest" cx="340.68" cy="553.68" r="3.05" fill="#009E73" aria-label="Wright County, Minnesota"/>
 <circle class="county-point" data-fips="28039" data-region="South" cx="624.88" cy="448.33" r="3.05" fill="#D55E00" aria-label="George County, Mississippi"/>
 <circle class="county-point" data-fips="08125" data-region="West" cx="388.89" cy="523.58" r="3.05" fill="#CC79A7" aria-label="Yuma County, Colorado"/>
-<circle class="county-point" data-fips="51775" data-region="South" cx="426.95" cy="487.46" r="3.05" fill="#D55E00" aria-label="Salem County, Virginia"/>
+<circle class="county-point" data-fips="51775" data-region="South" cx="426.95" cy="487.46" r="3.05" fill="#D55E00" aria-label="Salem city, Virginia"/>
 <circle class="county-point" data-fips="29169" data-region="Midwest" cx="576.66" cy="472.41" r="3.05" fill="#009E73" aria-label="Pulaski County, Missouri"/>
 <circle class="county-point" data-fips="37095" data-region="South" cx="584.27" cy="400.17" r="3.05" fill="#D55E00" aria-label="Hyde County, North Carolina"/>
 <circle class="county-point" data-fips="55099" data-region="Midwest" cx="556.36" cy="499.50" r="3.05" fill="#009E73" aria-label="Price County, Wisconsin"/>
@@ -204,7 +204,7 @@
 <circle class="county-point" data-fips="29215" data-region="Midwest" cx="713.69" cy="418.23" r="3.05" fill="#009E73" aria-label="Texas County, Missouri"/>
 <circle class="county-point" data-fips="39139" data-region="Midwest" cx="569.05" cy="436.29" r="3.05" fill="#009E73" aria-label="Richland County, Ohio"/>
 <circle class="county-point" data-fips="51033" data-region="South" cx="518.30" cy="439.30" r="3.05" fill="#D55E00" aria-label="Caroline County, Virginia"/>
-<circle class="county-point" data-fips="22055" data-region="South" cx="444.71" cy="442.31" r="3.05" fill="#D55E00" aria-label="Lafayette County, Louisiana"/>
+<circle class="county-point" data-fips="22055" data-region="South" cx="444.71" cy="442.31" r="3.05" fill="#D55E00" aria-label="Lafayette Parish, Louisiana"/>
 <circle class="county-point" data-fips="12115" data-region="South" cx="348.29" cy="547.66" r="3.05" fill="#D55E00" aria-label="Sarasota County, Florida"/>
 <circle class="county-point" data-fips="26073" data-region="Midwest" cx="530.99" cy="451.34" r="3.05" fill="#009E73" aria-label="Isabella County, Michigan"/>
 <circle class="county-point" data-fips="19175" data-region="Midwest" cx="487.85" cy="505.52" r="3.05" fill="#009E73" aria-label="Union County, Iowa"/>
@@ -225,7 +225,7 @@
 <circle class="county-point" data-fips="17001" data-region="Midwest" cx="411.73" cy="511.54" r="3.05" fill="#009E73" aria-label="Adams County, Illinois"/>
 <circle class="county-point" data-fips="28069" data-region="South" cx="766.98" cy="324.92" r="3.05" fill="#D55E00" aria-label="Kemper County, Mississippi"/>
 <circle class="county-point" data-fips="19141" data-region="Midwest" cx="503.07" cy="499.50" r="3.05" fill="#009E73" aria-label="O&#x27;Brien County, Iowa"/>
-<circle class="county-point" data-fips="22117" data-region="South" cx="756.83" cy="352.01" r="3.05" fill="#D55E00" aria-label="Washington County, Louisiana"/>
+<circle class="county-point" data-fips="22117" data-region="South" cx="756.83" cy="352.01" r="3.05" fill="#D55E00" aria-label="Washington Parish, Louisiana"/>
 <circle class="county-point" data-fips="29003" data-region="Midwest" cx="485.31" cy="523.58" r="3.05" fill="#009E73" aria-label="Andrew County, Missouri"/>
 <circle class="county-point" data-fips="29025" data-region="Midwest" cx="617.26" cy="490.47" r="3.05" fill="#009E73" aria-label="Caldwell County, Missouri"/>
 <circle class="county-point" data-fips="01021" data-region="South" cx="599.50" cy="439.30" r="3.05" fill="#D55E00" aria-label="Chilton County, Alabama"/>
@@ -242,7 +242,7 @@
 <circle class="county-point" data-fips="30111" data-region="West" cx="345.75" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Yellowstone County, Montana"/>
 <circle class="county-point" data-fips="56001" data-region="West" cx="333.06" cy="523.58" r="3.05" fill="#CC79A7" aria-label="Albany County, Wyoming"/>
 <circle class="county-point" data-fips="55003" data-region="Midwest" cx="591.89" cy="475.42" r="3.05" fill="#009E73" aria-label="Ashland County, Wisconsin"/>
-<circle class="county-point" data-fips="22045" data-region="South" cx="706.08" cy="358.03" r="3.05" fill="#D55E00" aria-label="Iberia County, Louisiana"/>
+<circle class="county-point" data-fips="22045" data-region="South" cx="706.08" cy="358.03" r="3.05" fill="#D55E00" aria-label="Iberia Parish, Louisiana"/>
 <circle class="county-point" data-fips="48165" data-region="South" cx="662.94" cy="430.27" r="3.05" fill="#D55E00" aria-label="Gaines County, Texas"/>
 <circle class="county-point" data-fips="48325" data-region="South" cx="589.35" cy="427.26" r="3.05" fill="#D55E00" aria-label="Medina County, Texas"/>
 <circle class="county-point" data-fips="48433" data-region="South" cx="576.66" cy="454.35" r="3.05" fill="#D55E00" aria-label="Stonewall County, Texas"/>
@@ -254,19 +254,19 @@
 <circle class="county-point" data-fips="56031" data-region="West" cx="510.69" cy="511.54" r="3.05" fill="#CC79A7" aria-label="Platte County, Wyoming"/>
 <circle class="county-point" data-fips="15005" data-region="West" cx="409.19" cy="412.21" r="3.05" fill="#CC79A7" aria-label="Kalawao County, Hawaii"/>
 <circle class="county-point" data-fips="05061" data-region="South" cx="711.15" cy="424.25" r="3.05" fill="#D55E00" aria-label="Howard County, Arkansas"/>
-<circle class="county-point" data-fips="51530" data-region="South" cx="536.06" cy="442.31" r="3.05" fill="#D55E00" aria-label="Buena Vista County, Virginia"/>
+<circle class="county-point" data-fips="51530" data-region="South" cx="536.06" cy="442.31" r="3.05" fill="#D55E00" aria-label="Buena Vista city, Virginia"/>
 <circle class="county-point" data-fips="54103" data-region="South" cx="706.08" cy="415.22" r="3.05" fill="#D55E00" aria-label="Wetzel County, West Virginia"/>
 <circle class="county-point" data-fips="31159" data-region="Midwest" cx="426.95" cy="550.67" r="3.05" fill="#009E73" aria-label="Seward County, Nebraska"/>
 <circle class="county-point" data-fips="36075" data-region="Northeast" cx="538.60" cy="517.56" r="3.05" fill="#0072B2" aria-label="Oswego County, New York"/>
 <circle class="county-point" data-fips="13227" data-region="South" cx="462.48" cy="490.47" r="3.05" fill="#D55E00" aria-label="Pickens County, Georgia"/>
 <circle class="county-point" data-fips="40103" data-region="South" cx="627.41" cy="484.45" r="3.05" fill="#D55E00" aria-label="Noble County, Oklahoma"/>
-<circle class="county-point" data-fips="22099" data-region="South" cx="650.25" cy="406.19" r="3.05" fill="#D55E00" aria-label="St. Martin County, Louisiana"/>
+<circle class="county-point" data-fips="22099" data-region="South" cx="650.25" cy="406.19" r="3.05" fill="#D55E00" aria-label="St. Martin Parish, Louisiana"/>
 <circle class="county-point" data-fips="38015" data-region="Midwest" cx="287.39" cy="556.69" r="3.05" fill="#009E73" aria-label="Burleigh County, North Dakota"/>
 <circle class="county-point" data-fips="19013" data-region="Midwest" cx="434.56" cy="475.42" r="3.05" fill="#009E73" aria-label="Black Hawk County, Iowa"/>
 <circle class="county-point" data-fips="44007" data-region="Northeast" cx="553.82" cy="481.44" r="3.05" fill="#0072B2" aria-label="Providence County, Rhode Island"/>
 <circle class="county-point" data-fips="18033" data-region="Midwest" cx="462.48" cy="475.42" r="3.05" fill="#009E73" aria-label="DeKalb County, Indiana"/>
 <circle class="county-point" data-fips="47037" data-region="South" cx="475.16" cy="448.33" r="3.05" fill="#D55E00" aria-label="Davidson County, Tennessee"/>
-<circle class="county-point" data-fips="51678" data-region="South" cx="416.80" cy="484.45" r="3.05" fill="#D55E00" aria-label="Lexington County, Virginia"/>
+<circle class="county-point" data-fips="51678" data-region="South" cx="416.80" cy="484.45" r="3.05" fill="#D55E00" aria-label="Lexington city, Virginia"/>
 <circle class="county-point" data-fips="26085" data-region="Midwest" cx="637.56" cy="424.25" r="3.05" fill="#009E73" aria-label="Lake County, Michigan"/>
 <circle class="county-point" data-fips="40017" data-region="South" cx="513.23" cy="502.51" r="3.05" fill="#D55E00" aria-label="Canadian County, Oklahoma"/>
 <circle class="county-point" data-fips="47009" data-region="South" cx="452.32" cy="481.44" r="3.05" fill="#D55E00" aria-label="Blount County, Tennessee"/>
@@ -326,7 +326,7 @@
 <circle class="county-point" data-fips="37045" data-region="South" cx="503.07" cy="463.38" r="3.05" fill="#D55E00" aria-label="Cleveland County, North Carolina"/>
 <circle class="county-point" data-fips="47123" data-region="South" cx="591.89" cy="433.28" r="3.05" fill="#D55E00" aria-label="Monroe County, Tennessee"/>
 <circle class="county-point" data-fips="26021" data-region="Midwest" cx="487.85" cy="478.43" r="3.05" fill="#009E73" aria-label="Berrien County, Michigan"/>
-<circle class="county-point" data-fips="22025" data-region="South" cx="744.14" cy="349.00" r="3.05" fill="#D55E00" aria-label="Catahoula County, Louisiana"/>
+<circle class="county-point" data-fips="22025" data-region="South" cx="744.14" cy="349.00" r="3.05" fill="#D55E00" aria-label="Catahoula Parish, Louisiana"/>
 <circle class="county-point" data-fips="48479" data-region="South" cx="853.25" cy="294.82" r="3.05" fill="#D55E00" aria-label="Webb County, Texas"/>
 <circle class="county-point" data-fips="48047" data-region="South" cx="904.00" cy="252.68" r="3.05" fill="#D55E00" aria-label="Brooks County, Texas"/>
 <circle class="county-point" data-fips="34013" data-region="Northeast" cx="558.90" cy="469.40" r="3.05" fill="#0072B2" aria-label="Essex County, New Jersey"/>
@@ -404,7 +404,7 @@
 <circle class="county-point" data-fips="31107" data-region="Midwest" cx="528.45" cy="490.47" r="3.05" fill="#009E73" aria-label="Knox County, Nebraska"/>
 <circle class="county-point" data-fips="48157" data-region="South" cx="447.25" cy="466.39" r="3.05" fill="#D55E00" aria-label="Fort Bend County, Texas"/>
 <circle class="county-point" data-fips="45021" data-region="South" cx="607.11" cy="412.21" r="3.05" fill="#D55E00" aria-label="Cherokee County, South Carolina"/>
-<circle class="county-point" data-fips="51510" data-region="South" cx="330.52" cy="505.52" r="3.05" fill="#D55E00" aria-label="Alexandria County, Virginia"/>
+<circle class="county-point" data-fips="51510" data-region="South" cx="330.52" cy="505.52" r="3.05" fill="#D55E00" aria-label="Alexandria city, Virginia"/>
 <circle class="county-point" data-fips="54073" data-region="South" cx="629.95" cy="433.28" r="3.05" fill="#D55E00" aria-label="Pleasants County, West Virginia"/>
 <circle class="county-point" data-fips="16035" data-region="West" cx="411.73" cy="523.58" r="3.05" fill="#CC79A7" aria-label="Clearwater County, Idaho"/>
 <circle class="county-point" data-fips="34033" data-region="Northeast" cx="510.69" cy="508.53" r="3.05" fill="#0072B2" aria-label="Salem County, New Jersey"/>
@@ -471,7 +471,7 @@
 <circle class="county-point" data-fips="39163" data-region="Midwest" cx="632.49" cy="430.27" r="3.05" fill="#009E73" aria-label="Vinton County, Ohio"/>
 <circle class="county-point" data-fips="06019" data-region="West" cx="624.88" cy="427.26" r="3.05" fill="#CC79A7" aria-label="Fresno County, California"/>
 <circle class="county-point" data-fips="28119" data-region="South" cx="949.67" cy="213.55" r="3.05" fill="#D55E00" aria-label="Quitman County, Mississippi"/>
-<circle class="county-point" data-fips="22035" data-region="South" cx="957.29" cy="159.37" r="3.05" fill="#D55E00" aria-label="East Carroll County, Louisiana"/>
+<circle class="county-point" data-fips="22035" data-region="South" cx="957.29" cy="159.37" r="3.05" fill="#D55E00" aria-label="East Carroll Parish, Louisiana"/>
 <circle class="county-point" data-fips="54101" data-region="South" cx="799.96" cy="376.09" r="3.05" fill="#D55E00" aria-label="Webster County, West Virginia"/>
 <circle class="county-point" data-fips="20119" data-region="Midwest" cx="579.20" cy="490.47" r="3.05" fill="#009E73" aria-label="Meade County, Kansas"/>
 <circle class="county-point" data-fips="48443" data-region="South" cx="442.18" cy="487.46" r="3.05" fill="#D55E00" aria-label="Terrell County, Texas"/>
@@ -500,7 +500,7 @@
 <circle class="county-point" data-fips="29059" data-region="Midwest" cx="675.62" cy="448.33" r="3.05" fill="#009E73" aria-label="Dallas County, Missouri"/>
 <circle class="county-point" data-fips="06005" data-region="West" cx="358.44" cy="541.64" r="3.05" fill="#CC79A7" aria-label="Amador County, California"/>
 <circle class="county-point" data-fips="01041" data-region="South" cx="622.34" cy="397.16" r="3.05" fill="#D55E00" aria-label="Crenshaw County, Alabama"/>
-<circle class="county-point" data-fips="22065" data-region="South" cx="916.69" cy="210.54" r="3.05" fill="#D55E00" aria-label="Madison County, Louisiana"/>
+<circle class="county-point" data-fips="22065" data-region="South" cx="916.69" cy="210.54" r="3.05" fill="#D55E00" aria-label="Madison Parish, Louisiana"/>
 <circle class="county-point" data-fips="26029" data-region="Midwest" cx="348.29" cy="541.64" r="3.05" fill="#009E73" aria-label="Charlevoix County, Michigan"/>
 <circle class="county-point" data-fips="39009" data-region="Midwest" cx="510.69" cy="421.24" r="3.05" fill="#009E73" aria-label="Athens County, Ohio"/>
 <circle class="county-point" data-fips="48055" data-region="South" cx="675.62" cy="394.15" r="3.05" fill="#D55E00" aria-label="Caldwell County, Texas"/>
@@ -514,7 +514,7 @@
 <circle class="county-point" data-fips="01093" data-region="South" cx="602.04" cy="430.27" r="3.05" fill="#D55E00" aria-label="Marion County, Alabama"/>
 <circle class="county-point" data-fips="30019" data-region="West" cx="353.36" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Daniels County, Montana"/>
 <circle class="county-point" data-fips="20159" data-region="Midwest" cx="533.52" cy="499.50" r="3.05" fill="#009E73" aria-label="Rice County, Kansas"/>
-<circle class="county-point" data-fips="02240" data-region="West" cx="475.16" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Southeast Fairbanks County, Alaska"/>
+<circle class="county-point" data-fips="02240" data-region="West" cx="475.16" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Southeast Fairbanks Census Area, Alaska"/>
 <circle class="county-point" data-fips="46021" data-region="Midwest" cx="411.73" cy="526.59" r="3.05" fill="#009E73" aria-label="Campbell County, South Dakota"/>
 <circle class="county-point" data-fips="17019" data-region="Midwest" cx="378.74" cy="481.44" r="3.05" fill="#009E73" aria-label="Champaign County, Illinois"/>
 <circle class="county-point" data-fips="27063" data-region="Midwest" cx="424.41" cy="532.61" r="3.05" fill="#009E73" aria-label="Jackson County, Minnesota"/>
@@ -526,9 +526,9 @@
 <circle class="county-point" data-fips="19181" data-region="Midwest" cx="371.12" cy="547.66" r="3.05" fill="#009E73" aria-label="Warren County, Iowa"/>
 <circle class="county-point" data-fips="55073" data-region="Midwest" cx="508.15" cy="535.62" r="3.05" fill="#009E73" aria-label="Marathon County, Wisconsin"/>
 <circle class="county-point" data-fips="13057" data-region="South" cx="421.88" cy="514.55" r="3.05" fill="#D55E00" aria-label="Cherokee County, Georgia"/>
-<circle class="county-point" data-fips="22001" data-region="South" cx="726.38" cy="370.07" r="3.05" fill="#D55E00" aria-label="Acadia County, Louisiana"/>
+<circle class="county-point" data-fips="22001" data-region="South" cx="726.38" cy="370.07" r="3.05" fill="#D55E00" aria-label="Acadia Parish, Louisiana"/>
 <circle class="county-point" data-fips="48221" data-region="South" cx="414.26" cy="523.58" r="3.05" fill="#D55E00" aria-label="Hood County, Texas"/>
-<circle class="county-point" data-fips="51640" data-region="South" cx="645.18" cy="382.11" r="3.05" fill="#D55E00" aria-label="Galax County, Virginia"/>
+<circle class="county-point" data-fips="51640" data-region="South" cx="645.18" cy="382.11" r="3.05" fill="#D55E00" aria-label="Galax city, Virginia"/>
 <circle class="county-point" data-fips="12007" data-region="South" cx="617.26" cy="427.26" r="3.05" fill="#D55E00" aria-label="Bradford County, Florida"/>
 <circle class="county-point" data-fips="37079" data-region="South" cx="640.10" cy="370.07" r="3.05" fill="#D55E00" aria-label="Greene County, North Carolina"/>
 <circle class="county-point" data-fips="05081" data-region="South" cx="716.23" cy="427.26" r="3.05" fill="#D55E00" aria-label="Little River County, Arkansas"/>
@@ -548,10 +548,10 @@
 <circle class="county-point" data-fips="29019" data-region="Midwest" cx="470.09" cy="496.49" r="3.05" fill="#009E73" aria-label="Boone County, Missouri"/>
 <circle class="county-point" data-fips="01115" data-region="South" cx="505.61" cy="472.41" r="3.05" fill="#D55E00" aria-label="St. Clair County, Alabama"/>
 <circle class="county-point" data-fips="53071" data-region="West" cx="320.38" cy="523.58" r="3.05" fill="#CC79A7" aria-label="Walla Walla County, Washington"/>
-<circle class="county-point" data-fips="09180" data-region="Northeast" cx="495.46" cy="535.62" r="3.05" fill="#0072B2" aria-label="Southeastern Connecticut County, Connecticut"/>
+<circle class="county-point" data-fips="09180" data-region="Northeast" cx="495.46" cy="535.62" r="3.05" fill="#0072B2" aria-label="Southeastern Connecticut Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="27093" data-region="Midwest" cx="454.86" cy="517.56" r="3.05" fill="#009E73" aria-label="Meeker County, Minnesota"/>
 <circle class="county-point" data-fips="37143" data-region="South" cx="462.48" cy="478.43" r="3.05" fill="#D55E00" aria-label="Perquimans County, North Carolina"/>
-<circle class="county-point" data-fips="02105" data-region="West" cx="454.86" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Hoonah-Angoon County, Alaska"/>
+<circle class="county-point" data-fips="02105" data-region="West" cx="454.86" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Hoonah-Angoon Census Area, Alaska"/>
 <circle class="county-point" data-fips="36091" data-region="Northeast" cx="307.69" cy="571.74" r="3.05" fill="#0072B2" aria-label="Saratoga County, New York"/>
 <circle class="county-point" data-fips="34005" data-region="Northeast" cx="409.19" cy="538.63" r="3.05" fill="#0072B2" aria-label="Burlington County, New Jersey"/>
 <circle class="county-point" data-fips="51065" data-region="South" cx="381.27" cy="502.51" r="3.05" fill="#D55E00" aria-label="Fluvanna County, Virginia"/>
@@ -567,7 +567,7 @@
 <circle class="county-point" data-fips="41025" data-region="West" cx="447.25" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Harney County, Oregon"/>
 <circle class="county-point" data-fips="06059" data-region="West" cx="432.02" cy="496.49" r="3.05" fill="#CC79A7" aria-label="Orange County, California"/>
 <circle class="county-point" data-fips="29009" data-region="Midwest" cx="711.15" cy="451.34" r="3.05" fill="#009E73" aria-label="Barry County, Missouri"/>
-<circle class="county-point" data-fips="51810" data-region="South" cx="388.89" cy="463.38" r="3.05" fill="#D55E00" aria-label="Virginia Beach County, Virginia"/>
+<circle class="county-point" data-fips="51810" data-region="South" cx="388.89" cy="463.38" r="3.05" fill="#D55E00" aria-label="Virginia Beach city, Virginia"/>
 <circle class="county-point" data-fips="41055" data-region="West" cx="404.11" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Sherman County, Oregon"/>
 <circle class="county-point" data-fips="28025" data-region="South" cx="784.74" cy="318.90" r="3.05" fill="#D55E00" aria-label="Clay County, Mississippi"/>
 <circle class="county-point" data-fips="13175" data-region="South" cx="670.55" cy="382.11" r="3.05" fill="#D55E00" aria-label="Laurens County, Georgia"/>
@@ -599,7 +599,7 @@
 <circle class="county-point" data-fips="49009" data-region="West" cx="358.44" cy="517.56" r="3.05" fill="#CC79A7" aria-label="Daggett County, Utah"/>
 <circle class="county-point" data-fips="51153" data-region="South" cx="421.88" cy="475.42" r="3.05" fill="#D55E00" aria-label="Prince William County, Virginia"/>
 <circle class="county-point" data-fips="30065" data-region="West" cx="454.86" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Musselshell County, Montana"/>
-<circle class="county-point" data-fips="11001" data-region="South" cx="226.49" cy="544.65" r="3.05" fill="#D55E00" aria-label="District of Columbia County, District of Columbia"/>
+<circle class="county-point" data-fips="11001" data-region="South" cx="226.49" cy="544.65" r="3.05" fill="#D55E00" aria-label="District of Columbia, District of Columbia"/>
 <circle class="county-point" data-fips="47079" data-region="South" cx="596.96" cy="421.24" r="3.05" fill="#D55E00" aria-label="Henry County, Tennessee"/>
 <circle class="county-point" data-fips="12109" data-region="South" cx="272.16" cy="553.68" r="3.05" fill="#D55E00" aria-label="St. Johns County, Florida"/>
 <circle class="county-point" data-fips="48251" data-region="South" cx="515.76" cy="469.40" r="3.05" fill="#D55E00" aria-label="Johnson County, Texas"/>
@@ -614,7 +614,7 @@
 <circle class="county-point" data-fips="51121" data-region="South" cx="424.41" cy="469.40" r="3.05" fill="#D55E00" aria-label="Montgomery County, Virginia"/>
 <circle class="county-point" data-fips="31053" data-region="Midwest" cx="528.45" cy="499.50" r="3.05" fill="#009E73" aria-label="Dodge County, Nebraska"/>
 <circle class="county-point" data-fips="13195" data-region="South" cx="612.19" cy="427.26" r="3.05" fill="#D55E00" aria-label="Madison County, Georgia"/>
-<circle class="county-point" data-fips="22043" data-region="South" cx="617.26" cy="418.23" r="3.05" fill="#D55E00" aria-label="Grant County, Louisiana"/>
+<circle class="county-point" data-fips="22043" data-region="South" cx="617.26" cy="418.23" r="3.05" fill="#D55E00" aria-label="Grant Parish, Louisiana"/>
 <circle class="county-point" data-fips="19087" data-region="Midwest" cx="467.55" cy="493.48" r="3.05" fill="#009E73" aria-label="Henry County, Iowa"/>
 <circle class="county-point" data-fips="36057" data-region="Northeast" cx="508.15" cy="514.55" r="3.05" fill="#0072B2" aria-label="Montgomery County, New York"/>
 <circle class="county-point" data-fips="36069" data-region="Northeast" cx="355.90" cy="556.69" r="3.05" fill="#0072B2" aria-label="Ontario County, New York"/>
@@ -622,11 +622,11 @@
 <circle class="county-point" data-fips="04017" data-region="West" cx="477.70" cy="430.27" r="3.05" fill="#CC79A7" aria-label="Navajo County, Arizona"/>
 <circle class="county-point" data-fips="06103" data-region="West" cx="498.00" cy="481.44" r="3.05" fill="#CC79A7" aria-label="Tehama County, California"/>
 <circle class="county-point" data-fips="35059" data-region="West" cx="510.69" cy="445.32" r="3.05" fill="#CC79A7" aria-label="Union County, New Mexico"/>
-<circle class="county-point" data-fips="51600" data-region="South" cx="355.90" cy="493.48" r="3.05" fill="#D55E00" aria-label="Fairfax County, Virginia"/>
+<circle class="county-point" data-fips="51600" data-region="South" cx="355.90" cy="493.48" r="3.05" fill="#D55E00" aria-label="Fairfax city, Virginia"/>
 <circle class="county-point" data-fips="37173" data-region="South" cx="510.69" cy="424.25" r="3.05" fill="#D55E00" aria-label="Swain County, North Carolina"/>
 <circle class="county-point" data-fips="05019" data-region="South" cx="678.16" cy="412.21" r="3.05" fill="#D55E00" aria-label="Clark County, Arkansas"/>
 <circle class="county-point" data-fips="13255" data-region="South" cx="602.04" cy="391.14" r="3.05" fill="#D55E00" aria-label="Spalding County, Georgia"/>
-<circle class="county-point" data-fips="22073" data-region="South" cx="657.86" cy="382.11" r="3.05" fill="#D55E00" aria-label="Ouachita County, Louisiana"/>
+<circle class="county-point" data-fips="22073" data-region="South" cx="657.86" cy="382.11" r="3.05" fill="#D55E00" aria-label="Ouachita Parish, Louisiana"/>
 <circle class="county-point" data-fips="20095" data-region="Midwest" cx="505.61" cy="511.54" r="3.05" fill="#009E73" aria-label="Kingman County, Kansas"/>
 <circle class="county-point" data-fips="27135" data-region="Midwest" cx="432.02" cy="523.58" r="3.05" fill="#009E73" aria-label="Roseau County, Minnesota"/>
 <circle class="county-point" data-fips="12055" data-region="South" cx="591.89" cy="421.24" r="3.05" fill="#D55E00" aria-label="Highlands County, Florida"/>
@@ -637,7 +637,7 @@
 <circle class="county-point" data-fips="37137" data-region="South" cx="434.56" cy="487.46" r="3.05" fill="#D55E00" aria-label="Pamlico County, North Carolina"/>
 <circle class="county-point" data-fips="48061" data-region="South" cx="772.05" cy="273.75" r="3.05" fill="#D55E00" aria-label="Cameron County, Texas"/>
 <circle class="county-point" data-fips="19031" data-region="Midwest" cx="437.10" cy="523.58" r="3.05" fill="#009E73" aria-label="Cedar County, Iowa"/>
-<circle class="county-point" data-fips="02164" data-region="West" cx="566.51" cy="421.24" r="3.05" fill="#CC79A7" aria-label="Lake and Peninsula County, Alaska"/>
+<circle class="county-point" data-fips="02164" data-region="West" cx="566.51" cy="421.24" r="3.05" fill="#CC79A7" aria-label="Lake and Peninsula Borough, Alaska"/>
 <circle class="county-point" data-fips="55089" data-region="Midwest" cx="358.44" cy="565.72" r="3.05" fill="#009E73" aria-label="Ozaukee County, Wisconsin"/>
 <circle class="county-point" data-fips="29195" data-region="Midwest" cx="637.56" cy="463.38" r="3.05" fill="#009E73" aria-label="Saline County, Missouri"/>
 <circle class="county-point" data-fips="12065" data-region="South" cx="498.00" cy="433.28" r="3.05" fill="#D55E00" aria-label="Jefferson County, Florida"/>
@@ -659,7 +659,7 @@
 <circle class="county-point" data-fips="05071" data-region="South" cx="744.14" cy="427.26" r="3.05" fill="#D55E00" aria-label="Johnson County, Arkansas"/>
 <circle class="county-point" data-fips="36027" data-region="Northeast" cx="363.51" cy="550.67" r="3.05" fill="#0072B2" aria-label="Dutchess County, New York"/>
 <circle class="county-point" data-fips="39027" data-region="Midwest" cx="574.12" cy="463.38" r="3.05" fill="#009E73" aria-label="Clinton County, Ohio"/>
-<circle class="county-point" data-fips="22109" data-region="South" cx="655.33" cy="403.18" r="3.05" fill="#D55E00" aria-label="Terrebonne County, Louisiana"/>
+<circle class="county-point" data-fips="22109" data-region="South" cx="655.33" cy="403.18" r="3.05" fill="#D55E00" aria-label="Terrebonne Parish, Louisiana"/>
 <circle class="county-point" data-fips="13017" data-region="South" cx="761.90" cy="318.90" r="3.05" fill="#D55E00" aria-label="Ben Hill County, Georgia"/>
 <circle class="county-point" data-fips="17181" data-region="Midwest" cx="498.00" cy="472.41" r="3.05" fill="#009E73" aria-label="Union County, Illinois"/>
 <circle class="county-point" data-fips="46009" data-region="Midwest" cx="477.70" cy="478.43" r="3.05" fill="#009E73" aria-label="Bon Homme County, South Dakota"/>
@@ -692,7 +692,7 @@
 <circle class="county-point" data-fips="54087" data-region="South" cx="774.59" cy="364.05" r="3.05" fill="#D55E00" aria-label="Roane County, West Virginia"/>
 <circle class="county-point" data-fips="48011" data-region="South" cx="416.80" cy="517.56" r="3.05" fill="#D55E00" aria-label="Armstrong County, Texas"/>
 <circle class="county-point" data-fips="13131" data-region="South" cx="708.61" cy="379.10" r="3.05" fill="#D55E00" aria-label="Grady County, Georgia"/>
-<circle class="county-point" data-fips="22009" data-region="South" cx="766.98" cy="342.98" r="3.05" fill="#D55E00" aria-label="Avoyelles County, Louisiana"/>
+<circle class="county-point" data-fips="22009" data-region="South" cx="766.98" cy="342.98" r="3.05" fill="#D55E00" aria-label="Avoyelles Parish, Louisiana"/>
 <circle class="county-point" data-fips="05041" data-region="South" cx="962.36" cy="285.79" r="3.05" fill="#D55E00" aria-label="Desha County, Arkansas"/>
 <circle class="county-point" data-fips="30045" data-region="West" cx="404.11" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Judith Basin County, Montana"/>
 <circle class="county-point" data-fips="46123" data-region="Midwest" cx="523.38" cy="451.34" r="3.05" fill="#009E73" aria-label="Tripp County, South Dakota"/>
@@ -704,7 +704,7 @@
 <circle class="county-point" data-fips="13015" data-region="South" cx="487.85" cy="475.42" r="3.05" fill="#D55E00" aria-label="Bartow County, Georgia"/>
 <circle class="county-point" data-fips="29083" data-region="Midwest" cx="637.56" cy="469.40" r="3.05" fill="#009E73" aria-label="Henry County, Missouri"/>
 <circle class="county-point" data-fips="40009" data-region="South" cx="716.23" cy="427.26" r="3.05" fill="#D55E00" aria-label="Beckham County, Oklahoma"/>
-<circle class="county-point" data-fips="02195" data-region="West" cx="355.90" cy="544.65" r="3.05" fill="#CC79A7" aria-label="Petersburg County, Alaska"/>
+<circle class="county-point" data-fips="02195" data-region="West" cx="355.90" cy="544.65" r="3.05" fill="#CC79A7" aria-label="Petersburg Borough, Alaska"/>
 <circle class="county-point" data-fips="27071" data-region="Midwest" cx="475.16" cy="520.57" r="3.05" fill="#009E73" aria-label="Koochiching County, Minnesota"/>
 <circle class="county-point" data-fips="05043" data-region="South" cx="728.91" cy="394.15" r="3.05" fill="#D55E00" aria-label="Drew County, Arkansas"/>
 <circle class="county-point" data-fips="17127" data-region="Midwest" cx="465.01" cy="475.42" r="3.05" fill="#009E73" aria-label="Massac County, Illinois"/>
@@ -738,8 +738,8 @@
 <circle class="county-point" data-fips="29073" data-region="Midwest" cx="548.75" cy="499.50" r="3.05" fill="#009E73" aria-label="Gasconade County, Missouri"/>
 <circle class="county-point" data-fips="13241" data-region="South" cx="503.07" cy="472.41" r="3.05" fill="#D55E00" aria-label="Rabun County, Georgia"/>
 <circle class="county-point" data-fips="13281" data-region="South" cx="444.71" cy="490.47" r="3.05" fill="#D55E00" aria-label="Towns County, Georgia"/>
-<circle class="county-point" data-fips="09140" data-region="Northeast" cx="482.77" cy="535.62" r="3.05" fill="#0072B2" aria-label="Naugatuck Valley County, Connecticut"/>
-<circle class="county-point" data-fips="02068" data-region="West" cx="355.90" cy="568.73" r="3.05" fill="#CC79A7" aria-label="Denali County, Alaska"/>
+<circle class="county-point" data-fips="09140" data-region="Northeast" cx="482.77" cy="535.62" r="3.05" fill="#0072B2" aria-label="Naugatuck Valley Planning Region, Connecticut"/>
+<circle class="county-point" data-fips="02068" data-region="West" cx="355.90" cy="568.73" r="3.05" fill="#CC79A7" aria-label="Denali Borough, Alaska"/>
 <circle class="county-point" data-fips="48389" data-region="South" cx="893.85" cy="273.75" r="3.05" fill="#D55E00" aria-label="Reeves County, Texas"/>
 <circle class="county-point" data-fips="40145" data-region="South" cx="536.06" cy="490.47" r="3.05" fill="#D55E00" aria-label="Wagoner County, Oklahoma"/>
 <circle class="county-point" data-fips="31081" data-region="Midwest" cx="421.88" cy="550.67" r="3.05" fill="#009E73" aria-label="Hamilton County, Nebraska"/>
@@ -756,7 +756,7 @@
 <circle class="county-point" data-fips="08123" data-region="West" cx="360.98" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Weld County, Colorado"/>
 <circle class="county-point" data-fips="30103" data-region="West" cx="363.51" cy="550.67" r="3.05" fill="#CC79A7" aria-label="Treasure County, Montana"/>
 <circle class="county-point" data-fips="30009" data-region="West" cx="343.21" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Carbon County, Montana"/>
-<circle class="county-point" data-fips="51580" data-region="South" cx="627.41" cy="397.16" r="3.05" fill="#D55E00" aria-label="Covington County, Virginia"/>
+<circle class="county-point" data-fips="51580" data-region="South" cx="627.41" cy="397.16" r="3.05" fill="#D55E00" aria-label="Covington city, Virginia"/>
 <circle class="county-point" data-fips="38039" data-region="Midwest" cx="363.51" cy="550.67" r="3.05" fill="#009E73" aria-label="Griggs County, North Dakota"/>
 <circle class="county-point" data-fips="55097" data-region="Midwest" cx="457.40" cy="538.63" r="3.05" fill="#009E73" aria-label="Portage County, Wisconsin"/>
 <circle class="county-point" data-fips="54037" data-region="South" cx="480.24" cy="463.38" r="3.05" fill="#D55E00" aria-label="Jefferson County, West Virginia"/>
@@ -785,13 +785,13 @@
 <circle class="county-point" data-fips="13319" data-region="South" cx="652.79" cy="376.09" r="3.05" fill="#D55E00" aria-label="Wilkinson County, Georgia"/>
 <circle class="county-point" data-fips="19005" data-region="Midwest" cx="480.24" cy="505.52" r="3.05" fill="#009E73" aria-label="Allamakee County, Iowa"/>
 <circle class="county-point" data-fips="20071" data-region="Midwest" cx="472.62" cy="520.57" r="3.05" fill="#009E73" aria-label="Greeley County, Kansas"/>
-<circle class="county-point" data-fips="02170" data-region="West" cx="409.19" cy="550.67" r="3.05" fill="#CC79A7" aria-label="Matanuska-Susitna County, Alaska"/>
+<circle class="county-point" data-fips="02170" data-region="West" cx="409.19" cy="550.67" r="3.05" fill="#CC79A7" aria-label="Matanuska-Susitna Borough, Alaska"/>
 <circle class="county-point" data-fips="26147" data-region="Midwest" cx="452.32" cy="514.55" r="3.05" fill="#009E73" aria-label="St. Clair County, Michigan"/>
 <circle class="county-point" data-fips="06029" data-region="West" cx="652.79" cy="400.17" r="3.05" fill="#CC79A7" aria-label="Kern County, California"/>
 <circle class="county-point" data-fips="24011" data-region="South" cx="530.99" cy="445.32" r="3.05" fill="#D55E00" aria-label="Caroline County, Maryland"/>
 <circle class="county-point" data-fips="46003" data-region="Midwest" cx="439.64" cy="505.52" r="3.05" fill="#009E73" aria-label="Aurora County, South Dakota"/>
 <circle class="county-point" data-fips="40063" data-region="South" cx="736.52" cy="397.16" r="3.05" fill="#D55E00" aria-label="Hughes County, Oklahoma"/>
-<circle class="county-point" data-fips="22077" data-region="South" cx="650.25" cy="400.17" r="3.05" fill="#D55E00" aria-label="Pointe Coupee County, Louisiana"/>
+<circle class="county-point" data-fips="22077" data-region="South" cx="650.25" cy="400.17" r="3.05" fill="#D55E00" aria-label="Pointe Coupee Parish, Louisiana"/>
 <circle class="county-point" data-fips="18125" data-region="Midwest" cx="490.39" cy="463.38" r="3.05" fill="#009E73" aria-label="Pike County, Indiana"/>
 <circle class="county-point" data-fips="39147" data-region="Midwest" cx="556.36" cy="466.39" r="3.05" fill="#009E73" aria-label="Seneca County, Ohio"/>
 <circle class="county-point" data-fips="19039" data-region="Midwest" cx="607.11" cy="451.34" r="3.05" fill="#009E73" aria-label="Clarke County, Iowa"/>
@@ -830,7 +830,7 @@
 <circle class="county-point" data-fips="31149" data-region="Midwest" cx="470.09" cy="535.62" r="3.05" fill="#009E73" aria-label="Rock County, Nebraska"/>
 <circle class="county-point" data-fips="19015" data-region="Midwest" cx="429.49" cy="532.61" r="3.05" fill="#009E73" aria-label="Boone County, Iowa"/>
 <circle class="county-point" data-fips="54089" data-region="South" cx="749.21" cy="370.07" r="3.05" fill="#D55E00" aria-label="Summers County, West Virginia"/>
-<circle class="county-point" data-fips="22097" data-region="South" cx="731.45" cy="327.93" r="3.05" fill="#D55E00" aria-label="St. Landry County, Louisiana"/>
+<circle class="county-point" data-fips="22097" data-region="South" cx="731.45" cy="327.93" r="3.05" fill="#D55E00" aria-label="St. Landry Parish, Louisiana"/>
 <circle class="county-point" data-fips="26083" data-region="Midwest" cx="333.06" cy="544.65" r="3.05" fill="#009E73" aria-label="Keweenaw County, Michigan"/>
 <circle class="county-point" data-fips="47023" data-region="South" cx="551.29" cy="424.25" r="3.05" fill="#D55E00" aria-label="Chester County, Tennessee"/>
 <circle class="county-point" data-fips="48297" data-region="South" cx="693.39" cy="373.08" r="3.05" fill="#D55E00" aria-label="Live Oak County, Texas"/>
@@ -863,12 +863,12 @@
 <circle class="county-point" data-fips="26045" data-region="Midwest" cx="414.26" cy="520.57" r="3.05" fill="#009E73" aria-label="Eaton County, Michigan"/>
 <circle class="county-point" data-fips="08113" data-region="West" cx="198.57" cy="586.79" r="3.05" fill="#CC79A7" aria-label="San Miguel County, Colorado"/>
 <circle class="county-point" data-fips="08029" data-region="West" cx="366.05" cy="535.62" r="3.05" fill="#CC79A7" aria-label="Delta County, Colorado"/>
-<circle class="county-point" data-fips="22017" data-region="South" cx="645.18" cy="364.05" r="3.05" fill="#D55E00" aria-label="Caddo County, Louisiana"/>
+<circle class="county-point" data-fips="22017" data-region="South" cx="645.18" cy="364.05" r="3.05" fill="#D55E00" aria-label="Caddo Parish, Louisiana"/>
 <circle class="county-point" data-fips="19143" data-region="Midwest" cx="543.67" cy="481.44" r="3.05" fill="#009E73" aria-label="Osceola County, Iowa"/>
 <circle class="county-point" data-fips="12057" data-region="South" cx="437.10" cy="454.35" r="3.05" fill="#D55E00" aria-label="Hillsborough County, Florida"/>
 <circle class="county-point" data-fips="53031" data-region="West" cx="211.26" cy="559.70" r="3.05" fill="#CC79A7" aria-label="Jefferson County, Washington"/>
 <circle class="county-point" data-fips="29171" data-region="Midwest" cx="576.66" cy="493.48" r="3.05" fill="#009E73" aria-label="Putnam County, Missouri"/>
-<circle class="county-point" data-fips="22119" data-region="South" cx="777.12" cy="327.93" r="3.05" fill="#D55E00" aria-label="Webster County, Louisiana"/>
+<circle class="county-point" data-fips="22119" data-region="South" cx="777.12" cy="327.93" r="3.05" fill="#D55E00" aria-label="Webster Parish, Louisiana"/>
 <circle class="county-point" data-fips="01057" data-region="South" cx="614.73" cy="406.19" r="3.05" fill="#D55E00" aria-label="Fayette County, Alabama"/>
 <circle class="county-point" data-fips="31041" data-region="Midwest" cx="498.00" cy="520.57" r="3.05" fill="#009E73" aria-label="Custer County, Nebraska"/>
 <circle class="county-point" data-fips="40001" data-region="South" cx="845.64" cy="342.98" r="3.05" fill="#D55E00" aria-label="Adair County, Oklahoma"/>
@@ -886,14 +886,14 @@
 <circle class="county-point" data-fips="13007" data-region="South" cx="749.21" cy="291.81" r="3.05" fill="#D55E00" aria-label="Baker County, Georgia"/>
 <circle class="county-point" data-fips="29005" data-region="Midwest" cx="624.88" cy="472.41" r="3.05" fill="#009E73" aria-label="Atchison County, Missouri"/>
 <circle class="county-point" data-fips="08103" data-region="West" cx="295.00" cy="559.70" r="3.05" fill="#CC79A7" aria-label="Rio Blanco County, Colorado"/>
-<circle class="county-point" data-fips="02050" data-region="West" cx="711.15" cy="358.03" r="3.05" fill="#CC79A7" aria-label="Bethel County, Alaska"/>
+<circle class="county-point" data-fips="02050" data-region="West" cx="711.15" cy="358.03" r="3.05" fill="#CC79A7" aria-label="Bethel Census Area, Alaska"/>
 <circle class="county-point" data-fips="13073" data-region="South" cx="439.64" cy="478.43" r="3.05" fill="#D55E00" aria-label="Columbia County, Georgia"/>
 <circle class="county-point" data-fips="55043" data-region="Midwest" cx="619.80" cy="490.47" r="3.05" fill="#009E73" aria-label="Grant County, Wisconsin"/>
 <circle class="county-point" data-fips="06011" data-region="West" cx="594.42" cy="433.28" r="3.05" fill="#CC79A7" aria-label="Colusa County, California"/>
 <circle class="county-point" data-fips="13037" data-region="South" cx="756.83" cy="285.79" r="3.05" fill="#D55E00" aria-label="Calhoun County, Georgia"/>
 <circle class="county-point" data-fips="17193" data-region="Midwest" cx="505.61" cy="466.39" r="3.05" fill="#009E73" aria-label="White County, Illinois"/>
 <circle class="county-point" data-fips="17067" data-region="Midwest" cx="419.34" cy="508.53" r="3.05" fill="#009E73" aria-label="Hancock County, Illinois"/>
-<circle class="county-point" data-fips="51690" data-region="South" cx="673.09" cy="321.91" r="3.05" fill="#D55E00" aria-label="Martinsville County, Virginia"/>
+<circle class="county-point" data-fips="51690" data-region="South" cx="673.09" cy="321.91" r="3.05" fill="#D55E00" aria-label="Martinsville city, Virginia"/>
 <circle class="county-point" data-fips="48163" data-region="South" cx="840.56" cy="303.85" r="3.05" fill="#D55E00" aria-label="Frio County, Texas"/>
 <circle class="county-point" data-fips="13083" data-region="South" cx="472.62" cy="493.48" r="3.05" fill="#D55E00" aria-label="Dade County, Georgia"/>
 <circle class="county-point" data-fips="56029" data-region="West" cx="419.34" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Park County, Wyoming"/>
@@ -921,7 +921,7 @@
 <circle class="county-point" data-fips="38047" data-region="Midwest" cx="472.62" cy="514.55" r="3.05" fill="#009E73" aria-label="Logan County, North Dakota"/>
 <circle class="county-point" data-fips="36107" data-region="Northeast" cx="452.32" cy="541.64" r="3.05" fill="#0072B2" aria-label="Tioga County, New York"/>
 <circle class="county-point" data-fips="29151" data-region="Midwest" cx="510.69" cy="523.58" r="3.05" fill="#009E73" aria-label="Osage County, Missouri"/>
-<circle class="county-point" data-fips="02230" data-region="West" cx="343.21" cy="565.72" r="3.05" fill="#CC79A7" aria-label="Skagway County, Alaska"/>
+<circle class="county-point" data-fips="02230" data-region="West" cx="343.21" cy="565.72" r="3.05" fill="#CC79A7" aria-label="Skagway Municipality, Alaska"/>
 <circle class="county-point" data-fips="28041" data-region="South" cx="678.16" cy="406.19" r="3.05" fill="#D55E00" aria-label="Greene County, Mississippi"/>
 <circle class="county-point" data-fips="20053" data-region="Midwest" cx="490.39" cy="511.54" r="3.05" fill="#009E73" aria-label="Ellsworth County, Kansas"/>
 <circle class="county-point" data-fips="13159" data-region="South" cx="574.12" cy="436.29" r="3.05" fill="#D55E00" aria-label="Jasper County, Georgia"/>
@@ -963,7 +963,7 @@
 <circle class="county-point" data-fips="55035" data-region="Midwest" cx="459.94" cy="532.61" r="3.05" fill="#009E73" aria-label="Eau Claire County, Wisconsin"/>
 <circle class="county-point" data-fips="04001" data-region="West" cx="543.67" cy="339.97" r="3.05" fill="#CC79A7" aria-label="Apache County, Arizona"/>
 <circle class="county-point" data-fips="12015" data-region="South" cx="386.35" cy="505.52" r="3.05" fill="#D55E00" aria-label="Charlotte County, Florida"/>
-<circle class="county-point" data-fips="22127" data-region="South" cx="706.08" cy="358.03" r="3.05" fill="#D55E00" aria-label="Winn County, Louisiana"/>
+<circle class="county-point" data-fips="22127" data-region="South" cx="706.08" cy="358.03" r="3.05" fill="#D55E00" aria-label="Winn Parish, Louisiana"/>
 <circle class="county-point" data-fips="51105" data-region="South" cx="645.18" cy="391.14" r="3.05" fill="#D55E00" aria-label="Lee County, Virginia"/>
 <circle class="county-point" data-fips="37119" data-region="South" cx="373.66" cy="496.49" r="3.05" fill="#D55E00" aria-label="Mecklenburg County, North Carolina"/>
 <circle class="county-point" data-fips="36117" data-region="Northeast" cx="452.32" cy="541.64" r="3.05" fill="#0072B2" aria-label="Wayne County, New York"/>
@@ -980,7 +980,7 @@
 <circle class="county-point" data-fips="19079" data-region="Midwest" cx="442.18" cy="514.55" r="3.05" fill="#009E73" aria-label="Hamilton County, Iowa"/>
 <circle class="county-point" data-fips="19197" data-region="Midwest" cx="523.38" cy="472.41" r="3.05" fill="#009E73" aria-label="Wright County, Iowa"/>
 <circle class="county-point" data-fips="40093" data-region="South" cx="645.18" cy="484.45" r="3.05" fill="#D55E00" aria-label="Major County, Oklahoma"/>
-<circle class="county-point" data-fips="22089" data-region="South" cx="518.30" cy="460.37" r="3.05" fill="#D55E00" aria-label="St. Charles County, Louisiana"/>
+<circle class="county-point" data-fips="22089" data-region="South" cx="518.30" cy="460.37" r="3.05" fill="#D55E00" aria-label="St. Charles Parish, Louisiana"/>
 <circle class="county-point" data-fips="13147" data-region="South" cx="533.52" cy="442.31" r="3.05" fill="#D55E00" aria-label="Hart County, Georgia"/>
 <circle class="county-point" data-fips="36013" data-region="Northeast" cx="505.61" cy="499.50" r="3.05" fill="#0072B2" aria-label="Chautauqua County, New York"/>
 <circle class="county-point" data-fips="34023" data-region="Northeast" cx="465.01" cy="490.47" r="3.05" fill="#0072B2" aria-label="Middlesex County, New Jersey"/>
@@ -1003,7 +1003,7 @@
 <circle class="county-point" data-fips="41037" data-region="West" cx="434.56" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Lake County, Oregon"/>
 <circle class="county-point" data-fips="44001" data-region="Northeast" cx="289.93" cy="562.71" r="3.05" fill="#0072B2" aria-label="Bristol County, Rhode Island"/>
 <circle class="county-point" data-fips="15007" data-region="West" cx="333.06" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Kauai County, Hawaii"/>
-<circle class="county-point" data-fips="22027" data-region="South" cx="891.31" cy="234.62" r="3.05" fill="#D55E00" aria-label="Claiborne County, Louisiana"/>
+<circle class="county-point" data-fips="22027" data-region="South" cx="891.31" cy="234.62" r="3.05" fill="#D55E00" aria-label="Claiborne Parish, Louisiana"/>
 <circle class="county-point" data-fips="47125" data-region="South" cx="459.94" cy="445.32" r="3.05" fill="#D55E00" aria-label="Montgomery County, Tennessee"/>
 <circle class="county-point" data-fips="26097" data-region="Midwest" cx="508.15" cy="454.35" r="3.05" fill="#009E73" aria-label="Mackinac County, Michigan"/>
 <circle class="county-point" data-fips="48435" data-region="South" cx="703.54" cy="379.10" r="3.05" fill="#D55E00" aria-label="Sutton County, Texas"/>
@@ -1042,7 +1042,7 @@
 <circle class="county-point" data-fips="19167" data-region="Midwest" cx="421.88" cy="532.61" r="3.05" fill="#009E73" aria-label="Sioux County, Iowa"/>
 <circle class="county-point" data-fips="40049" data-region="South" cx="678.16" cy="442.31" r="3.05" fill="#D55E00" aria-label="Garvin County, Oklahoma"/>
 <circle class="county-point" data-fips="51037" data-region="South" cx="624.88" cy="379.10" r="3.05" fill="#D55E00" aria-label="Charlotte County, Virginia"/>
-<circle class="county-point" data-fips="22057" data-region="South" cx="642.64" cy="418.23" r="3.05" fill="#D55E00" aria-label="Lafourche County, Louisiana"/>
+<circle class="county-point" data-fips="22057" data-region="South" cx="642.64" cy="418.23" r="3.05" fill="#D55E00" aria-label="Lafourche Parish, Louisiana"/>
 <circle class="county-point" data-fips="39141" data-region="Midwest" cx="584.27" cy="421.24" r="3.05" fill="#009E73" aria-label="Ross County, Ohio"/>
 <circle class="county-point" data-fips="32029" data-region="West" cx="335.60" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Storey County, Nevada"/>
 <circle class="county-point" data-fips="47171" data-region="South" cx="591.89" cy="421.24" r="3.05" fill="#D55E00" aria-label="Unicoi County, Tennessee"/>
@@ -1052,9 +1052,9 @@
 <circle class="county-point" data-fips="33013" data-region="Northeast" cx="315.30" cy="577.76" r="3.05" fill="#0072B2" aria-label="Merrimack County, New Hampshire"/>
 <circle class="county-point" data-fips="26053" data-region="Midwest" cx="480.24" cy="484.45" r="3.05" fill="#009E73" aria-label="Gogebic County, Michigan"/>
 <circle class="county-point" data-fips="56005" data-region="West" cx="490.39" cy="526.59" r="3.05" fill="#CC79A7" aria-label="Campbell County, Wyoming"/>
-<circle class="county-point" data-fips="51770" data-region="South" cx="571.59" cy="403.18" r="3.05" fill="#D55E00" aria-label="Roanoke County, Virginia"/>
+<circle class="county-point" data-fips="51770" data-region="South" cx="571.59" cy="403.18" r="3.05" fill="#D55E00" aria-label="Roanoke city, Virginia"/>
 <circle class="county-point" data-fips="53073" data-region="West" cx="256.94" cy="562.71" r="3.05" fill="#CC79A7" aria-label="Whatcom County, Washington"/>
-<circle class="county-point" data-fips="09190" data-region="Northeast" cx="381.27" cy="577.76" r="3.05" fill="#0072B2" aria-label="Western Connecticut County, Connecticut"/>
+<circle class="county-point" data-fips="09190" data-region="Northeast" cx="381.27" cy="577.76" r="3.05" fill="#0072B2" aria-label="Western Connecticut Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="46029" data-region="Midwest" cx="475.16" cy="499.50" r="3.05" fill="#009E73" aria-label="Codington County, South Dakota"/>
 <circle class="county-point" data-fips="17107" data-region="Midwest" cx="429.49" cy="502.51" r="3.05" fill="#009E73" aria-label="Logan County, Illinois"/>
 <circle class="county-point" data-fips="48105" data-region="South" cx="695.92" cy="397.16" r="3.05" fill="#D55E00" aria-label="Crockett County, Texas"/>
@@ -1073,7 +1073,7 @@
 <circle class="county-point" data-fips="45083" data-region="South" cx="518.30" cy="436.29" r="3.05" fill="#D55E00" aria-label="Spartanburg County, South Carolina"/>
 <circle class="county-point" data-fips="27119" data-region="Midwest" cx="462.48" cy="523.58" r="3.05" fill="#009E73" aria-label="Polk County, Minnesota"/>
 <circle class="county-point" data-fips="53039" data-region="West" cx="315.30" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Klickitat County, Washington"/>
-<circle class="county-point" data-fips="22013" data-region="South" cx="853.25" cy="273.75" r="3.05" fill="#D55E00" aria-label="Bienville County, Louisiana"/>
+<circle class="county-point" data-fips="22013" data-region="South" cx="853.25" cy="273.75" r="3.05" fill="#D55E00" aria-label="Bienville Parish, Louisiana"/>
 <circle class="county-point" data-fips="48371" data-region="South" cx="784.74" cy="318.90" r="3.05" fill="#D55E00" aria-label="Pecos County, Texas"/>
 <circle class="county-point" data-fips="37157" data-region="South" cx="518.30" cy="460.37" r="3.05" fill="#D55E00" aria-label="Rockingham County, North Carolina"/>
 <circle class="county-point" data-fips="25017" data-region="Northeast" cx="292.46" cy="568.73" r="3.05" fill="#0072B2" aria-label="Middlesex County, Massachusetts"/>
@@ -1097,7 +1097,7 @@
 <circle class="county-point" data-fips="48405" data-region="South" cx="751.75" cy="342.98" r="3.05" fill="#D55E00" aria-label="San Augustine County, Texas"/>
 <circle class="county-point" data-fips="48213" data-region="South" cx="556.36" cy="460.37" r="3.05" fill="#D55E00" aria-label="Henderson County, Texas"/>
 <circle class="county-point" data-fips="01107" data-region="South" cx="685.77" cy="342.98" r="3.05" fill="#D55E00" aria-label="Pickens County, Alabama"/>
-<circle class="county-point" data-fips="22047" data-region="South" cx="680.70" cy="367.06" r="3.05" fill="#D55E00" aria-label="Iberville County, Louisiana"/>
+<circle class="county-point" data-fips="22047" data-region="South" cx="680.70" cy="367.06" r="3.05" fill="#D55E00" aria-label="Iberville Parish, Louisiana"/>
 <circle class="county-point" data-fips="48401" data-region="South" cx="574.12" cy="433.28" r="3.05" fill="#D55E00" aria-label="Rusk County, Texas"/>
 <circle class="county-point" data-fips="31127" data-region="Midwest" cx="563.98" cy="502.51" r="3.05" fill="#009E73" aria-label="Nemaha County, Nebraska"/>
 <circle class="county-point" data-fips="12071" data-region="South" cx="457.40" cy="475.42" r="3.05" fill="#D55E00" aria-label="Lee County, Florida"/>
@@ -1115,7 +1115,7 @@
 <circle class="county-point" data-fips="18169" data-region="Midwest" cx="467.55" cy="475.42" r="3.05" fill="#009E73" aria-label="Wabash County, Indiana"/>
 <circle class="county-point" data-fips="48227" data-region="South" cx="647.71" cy="406.19" r="3.05" fill="#D55E00" aria-label="Howard County, Texas"/>
 <circle class="county-point" data-fips="13065" data-region="South" cx="711.15" cy="355.02" r="3.05" fill="#D55E00" aria-label="Clinch County, Georgia"/>
-<circle class="county-point" data-fips="22007" data-region="South" cx="685.77" cy="397.16" r="3.05" fill="#D55E00" aria-label="Assumption County, Louisiana"/>
+<circle class="county-point" data-fips="22007" data-region="South" cx="685.77" cy="397.16" r="3.05" fill="#D55E00" aria-label="Assumption Parish, Louisiana"/>
 <circle class="county-point" data-fips="13225" data-region="South" cx="574.12" cy="397.16" r="3.05" fill="#D55E00" aria-label="Peach County, Georgia"/>
 <circle class="county-point" data-fips="54017" data-region="South" cx="665.48" cy="403.18" r="3.05" fill="#D55E00" aria-label="Doddridge County, West Virginia"/>
 <circle class="county-point" data-fips="20199" data-region="Midwest" cx="530.99" cy="493.48" r="3.05" fill="#009E73" aria-label="Wallace County, Kansas"/>
@@ -1134,7 +1134,7 @@
 <circle class="county-point" data-fips="31055" data-region="Midwest" cx="393.96" cy="520.57" r="3.05" fill="#009E73" aria-label="Douglas County, Nebraska"/>
 <circle class="county-point" data-fips="19187" data-region="Midwest" cx="513.23" cy="496.49" r="3.05" fill="#009E73" aria-label="Webster County, Iowa"/>
 <circle class="county-point" data-fips="27027" data-region="Midwest" cx="399.04" cy="520.57" r="3.05" fill="#009E73" aria-label="Clay County, Minnesota"/>
-<circle class="county-point" data-fips="22091" data-region="South" cx="784.74" cy="312.88" r="3.05" fill="#D55E00" aria-label="St. Helena County, Louisiana"/>
+<circle class="county-point" data-fips="22091" data-region="South" cx="784.74" cy="312.88" r="3.05" fill="#D55E00" aria-label="St. Helena Parish, Louisiana"/>
 <circle class="county-point" data-fips="56043" data-region="West" cx="546.21" cy="490.47" r="3.05" fill="#CC79A7" aria-label="Washakie County, Wyoming"/>
 <circle class="county-point" data-fips="51115" data-region="South" cx="416.80" cy="496.49" r="3.05" fill="#D55E00" aria-label="Mathews County, Virginia"/>
 <circle class="county-point" data-fips="38063" data-region="Midwest" cx="376.20" cy="541.64" r="3.05" fill="#009E73" aria-label="Nelson County, North Dakota"/>
@@ -1150,7 +1150,7 @@
 <circle class="county-point" data-fips="12037" data-region="South" cx="518.30" cy="463.38" r="3.05" fill="#D55E00" aria-label="Franklin County, Florida"/>
 <circle class="county-point" data-fips="26119" data-region="Midwest" cx="503.07" cy="484.45" r="3.05" fill="#009E73" aria-label="Montmorency County, Michigan"/>
 <circle class="county-point" data-fips="20087" data-region="Midwest" cx="434.56" cy="538.63" r="3.05" fill="#009E73" aria-label="Jefferson County, Kansas"/>
-<circle class="county-point" data-fips="02100" data-region="West" cx="305.15" cy="568.73" r="3.05" fill="#CC79A7" aria-label="Haines County, Alaska"/>
+<circle class="county-point" data-fips="02100" data-region="West" cx="305.15" cy="568.73" r="3.05" fill="#CC79A7" aria-label="Haines Borough, Alaska"/>
 <circle class="county-point" data-fips="16003" data-region="West" cx="475.16" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Adams County, Idaho"/>
 <circle class="county-point" data-fips="18109" data-region="Midwest" cx="424.41" cy="472.41" r="3.05" fill="#009E73" aria-label="Morgan County, Indiana"/>
 <circle class="county-point" data-fips="48073" data-region="South" cx="617.26" cy="421.24" r="3.05" fill="#D55E00" aria-label="Cherokee County, Texas"/>
@@ -1207,13 +1207,13 @@
 <circle class="county-point" data-fips="17165" data-region="Midwest" cx="457.40" cy="481.44" r="3.05" fill="#009E73" aria-label="Saline County, Illinois"/>
 <circle class="county-point" data-fips="20161" data-region="Midwest" cx="480.24" cy="487.46" r="3.05" fill="#009E73" aria-label="Riley County, Kansas"/>
 <circle class="county-point" data-fips="44009" data-region="Northeast" cx="264.55" cy="586.79" r="3.05" fill="#0072B2" aria-label="Washington County, Rhode Island"/>
-<circle class="county-point" data-fips="22081" data-region="South" cx="802.50" cy="315.89" r="3.05" fill="#D55E00" aria-label="Red River County, Louisiana"/>
+<circle class="county-point" data-fips="22081" data-region="South" cx="802.50" cy="315.89" r="3.05" fill="#D55E00" aria-label="Red River Parish, Louisiana"/>
 <circle class="county-point" data-fips="13321" data-region="South" cx="650.25" cy="391.14" r="3.05" fill="#D55E00" aria-label="Worth County, Georgia"/>
 <circle class="county-point" data-fips="31177" data-region="Midwest" cx="388.89" cy="544.65" r="3.05" fill="#009E73" aria-label="Washington County, Nebraska"/>
 <circle class="county-point" data-fips="06051" data-region="West" cx="366.05" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Mono County, California"/>
 <circle class="county-point" data-fips="18015" data-region="Midwest" cx="487.85" cy="472.41" r="3.05" fill="#009E73" aria-label="Carroll County, Indiana"/>
 <circle class="county-point" data-fips="49007" data-region="West" cx="373.66" cy="475.42" r="3.05" fill="#CC79A7" aria-label="Carbon County, Utah"/>
-<circle class="county-point" data-fips="02290" data-region="West" cx="556.36" cy="382.11" r="3.05" fill="#CC79A7" aria-label="Yukon-Koyukuk County, Alaska"/>
+<circle class="county-point" data-fips="02290" data-region="West" cx="556.36" cy="382.11" r="3.05" fill="#CC79A7" aria-label="Yukon-Koyukuk Census Area, Alaska"/>
 <circle class="county-point" data-fips="28033" data-region="South" cx="536.06" cy="457.36" r="3.05" fill="#D55E00" aria-label="DeSoto County, Mississippi"/>
 <circle class="county-point" data-fips="17051" data-region="Midwest" cx="487.85" cy="469.40" r="3.05" fill="#009E73" aria-label="Fayette County, Illinois"/>
 <circle class="county-point" data-fips="19093" data-region="Midwest" cx="490.39" cy="511.54" r="3.05" fill="#009E73" aria-label="Ida County, Iowa"/>
@@ -1226,13 +1226,13 @@
 <circle class="county-point" data-fips="34001" data-region="Northeast" cx="515.76" cy="490.47" r="3.05" fill="#0072B2" aria-label="Atlantic County, New Jersey"/>
 <circle class="county-point" data-fips="26061" data-region="Midwest" cx="406.65" cy="505.52" r="3.05" fill="#009E73" aria-label="Houghton County, Michigan"/>
 <circle class="county-point" data-fips="47041" data-region="South" cx="617.26" cy="409.20" r="3.05" fill="#D55E00" aria-label="DeKalb County, Tennessee"/>
-<circle class="county-point" data-fips="51670" data-region="South" cx="723.84" cy="315.89" r="3.05" fill="#D55E00" aria-label="Hopewell County, Virginia"/>
+<circle class="county-point" data-fips="51670" data-region="South" cx="723.84" cy="315.89" r="3.05" fill="#D55E00" aria-label="Hopewell city, Virginia"/>
 <circle class="county-point" data-fips="39161" data-region="Midwest" cx="538.60" cy="481.44" r="3.05" fill="#009E73" aria-label="Van Wert County, Ohio"/>
 <circle class="county-point" data-fips="29209" data-region="Midwest" cx="579.20" cy="490.47" r="3.05" fill="#009E73" aria-label="Stone County, Missouri"/>
 <circle class="county-point" data-fips="20191" data-region="Midwest" cx="490.39" cy="502.51" r="3.05" fill="#009E73" aria-label="Sumner County, Kansas"/>
 <circle class="county-point" data-fips="18005" data-region="Midwest" cx="429.49" cy="469.40" r="3.05" fill="#009E73" aria-label="Bartholomew County, Indiana"/>
 <circle class="county-point" data-fips="13257" data-region="South" cx="579.20" cy="436.29" r="3.05" fill="#D55E00" aria-label="Stephens County, Georgia"/>
-<circle class="county-point" data-fips="22071" data-region="South" cx="500.54" cy="367.06" r="3.05" fill="#D55E00" aria-label="Orleans County, Louisiana"/>
+<circle class="county-point" data-fips="22071" data-region="South" cx="500.54" cy="367.06" r="3.05" fill="#D55E00" aria-label="Orleans Parish, Louisiana"/>
 <circle class="county-point" data-fips="28151" data-region="South" cx="838.02" cy="270.74" r="3.05" fill="#D55E00" aria-label="Washington County, Mississippi"/>
 <circle class="county-point" data-fips="26033" data-region="Midwest" cx="492.93" cy="463.38" r="3.05" fill="#009E73" aria-label="Chippewa County, Michigan"/>
 <circle class="county-point" data-fips="47179" data-region="South" cx="465.01" cy="463.38" r="3.05" fill="#D55E00" aria-label="Washington County, Tennessee"/>
@@ -1257,7 +1257,7 @@
 <circle class="county-point" data-fips="51167" data-region="South" cx="569.05" cy="445.32" r="3.05" fill="#D55E00" aria-label="Russell County, Virginia"/>
 <circle class="county-point" data-fips="36003" data-region="Northeast" cx="467.55" cy="514.55" r="3.05" fill="#0072B2" aria-label="Allegany County, New York"/>
 <circle class="county-point" data-fips="25025" data-region="Northeast" cx="465.01" cy="496.49" r="3.05" fill="#0072B2" aria-label="Suffolk County, Massachusetts"/>
-<circle class="county-point" data-fips="22033" data-region="South" cx="470.09" cy="391.14" r="3.05" fill="#D55E00" aria-label="East Baton Rouge County, Louisiana"/>
+<circle class="county-point" data-fips="22033" data-region="South" cx="470.09" cy="391.14" r="3.05" fill="#D55E00" aria-label="East Baton Rouge Parish, Louisiana"/>
 <circle class="county-point" data-fips="17115" data-region="Midwest" cx="457.40" cy="475.42" r="3.05" fill="#009E73" aria-label="Macon County, Illinois"/>
 <circle class="county-point" data-fips="31025" data-region="Midwest" cx="442.18" cy="541.64" r="3.05" fill="#009E73" aria-label="Cass County, Nebraska"/>
 <circle class="county-point" data-fips="37165" data-region="South" cx="668.01" cy="342.98" r="3.05" fill="#D55E00" aria-label="Scotland County, North Carolina"/>
@@ -1294,7 +1294,7 @@
 <circle class="county-point" data-fips="48485" data-region="South" cx="523.38" cy="451.34" r="3.05" fill="#D55E00" aria-label="Wichita County, Texas"/>
 <circle class="county-point" data-fips="39015" data-region="Midwest" cx="657.86" cy="451.34" r="3.05" fill="#009E73" aria-label="Brown County, Ohio"/>
 <circle class="county-point" data-fips="47105" data-region="South" cx="462.48" cy="475.42" r="3.05" fill="#D55E00" aria-label="Loudon County, Tennessee"/>
-<circle class="county-point" data-fips="29510" data-region="Midwest" cx="520.84" cy="418.23" r="3.05" fill="#009E73" aria-label="St. Louis County, Missouri"/>
+<circle class="county-point" data-fips="29510" data-region="Midwest" cx="520.84" cy="418.23" r="3.05" fill="#009E73" aria-label="St. Louis city, Missouri"/>
 <circle class="county-point" data-fips="48347" data-region="South" cx="612.19" cy="409.20" r="3.05" fill="#D55E00" aria-label="Nacogdoches County, Texas"/>
 <circle class="county-point" data-fips="12045" data-region="South" cx="487.85" cy="472.41" r="3.05" fill="#D55E00" aria-label="Gulf County, Florida"/>
 <circle class="county-point" data-fips="26027" data-region="Midwest" cx="470.09" cy="499.50" r="3.05" fill="#009E73" aria-label="Cass County, Michigan"/>
@@ -1323,7 +1323,7 @@
 <circle class="county-point" data-fips="48451" data-region="South" cx="563.98" cy="442.31" r="3.05" fill="#D55E00" aria-label="Tom Green County, Texas"/>
 <circle class="county-point" data-fips="48475" data-region="South" cx="690.85" cy="394.15" r="3.05" fill="#D55E00" aria-label="Ward County, Texas"/>
 <circle class="county-point" data-fips="28063" data-region="South" cx="936.99" cy="204.52" r="3.05" fill="#D55E00" aria-label="Jefferson County, Mississippi"/>
-<circle class="county-point" data-fips="02066" data-region="West" cx="388.89" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Copper River County, Alaska"/>
+<circle class="county-point" data-fips="02066" data-region="West" cx="388.89" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Copper River Census Area, Alaska"/>
 <circle class="county-point" data-fips="36055" data-region="Northeast" cx="459.94" cy="511.54" r="3.05" fill="#0072B2" aria-label="Monroe County, New York"/>
 <circle class="county-point" data-fips="05033" data-region="South" cx="596.96" cy="472.41" r="3.05" fill="#D55E00" aria-label="Crawford County, Arkansas"/>
 <circle class="county-point" data-fips="06101" data-region="West" cx="520.84" cy="457.36" r="3.05" fill="#CC79A7" aria-label="Sutter County, California"/>
@@ -1332,7 +1332,7 @@
 <circle class="county-point" data-fips="27005" data-region="Midwest" cx="414.26" cy="532.61" r="3.05" fill="#009E73" aria-label="Becker County, Minnesota"/>
 <circle class="county-point" data-fips="04015" data-region="West" cx="513.23" cy="508.53" r="3.05" fill="#CC79A7" aria-label="Mohave County, Arizona"/>
 <circle class="county-point" data-fips="06115" data-region="West" cx="500.54" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Yuba County, California"/>
-<circle class="county-point" data-fips="51610" data-region="South" cx="226.49" cy="565.72" r="3.05" fill="#D55E00" aria-label="Falls Church County, Virginia"/>
+<circle class="county-point" data-fips="51610" data-region="South" cx="226.49" cy="565.72" r="3.05" fill="#D55E00" aria-label="Falls Church city, Virginia"/>
 <circle class="county-point" data-fips="24017" data-region="South" cx="411.73" cy="445.32" r="3.05" fill="#D55E00" aria-label="Charles County, Maryland"/>
 <circle class="county-point" data-fips="19003" data-region="Midwest" cx="470.09" cy="514.55" r="3.05" fill="#009E73" aria-label="Adams County, Iowa"/>
 <circle class="county-point" data-fips="01005" data-region="South" cx="713.69" cy="303.85" r="3.05" fill="#D55E00" aria-label="Barbour County, Alabama"/>
@@ -1351,7 +1351,7 @@
 <circle class="county-point" data-fips="06037" data-region="West" cx="490.39" cy="451.34" r="3.05" fill="#CC79A7" aria-label="Los Angeles County, California"/>
 <circle class="county-point" data-fips="38103" data-region="Midwest" cx="439.64" cy="517.56" r="3.05" fill="#009E73" aria-label="Wells County, North Dakota"/>
 <circle class="county-point" data-fips="13243" data-region="South" cx="840.56" cy="231.61" r="3.05" fill="#D55E00" aria-label="Randolph County, Georgia"/>
-<circle class="county-point" data-fips="09130" data-region="Northeast" cx="358.44" cy="580.77" r="3.05" fill="#0072B2" aria-label="Lower Connecticut River Valley County, Connecticut"/>
+<circle class="county-point" data-fips="09130" data-region="Northeast" cx="358.44" cy="580.77" r="3.05" fill="#0072B2" aria-label="Lower Connecticut River Valley Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="31079" data-region="Midwest" cx="612.19" cy="478.43" r="3.05" fill="#009E73" aria-label="Hall County, Nebraska"/>
 <circle class="county-point" data-fips="51131" data-region="South" cx="553.82" cy="412.21" r="3.05" fill="#D55E00" aria-label="Northampton County, Virginia"/>
 <circle class="county-point" data-fips="20063" data-region="Midwest" cx="495.46" cy="523.58" r="3.05" fill="#009E73" aria-label="Gove County, Kansas"/>
@@ -1364,7 +1364,7 @@
 <circle class="county-point" data-fips="36033" data-region="Northeast" cx="536.06" cy="499.50" r="3.05" fill="#0072B2" aria-label="Franklin County, New York"/>
 <circle class="county-point" data-fips="39063" data-region="Midwest" cx="490.39" cy="478.43" r="3.05" fill="#009E73" aria-label="Hancock County, Ohio"/>
 <circle class="county-point" data-fips="48449" data-region="South" cx="713.69" cy="379.10" r="3.05" fill="#D55E00" aria-label="Titus County, Texas"/>
-<circle class="county-point" data-fips="22111" data-region="South" cx="690.85" cy="370.07" r="3.05" fill="#D55E00" aria-label="Union County, Louisiana"/>
+<circle class="county-point" data-fips="22111" data-region="South" cx="690.85" cy="370.07" r="3.05" fill="#D55E00" aria-label="Union Parish, Louisiana"/>
 <circle class="county-point" data-fips="53019" data-region="West" cx="406.65" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Ferry County, Washington"/>
 <circle class="county-point" data-fips="26107" data-region="Midwest" cx="508.15" cy="487.46" r="3.05" fill="#009E73" aria-label="Mecosta County, Michigan"/>
 <circle class="county-point" data-fips="46079" data-region="Midwest" cx="373.66" cy="526.59" r="3.05" fill="#009E73" aria-label="Lake County, South Dakota"/>
@@ -1383,7 +1383,7 @@
 <circle class="county-point" data-fips="29061" data-region="Midwest" cx="642.64" cy="469.40" r="3.05" fill="#009E73" aria-label="Daviess County, Missouri"/>
 <circle class="county-point" data-fips="41023" data-region="West" cx="388.89" cy="499.50" r="3.05" fill="#CC79A7" aria-label="Grant County, Oregon"/>
 <circle class="county-point" data-fips="37007" data-region="South" cx="642.64" cy="361.04" r="3.05" fill="#D55E00" aria-label="Anson County, North Carolina"/>
-<circle class="county-point" data-fips="22105" data-region="South" cx="599.50" cy="394.15" r="3.05" fill="#D55E00" aria-label="Tangipahoa County, Louisiana"/>
+<circle class="county-point" data-fips="22105" data-region="South" cx="599.50" cy="394.15" r="3.05" fill="#D55E00" aria-label="Tangipahoa Parish, Louisiana"/>
 <circle class="county-point" data-fips="48241" data-region="South" cx="640.10" cy="412.21" r="3.05" fill="#D55E00" aria-label="Jasper County, Texas"/>
 <circle class="county-point" data-fips="40113" data-region="South" cx="599.50" cy="457.36" r="3.05" fill="#D55E00" aria-label="Osage County, Oklahoma"/>
 <circle class="county-point" data-fips="30033" data-region="West" cx="401.57" cy="544.65" r="3.05" fill="#CC79A7" aria-label="Garfield County, Montana"/>
@@ -1414,8 +1414,8 @@
 <circle class="county-point" data-fips="20033" data-region="Midwest" cx="510.69" cy="508.53" r="3.05" fill="#009E73" aria-label="Comanche County, Kansas"/>
 <circle class="county-point" data-fips="26091" data-region="Midwest" cx="472.62" cy="499.50" r="3.05" fill="#009E73" aria-label="Lenawee County, Michigan"/>
 <circle class="county-point" data-fips="37029" data-region="South" cx="348.29" cy="535.62" r="3.05" fill="#D55E00" aria-label="Camden County, North Carolina"/>
-<circle class="county-point" data-fips="51685" data-region="South" cx="624.88" cy="382.11" r="3.05" fill="#D55E00" aria-label="Manassas Park County, Virginia"/>
-<circle class="county-point" data-fips="22041" data-region="South" cx="751.75" cy="345.99" r="3.05" fill="#D55E00" aria-label="Franklin County, Louisiana"/>
+<circle class="county-point" data-fips="51685" data-region="South" cx="624.88" cy="382.11" r="3.05" fill="#D55E00" aria-label="Manassas Park city, Virginia"/>
+<circle class="county-point" data-fips="22041" data-region="South" cx="751.75" cy="345.99" r="3.05" fill="#D55E00" aria-label="Franklin Parish, Louisiana"/>
 <circle class="county-point" data-fips="48411" data-region="South" cx="594.42" cy="439.30" r="3.05" fill="#D55E00" aria-label="San Saba County, Texas"/>
 <circle class="county-point" data-fips="30097" data-region="West" cx="335.60" cy="568.73" r="3.05" fill="#CC79A7" aria-label="Sweet Grass County, Montana"/>
 <circle class="county-point" data-fips="13049" data-region="South" cx="698.46" cy="336.96" r="3.05" fill="#D55E00" aria-label="Charlton County, Georgia"/>
@@ -1433,7 +1433,7 @@
 <circle class="county-point" data-fips="48307" data-region="South" cx="602.04" cy="442.31" r="3.05" fill="#D55E00" aria-label="McCulloch County, Texas"/>
 <circle class="county-point" data-fips="40087" data-region="South" cx="543.67" cy="505.52" r="3.05" fill="#D55E00" aria-label="McClain County, Oklahoma"/>
 <circle class="county-point" data-fips="13253" data-region="South" cx="617.26" cy="397.16" r="3.05" fill="#D55E00" aria-label="Seminole County, Georgia"/>
-<circle class="county-point" data-fips="22063" data-region="South" cx="520.84" cy="448.33" r="3.05" fill="#D55E00" aria-label="Livingston County, Louisiana"/>
+<circle class="county-point" data-fips="22063" data-region="South" cx="520.84" cy="448.33" r="3.05" fill="#D55E00" aria-label="Livingston Parish, Louisiana"/>
 <circle class="county-point" data-fips="32011" data-region="West" cx="584.27" cy="430.27" r="3.05" fill="#CC79A7" aria-label="Eureka County, Nevada"/>
 <circle class="county-point" data-fips="13085" data-region="South" cx="406.65" cy="511.54" r="3.05" fill="#D55E00" aria-label="Dawson County, Georgia"/>
 <circle class="county-point" data-fips="46057" data-region="Midwest" cx="414.26" cy="529.60" r="3.05" fill="#009E73" aria-label="Hamlin County, South Dakota"/>
@@ -1459,7 +1459,7 @@
 <circle class="county-point" data-fips="55063" data-region="Midwest" cx="472.62" cy="520.57" r="3.05" fill="#009E73" aria-label="La Crosse County, Wisconsin"/>
 <circle class="county-point" data-fips="48091" data-region="South" cx="366.05" cy="523.58" r="3.05" fill="#D55E00" aria-label="Comal County, Texas"/>
 <circle class="county-point" data-fips="31183" data-region="Midwest" cx="434.56" cy="532.61" r="3.05" fill="#009E73" aria-label="Wheeler County, Nebraska"/>
-<circle class="county-point" data-fips="51730" data-region="South" cx="680.70" cy="288.80" r="3.05" fill="#D55E00" aria-label="Petersburg County, Virginia"/>
+<circle class="county-point" data-fips="51730" data-region="South" cx="680.70" cy="288.80" r="3.05" fill="#D55E00" aria-label="Petersburg city, Virginia"/>
 <circle class="county-point" data-fips="29127" data-region="Midwest" cx="599.50" cy="481.44" r="3.05" fill="#009E73" aria-label="Marion County, Missouri"/>
 <circle class="county-point" data-fips="37071" data-region="South" cx="457.40" cy="478.43" r="3.05" fill="#D55E00" aria-label="Gaston County, North Carolina"/>
 <circle class="county-point" data-fips="01091" data-region="South" cx="668.01" cy="315.89" r="3.05" fill="#D55E00" aria-label="Marengo County, Alabama"/>
@@ -1490,7 +1490,7 @@
 <circle class="county-point" data-fips="18069" data-region="Midwest" cx="447.25" cy="466.39" r="3.05" fill="#009E73" aria-label="Huntington County, Indiana"/>
 <circle class="county-point" data-fips="17009" data-region="Midwest" cx="505.61" cy="457.36" r="3.05" fill="#009E73" aria-label="Brown County, Illinois"/>
 <circle class="county-point" data-fips="16063" data-region="West" cx="536.06" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Lincoln County, Idaho"/>
-<circle class="county-point" data-fips="22079" data-region="South" cx="607.11" cy="397.16" r="3.05" fill="#D55E00" aria-label="Rapides County, Louisiana"/>
+<circle class="county-point" data-fips="22079" data-region="South" cx="607.11" cy="397.16" r="3.05" fill="#D55E00" aria-label="Rapides Parish, Louisiana"/>
 <circle class="county-point" data-fips="19057" data-region="Midwest" cx="510.69" cy="505.52" r="3.05" fill="#009E73" aria-label="Des Moines County, Iowa"/>
 <circle class="county-point" data-fips="16019" data-region="West" cx="376.20" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Bonneville County, Idaho"/>
 <circle class="county-point" data-fips="20029" data-region="Midwest" cx="533.52" cy="499.50" r="3.05" fill="#009E73" aria-label="Cloud County, Kansas"/>
@@ -1507,7 +1507,7 @@
 <circle class="county-point" data-fips="13027" data-region="South" cx="711.15" cy="327.93" r="3.05" fill="#D55E00" aria-label="Brooks County, Georgia"/>
 <circle class="county-point" data-fips="39007" data-region="Midwest" cx="668.01" cy="409.20" r="3.05" fill="#009E73" aria-label="Ashtabula County, Ohio"/>
 <circle class="county-point" data-fips="51079" data-region="South" cx="459.94" cy="487.46" r="3.05" fill="#D55E00" aria-label="Greene County, Virginia"/>
-<circle class="county-point" data-fips="51700" data-region="South" cx="556.36" cy="400.17" r="3.05" fill="#D55E00" aria-label="Newport News County, Virginia"/>
+<circle class="county-point" data-fips="51700" data-region="South" cx="556.36" cy="400.17" r="3.05" fill="#D55E00" aria-label="Newport News city, Virginia"/>
 <circle class="county-point" data-fips="41031" data-region="West" cx="401.57" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Jefferson County, Oregon"/>
 <circle class="county-point" data-fips="18067" data-region="Midwest" cx="508.15" cy="445.32" r="3.05" fill="#009E73" aria-label="Howard County, Indiana"/>
 <circle class="county-point" data-fips="36109" data-region="Northeast" cx="320.38" cy="553.68" r="3.05" fill="#0072B2" aria-label="Tompkins County, New York"/>
@@ -1519,7 +1519,7 @@
 <circle class="county-point" data-fips="49027" data-region="West" cx="409.19" cy="496.49" r="3.05" fill="#CC79A7" aria-label="Millard County, Utah"/>
 <circle class="county-point" data-fips="49023" data-region="West" cx="315.30" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Juab County, Utah"/>
 <circle class="county-point" data-fips="19105" data-region="Midwest" cx="447.25" cy="517.56" r="3.05" fill="#009E73" aria-label="Jones County, Iowa"/>
-<circle class="county-point" data-fips="22021" data-region="South" cx="708.61" cy="373.08" r="3.05" fill="#D55E00" aria-label="Caldwell County, Louisiana"/>
+<circle class="county-point" data-fips="22021" data-region="South" cx="708.61" cy="373.08" r="3.05" fill="#D55E00" aria-label="Caldwell Parish, Louisiana"/>
 <circle class="county-point" data-fips="48001" data-region="South" cx="602.04" cy="409.20" r="3.05" fill="#D55E00" aria-label="Anderson County, Texas"/>
 <circle class="county-point" data-fips="51059" data-region="South" cx="317.84" cy="514.55" r="3.05" fill="#D55E00" aria-label="Fairfax County, Virginia"/>
 <circle class="county-point" data-fips="40111" data-region="South" cx="751.75" cy="403.18" r="3.05" fill="#D55E00" aria-label="Okmulgee County, Oklahoma"/>
@@ -1560,7 +1560,7 @@
 <circle class="county-point" data-fips="37147" data-region="South" cx="495.46" cy="439.30" r="3.05" fill="#D55E00" aria-label="Pitt County, North Carolina"/>
 <circle class="county-point" data-fips="29071" data-region="Midwest" cx="541.14" cy="508.53" r="3.05" fill="#009E73" aria-label="Franklin County, Missouri"/>
 <circle class="county-point" data-fips="50021" data-region="Northeast" cx="355.90" cy="571.74" r="3.05" fill="#0072B2" aria-label="Rutland County, Vermont"/>
-<circle class="county-point" data-fips="22019" data-region="South" cx="650.25" cy="424.25" r="3.05" fill="#D55E00" aria-label="Calcasieu County, Louisiana"/>
+<circle class="county-point" data-fips="22019" data-region="South" cx="650.25" cy="424.25" r="3.05" fill="#D55E00" aria-label="Calcasieu Parish, Louisiana"/>
 <circle class="county-point" data-fips="08071" data-region="West" cx="449.79" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Las Animas County, Colorado"/>
 <circle class="county-point" data-fips="06035" data-region="West" cx="487.85" cy="481.44" r="3.05" fill="#CC79A7" aria-label="Lassen County, California"/>
 <circle class="county-point" data-fips="48343" data-region="South" cx="591.89" cy="424.25" r="3.05" fill="#D55E00" aria-label="Morris County, Texas"/>
@@ -1577,9 +1577,9 @@
 <circle class="county-point" data-fips="17089" data-region="Midwest" cx="409.19" cy="496.49" r="3.05" fill="#009E73" aria-label="Kane County, Illinois"/>
 <circle class="county-point" data-fips="28051" data-region="South" cx="964.90" cy="168.40" r="3.05" fill="#D55E00" aria-label="Holmes County, Mississippi"/>
 <circle class="county-point" data-fips="40057" data-region="South" cx="794.89" cy="385.12" r="3.05" fill="#D55E00" aria-label="Harmon County, Oklahoma"/>
-<circle class="county-point" data-fips="02060" data-region="West" cx="363.51" cy="526.59" r="3.05" fill="#CC79A7" aria-label="Bristol Bay County, Alaska"/>
+<circle class="county-point" data-fips="02060" data-region="West" cx="363.51" cy="526.59" r="3.05" fill="#CC79A7" aria-label="Bristol Bay Borough, Alaska"/>
 <circle class="county-point" data-fips="13005" data-region="South" cx="640.10" cy="409.20" r="3.05" fill="#D55E00" aria-label="Bacon County, Georgia"/>
-<circle class="county-point" data-fips="22049" data-region="South" cx="726.38" cy="367.06" r="3.05" fill="#D55E00" aria-label="Jackson County, Louisiana"/>
+<circle class="county-point" data-fips="22049" data-region="South" cx="726.38" cy="367.06" r="3.05" fill="#D55E00" aria-label="Jackson Parish, Louisiana"/>
 <circle class="county-point" data-fips="29037" data-region="Midwest" cx="472.62" cy="514.55" r="3.05" fill="#009E73" aria-label="Cass County, Missouri"/>
 <circle class="county-point" data-fips="01025" data-region="South" cx="662.94" cy="352.01" r="3.05" fill="#D55E00" aria-label="Clarke County, Alabama"/>
 <circle class="county-point" data-fips="40121" data-region="South" cx="652.79" cy="445.32" r="3.05" fill="#D55E00" aria-label="Pittsburg County, Oklahoma"/>
@@ -1597,7 +1597,7 @@
 <circle class="county-point" data-fips="38075" data-region="Midwest" cx="414.26" cy="544.65" r="3.05" fill="#009E73" aria-label="Renville County, North Dakota"/>
 <circle class="county-point" data-fips="45017" data-region="South" cx="515.76" cy="412.21" r="3.05" fill="#D55E00" aria-label="Calhoun County, South Carolina"/>
 <circle class="county-point" data-fips="31103" data-region="Midwest" cx="508.15" cy="508.53" r="3.05" fill="#009E73" aria-label="Keya Paha County, Nebraska"/>
-<circle class="county-point" data-fips="09150" data-region="Northeast" cx="432.02" cy="559.70" r="3.05" fill="#0072B2" aria-label="Northeastern Connecticut County, Connecticut"/>
+<circle class="county-point" data-fips="09150" data-region="Northeast" cx="432.02" cy="559.70" r="3.05" fill="#0072B2" aria-label="Northeastern Connecticut Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="55007" data-region="Midwest" cx="449.79" cy="523.58" r="3.05" fill="#009E73" aria-label="Bayfield County, Wisconsin"/>
 <circle class="county-point" data-fips="51147" data-region="South" cx="581.74" cy="370.07" r="3.05" fill="#D55E00" aria-label="Prince Edward County, Virginia"/>
 <circle class="county-point" data-fips="26077" data-region="Midwest" cx="421.88" cy="517.56" r="3.05" fill="#009E73" aria-label="Kalamazoo County, Michigan"/>
@@ -1612,7 +1612,7 @@
 <circle class="county-point" data-fips="36071" data-region="Northeast" cx="487.85" cy="496.49" r="3.05" fill="#0072B2" aria-label="Orange County, New York"/>
 <circle class="county-point" data-fips="13223" data-region="South" cx="416.80" cy="472.41" r="3.05" fill="#D55E00" aria-label="Paulding County, Georgia"/>
 <circle class="county-point" data-fips="30071" data-region="West" cx="414.26" cy="535.62" r="3.05" fill="#CC79A7" aria-label="Phillips County, Montana"/>
-<circle class="county-point" data-fips="51683" data-region="South" cx="508.15" cy="445.32" r="3.05" fill="#D55E00" aria-label="Manassas County, Virginia"/>
+<circle class="county-point" data-fips="51683" data-region="South" cx="508.15" cy="445.32" r="3.05" fill="#D55E00" aria-label="Manassas city, Virginia"/>
 <circle class="county-point" data-fips="54019" data-region="South" cx="685.77" cy="385.12" r="3.05" fill="#D55E00" aria-label="Fayette County, West Virginia"/>
 <circle class="county-point" data-fips="31155" data-region="Midwest" cx="399.04" cy="547.66" r="3.05" fill="#009E73" aria-label="Saunders County, Nebraska"/>
 <circle class="county-point" data-fips="26013" data-region="Midwest" cx="520.84" cy="451.34" r="3.05" fill="#009E73" aria-label="Baraga County, Michigan"/>
@@ -1627,7 +1627,7 @@
 <circle class="county-point" data-fips="12029" data-region="South" cx="599.50" cy="430.27" r="3.05" fill="#D55E00" aria-label="Dixie County, Florida"/>
 <circle class="county-point" data-fips="48365" data-region="South" cx="530.99" cy="460.37" r="3.05" fill="#D55E00" aria-label="Panola County, Texas"/>
 <circle class="county-point" data-fips="40067" data-region="South" cx="754.29" cy="415.22" r="3.05" fill="#D55E00" aria-label="Jefferson County, Oklahoma"/>
-<circle class="county-point" data-fips="32510" data-region="West" cx="437.10" cy="502.51" r="3.05" fill="#CC79A7" aria-label="Carson City County, Nevada"/>
+<circle class="county-point" data-fips="32510" data-region="West" cx="437.10" cy="502.51" r="3.05" fill="#CC79A7" aria-label="Carson City, Nevada"/>
 <circle class="county-point" data-fips="06099" data-region="West" cx="602.04" cy="463.38" r="3.05" fill="#CC79A7" aria-label="Stanislaus County, California"/>
 <circle class="county-point" data-fips="47055" data-region="South" cx="523.38" cy="433.28" r="3.05" fill="#D55E00" aria-label="Giles County, Tennessee"/>
 <circle class="county-point" data-fips="37011" data-region="South" cx="442.18" cy="493.48" r="3.05" fill="#D55E00" aria-label="Avery County, North Carolina"/>
@@ -1652,7 +1652,7 @@
 <circle class="county-point" data-fips="12059" data-region="South" cx="543.67" cy="442.31" r="3.05" fill="#D55E00" aria-label="Holmes County, Florida"/>
 <circle class="county-point" data-fips="31039" data-region="Midwest" cx="510.69" cy="514.55" r="3.05" fill="#009E73" aria-label="Cuming County, Nebraska"/>
 <circle class="county-point" data-fips="13307" data-region="South" cx="685.77" cy="333.95" r="3.05" fill="#D55E00" aria-label="Webster County, Georgia"/>
-<circle class="county-point" data-fips="02180" data-region="West" cx="607.11" cy="388.13" r="3.05" fill="#CC79A7" aria-label="Nome County, Alaska"/>
+<circle class="county-point" data-fips="02180" data-region="West" cx="607.11" cy="388.13" r="3.05" fill="#CC79A7" aria-label="Nome Census Area, Alaska"/>
 <circle class="county-point" data-fips="05095" data-region="South" cx="772.05" cy="370.07" r="3.05" fill="#D55E00" aria-label="Monroe County, Arkansas"/>
 <circle class="county-point" data-fips="17151" data-region="Midwest" cx="419.34" cy="505.52" r="3.05" fill="#009E73" aria-label="Pope County, Illinois"/>
 <circle class="county-point" data-fips="47161" data-region="South" cx="492.93" cy="469.40" r="3.05" fill="#D55E00" aria-label="Stewart County, Tennessee"/>
@@ -1698,12 +1698,12 @@
 <circle class="county-point" data-fips="54091" data-region="South" cx="662.94" cy="421.24" r="3.05" fill="#D55E00" aria-label="Taylor County, West Virginia"/>
 <circle class="county-point" data-fips="48225" data-region="South" cx="642.64" cy="394.15" r="3.05" fill="#D55E00" aria-label="Houston County, Texas"/>
 <circle class="county-point" data-fips="46119" data-region="Midwest" cx="376.20" cy="532.61" r="3.05" fill="#009E73" aria-label="Sully County, South Dakota"/>
-<circle class="county-point" data-fips="22005" data-region="South" cx="490.39" cy="463.38" r="3.05" fill="#D55E00" aria-label="Ascension County, Louisiana"/>
+<circle class="county-point" data-fips="22005" data-region="South" cx="490.39" cy="463.38" r="3.05" fill="#D55E00" aria-label="Ascension Parish, Louisiana"/>
 <circle class="county-point" data-fips="29179" data-region="Midwest" cx="695.92" cy="445.32" r="3.05" fill="#009E73" aria-label="Reynolds County, Missouri"/>
 <circle class="county-point" data-fips="35017" data-region="West" cx="495.46" cy="457.36" r="3.05" fill="#CC79A7" aria-label="Grant County, New Mexico"/>
 <circle class="county-point" data-fips="13063" data-region="South" cx="673.09" cy="315.89" r="3.05" fill="#D55E00" aria-label="Clayton County, Georgia"/>
 <circle class="county-point" data-fips="48501" data-region="South" cx="655.33" cy="409.20" r="3.05" fill="#D55E00" aria-label="Yoakum County, Texas"/>
-<circle class="county-point" data-fips="02130" data-region="West" cx="371.12" cy="541.64" r="3.05" fill="#CC79A7" aria-label="Ketchikan Gateway County, Alaska"/>
+<circle class="county-point" data-fips="02130" data-region="West" cx="371.12" cy="541.64" r="3.05" fill="#CC79A7" aria-label="Ketchikan Gateway Borough, Alaska"/>
 <circle class="county-point" data-fips="29079" data-region="Midwest" cx="662.94" cy="463.38" r="3.05" fill="#009E73" aria-label="Grundy County, Missouri"/>
 <circle class="county-point" data-fips="51179" data-region="South" cx="396.50" cy="493.48" r="3.05" fill="#D55E00" aria-label="Stafford County, Virginia"/>
 <circle class="county-point" data-fips="18075" data-region="Midwest" cx="574.12" cy="433.28" r="3.05" fill="#009E73" aria-label="Jay County, Indiana"/>
@@ -1721,20 +1721,20 @@
 <circle class="county-point" data-fips="29115" data-region="Midwest" cx="622.34" cy="484.45" r="3.05" fill="#009E73" aria-label="Linn County, Missouri"/>
 <circle class="county-point" data-fips="12083" data-region="South" cx="452.32" cy="472.41" r="3.05" fill="#D55E00" aria-label="Marion County, Florida"/>
 <circle class="county-point" data-fips="13127" data-region="South" cx="508.15" cy="439.30" r="3.05" fill="#D55E00" aria-label="Glynn County, Georgia"/>
-<circle class="county-point" data-fips="02090" data-region="West" cx="391.43" cy="550.67" r="3.05" fill="#CC79A7" aria-label="Fairbanks North Star County, Alaska"/>
+<circle class="county-point" data-fips="02090" data-region="West" cx="391.43" cy="550.67" r="3.05" fill="#CC79A7" aria-label="Fairbanks North Star Borough, Alaska"/>
 <circle class="county-point" data-fips="16029" data-region="West" cx="416.80" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Caribou County, Idaho"/>
 <circle class="county-point" data-fips="01015" data-region="South" cx="624.88" cy="412.21" r="3.05" fill="#D55E00" aria-label="Calhoun County, Alabama"/>
 <circle class="county-point" data-fips="31133" data-region="Midwest" cx="586.81" cy="502.51" r="3.05" fill="#009E73" aria-label="Pawnee County, Nebraska"/>
 <circle class="county-point" data-fips="48289" data-region="South" cx="556.36" cy="457.36" r="3.05" fill="#D55E00" aria-label="Leon County, Texas"/>
-<circle class="county-point" data-fips="22059" data-region="South" cx="599.50" cy="427.26" r="3.05" fill="#D55E00" aria-label="LaSalle County, Louisiana"/>
+<circle class="county-point" data-fips="22059" data-region="South" cx="599.50" cy="427.26" r="3.05" fill="#D55E00" aria-label="LaSalle Parish, Louisiana"/>
 <circle class="county-point" data-fips="08001" data-region="West" cx="424.41" cy="502.51" r="3.05" fill="#CC79A7" aria-label="Adams County, Colorado"/>
 <circle class="county-point" data-fips="39143" data-region="Midwest" cx="541.14" cy="451.34" r="3.05" fill="#009E73" aria-label="Sandusky County, Ohio"/>
 <circle class="county-point" data-fips="51036" data-region="South" cx="569.05" cy="388.13" r="3.05" fill="#D55E00" aria-label="Charles City County, Virginia"/>
 <circle class="county-point" data-fips="33011" data-region="Northeast" cx="381.27" cy="562.71" r="3.05" fill="#0072B2" aria-label="Hillsborough County, New Hampshire"/>
-<circle class="county-point" data-fips="51740" data-region="South" cx="591.89" cy="352.01" r="3.05" fill="#D55E00" aria-label="Portsmouth County, Virginia"/>
+<circle class="county-point" data-fips="51740" data-region="South" cx="591.89" cy="352.01" r="3.05" fill="#D55E00" aria-label="Portsmouth city, Virginia"/>
 <circle class="county-point" data-fips="18077" data-region="Midwest" cx="452.32" cy="466.39" r="3.05" fill="#009E73" aria-label="Jefferson County, Indiana"/>
 <circle class="county-point" data-fips="10001" data-region="South" cx="617.26" cy="427.26" r="3.05" fill="#D55E00" aria-label="Kent County, Delaware"/>
-<circle class="county-point" data-fips="51760" data-region="South" cx="495.46" cy="394.15" r="3.05" fill="#D55E00" aria-label="Richmond County, Virginia"/>
+<circle class="county-point" data-fips="51760" data-region="South" cx="495.46" cy="394.15" r="3.05" fill="#D55E00" aria-label="Richmond city, Virginia"/>
 <circle class="county-point" data-fips="13245" data-region="South" cx="612.19" cy="321.91" r="3.05" fill="#D55E00" aria-label="Richmond County, Georgia"/>
 <circle class="county-point" data-fips="19179" data-region="Midwest" cx="589.35" cy="454.35" r="3.05" fill="#009E73" aria-label="Wapello County, Iowa"/>
 <circle class="county-point" data-fips="01079" data-region="South" cx="584.27" cy="424.25" r="3.05" fill="#D55E00" aria-label="Lawrence County, Alabama"/>
@@ -1747,7 +1747,7 @@
 <circle class="county-point" data-fips="04003" data-region="West" cx="452.32" cy="481.44" r="3.05" fill="#CC79A7" aria-label="Cochise County, Arizona"/>
 <circle class="county-point" data-fips="17039" data-region="Midwest" cx="409.19" cy="511.54" r="3.05" fill="#009E73" aria-label="De Witt County, Illinois"/>
 <circle class="county-point" data-fips="08115" data-region="West" cx="358.44" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Sedgwick County, Colorado"/>
-<circle class="county-point" data-fips="22015" data-region="South" cx="581.74" cy="436.29" r="3.05" fill="#D55E00" aria-label="Bossier County, Louisiana"/>
+<circle class="county-point" data-fips="22015" data-region="South" cx="581.74" cy="436.29" r="3.05" fill="#D55E00" aria-label="Bossier Parish, Louisiana"/>
 <circle class="county-point" data-fips="46031" data-region="Midwest" cx="779.66" cy="249.67" r="3.05" fill="#009E73" aria-label="Corson County, South Dakota"/>
 <circle class="county-point" data-fips="08051" data-region="West" cx="211.26" cy="586.79" r="3.05" fill="#CC79A7" aria-label="Gunnison County, Colorado"/>
 <circle class="county-point" data-fips="31069" data-region="Midwest" cx="571.59" cy="484.45" r="3.05" fill="#009E73" aria-label="Garden County, Nebraska"/>
@@ -1764,7 +1764,7 @@
 <circle class="county-point" data-fips="26149" data-region="Midwest" cx="470.09" cy="484.45" r="3.05" fill="#009E73" aria-label="St. Joseph County, Michigan"/>
 <circle class="county-point" data-fips="19145" data-region="Midwest" cx="528.45" cy="481.44" r="3.05" fill="#009E73" aria-label="Page County, Iowa"/>
 <circle class="county-point" data-fips="39041" data-region="Midwest" cx="272.16" cy="538.63" r="3.05" fill="#009E73" aria-label="Delaware County, Ohio"/>
-<circle class="county-point" data-fips="22121" data-region="South" cx="536.06" cy="421.24" r="3.05" fill="#D55E00" aria-label="West Baton Rouge County, Louisiana"/>
+<circle class="county-point" data-fips="22121" data-region="South" cx="536.06" cy="421.24" r="3.05" fill="#D55E00" aria-label="West Baton Rouge Parish, Louisiana"/>
 <circle class="county-point" data-fips="20001" data-region="Midwest" cx="541.14" cy="496.49" r="3.05" fill="#009E73" aria-label="Allen County, Kansas"/>
 <circle class="county-point" data-fips="31023" data-region="Midwest" cx="487.85" cy="535.62" r="3.05" fill="#009E73" aria-label="Butler County, Nebraska"/>
 <circle class="county-point" data-fips="40095" data-region="South" cx="731.45" cy="433.28" r="3.05" fill="#D55E00" aria-label="Marshall County, Oklahoma"/>
@@ -1814,12 +1814,12 @@
 <circle class="county-point" data-fips="19017" data-region="Midwest" cx="381.27" cy="547.66" r="3.05" fill="#009E73" aria-label="Bremer County, Iowa"/>
 <circle class="county-point" data-fips="37035" data-region="South" cx="426.95" cy="496.49" r="3.05" fill="#D55E00" aria-label="Catawba County, North Carolina"/>
 <circle class="county-point" data-fips="06053" data-region="West" cx="515.76" cy="451.34" r="3.05" fill="#CC79A7" aria-label="Monterey County, California"/>
-<circle class="county-point" data-fips="22095" data-region="South" cx="622.34" cy="352.01" r="3.05" fill="#D55E00" aria-label="St. John the Baptist County, Louisiana"/>
+<circle class="county-point" data-fips="22095" data-region="South" cx="622.34" cy="352.01" r="3.05" fill="#D55E00" aria-label="St. John the Baptist Parish, Louisiana"/>
 <circle class="county-point" data-fips="18055" data-region="Midwest" cx="513.23" cy="451.34" r="3.05" fill="#009E73" aria-label="Greene County, Indiana"/>
 <circle class="county-point" data-fips="47033" data-region="South" cx="584.27" cy="415.22" r="3.05" fill="#D55E00" aria-label="Crockett County, Tennessee"/>
 <circle class="county-point" data-fips="17049" data-region="Midwest" cx="383.81" cy="523.58" r="3.05" fill="#009E73" aria-label="Effingham County, Illinois"/>
 <circle class="county-point" data-fips="48467" data-region="South" cx="523.38" cy="478.43" r="3.05" fill="#D55E00" aria-label="Van Zandt County, Texas"/>
-<circle class="county-point" data-fips="02220" data-region="West" cx="305.15" cy="547.66" r="3.05" fill="#CC79A7" aria-label="Sitka County, Alaska"/>
+<circle class="county-point" data-fips="02220" data-region="West" cx="305.15" cy="547.66" r="3.05" fill="#CC79A7" aria-label="Sitka City and Borough, Alaska"/>
 <circle class="county-point" data-fips="08013" data-region="West" cx="147.82" cy="598.83" r="3.05" fill="#CC79A7" aria-label="Boulder County, Colorado"/>
 <circle class="county-point" data-fips="36065" data-region="Northeast" cx="518.30" cy="514.55" r="3.05" fill="#0072B2" aria-label="Oneida County, New York"/>
 <circle class="county-point" data-fips="13191" data-region="South" cx="688.31" cy="364.05" r="3.05" fill="#D55E00" aria-label="McIntosh County, Georgia"/>
@@ -1830,14 +1830,14 @@
 <circle class="county-point" data-fips="54083" data-region="South" cx="635.02" cy="418.23" r="3.05" fill="#D55E00" aria-label="Randolph County, West Virginia"/>
 <circle class="county-point" data-fips="06107" data-region="West" cx="673.09" cy="406.19" r="3.05" fill="#CC79A7" aria-label="Tulare County, California"/>
 <circle class="county-point" data-fips="46095" data-region="Midwest" cx="789.81" cy="249.67" r="3.05" fill="#009E73" aria-label="Mellette County, South Dakota"/>
-<circle class="county-point" data-fips="51590" data-region="South" cx="701.00" cy="300.84" r="3.05" fill="#D55E00" aria-label="Danville County, Virginia"/>
+<circle class="county-point" data-fips="51590" data-region="South" cx="701.00" cy="300.84" r="3.05" fill="#D55E00" aria-label="Danville city, Virginia"/>
 <circle class="county-point" data-fips="36017" data-region="Northeast" cx="490.39" cy="520.57" r="3.05" fill="#0072B2" aria-label="Chenango County, New York"/>
 <circle class="county-point" data-fips="27019" data-region="Midwest" cx="302.61" cy="580.77" r="3.05" fill="#009E73" aria-label="Carver County, Minnesota"/>
 <circle class="county-point" data-fips="49015" data-region="West" cx="327.99" cy="517.56" r="3.05" fill="#CC79A7" aria-label="Emery County, Utah"/>
 <circle class="county-point" data-fips="48137" data-region="South" cx="693.39" cy="388.13" r="3.05" fill="#D55E00" aria-label="Edwards County, Texas"/>
 <circle class="county-point" data-fips="20011" data-region="Midwest" cx="586.81" cy="487.46" r="3.05" fill="#009E73" aria-label="Bourbon County, Kansas"/>
 <circle class="county-point" data-fips="54027" data-region="South" cx="629.95" cy="427.26" r="3.05" fill="#D55E00" aria-label="Hampshire County, West Virginia"/>
-<circle class="county-point" data-fips="22069" data-region="South" cx="660.40" cy="355.02" r="3.05" fill="#D55E00" aria-label="Natchitoches County, Louisiana"/>
+<circle class="county-point" data-fips="22069" data-region="South" cx="660.40" cy="355.02" r="3.05" fill="#D55E00" aria-label="Natchitoches Parish, Louisiana"/>
 <circle class="county-point" data-fips="20149" data-region="Midwest" cx="424.41" cy="544.65" r="3.05" fill="#009E73" aria-label="Pottawatomie County, Kansas"/>
 <circle class="county-point" data-fips="51109" data-region="South" cx="439.64" cy="472.41" r="3.05" fill="#D55E00" aria-label="Louisa County, Virginia"/>
 <circle class="county-point" data-fips="17059" data-region="Midwest" cx="482.77" cy="484.45" r="3.05" fill="#009E73" aria-label="Gallatin County, Illinois"/>
@@ -1854,9 +1854,9 @@
 <circle class="county-point" data-fips="48057" data-region="South" cx="599.50" cy="433.28" r="3.05" fill="#D55E00" aria-label="Calhoun County, Texas"/>
 <circle class="county-point" data-fips="17143" data-region="Midwest" cx="411.73" cy="472.41" r="3.05" fill="#009E73" aria-label="Peoria County, Illinois"/>
 <circle class="county-point" data-fips="05087" data-region="South" cx="685.77" cy="460.37" r="3.05" fill="#D55E00" aria-label="Madison County, Arkansas"/>
-<circle class="county-point" data-fips="51630" data-region="South" cx="452.32" cy="451.34" r="3.05" fill="#D55E00" aria-label="Fredericksburg County, Virginia"/>
+<circle class="county-point" data-fips="51630" data-region="South" cx="452.32" cy="451.34" r="3.05" fill="#D55E00" aria-label="Fredericksburg city, Virginia"/>
 <circle class="county-point" data-fips="06023" data-region="West" cx="426.95" cy="499.50" r="3.05" fill="#CC79A7" aria-label="Humboldt County, California"/>
-<circle class="county-point" data-fips="22125" data-region="South" cx="530.99" cy="415.22" r="3.05" fill="#D55E00" aria-label="West Feliciana County, Louisiana"/>
+<circle class="county-point" data-fips="22125" data-region="South" cx="530.99" cy="415.22" r="3.05" fill="#D55E00" aria-label="West Feliciana Parish, Louisiana"/>
 <circle class="county-point" data-fips="27131" data-region="Midwest" cx="482.77" cy="517.56" r="3.05" fill="#009E73" aria-label="Rice County, Minnesota"/>
 <circle class="county-point" data-fips="47063" data-region="South" cx="599.50" cy="412.21" r="3.05" fill="#D55E00" aria-label="Hamblen County, Tennessee"/>
 <circle class="county-point" data-fips="53041" data-region="West" cx="371.12" cy="511.54" r="3.05" fill="#CC79A7" aria-label="Lewis County, Washington"/>
@@ -1875,7 +1875,7 @@
 <circle class="county-point" data-fips="20045" data-region="Midwest" cx="345.75" cy="523.58" r="3.05" fill="#009E73" aria-label="Douglas County, Kansas"/>
 <circle class="county-point" data-fips="17177" data-region="Midwest" cx="462.48" cy="487.46" r="3.05" fill="#009E73" aria-label="Stephenson County, Illinois"/>
 <circle class="county-point" data-fips="13269" data-region="South" cx="751.75" cy="318.90" r="3.05" fill="#D55E00" aria-label="Taylor County, Georgia"/>
-<circle class="county-point" data-fips="22113" data-region="South" cx="624.88" cy="415.22" r="3.05" fill="#D55E00" aria-label="Vermilion County, Louisiana"/>
+<circle class="county-point" data-fips="22113" data-region="South" cx="624.88" cy="415.22" r="3.05" fill="#D55E00" aria-label="Vermilion Parish, Louisiana"/>
 <circle class="county-point" data-fips="48493" data-region="South" cx="487.85" cy="469.40" r="3.05" fill="#D55E00" aria-label="Wilson County, Texas"/>
 <circle class="county-point" data-fips="20187" data-region="Midwest" cx="703.54" cy="424.25" r="3.05" fill="#009E73" aria-label="Stanton County, Kansas"/>
 <circle class="county-point" data-fips="39061" data-region="Midwest" cx="442.18" cy="442.31" r="3.05" fill="#009E73" aria-label="Hamilton County, Ohio"/>
@@ -1923,10 +1923,10 @@
 <circle class="county-point" data-fips="13135" data-region="South" cx="530.99" cy="439.30" r="3.05" fill="#D55E00" aria-label="Gwinnett County, Georgia"/>
 <circle class="county-point" data-fips="19185" data-region="Midwest" cx="523.38" cy="499.50" r="3.05" fill="#009E73" aria-label="Wayne County, Iowa"/>
 <circle class="county-point" data-fips="39039" data-region="Midwest" cx="508.15" cy="472.41" r="3.05" fill="#009E73" aria-label="Defiance County, Ohio"/>
-<circle class="county-point" data-fips="22123" data-region="South" cx="637.56" cy="412.21" r="3.05" fill="#D55E00" aria-label="West Carroll County, Louisiana"/>
+<circle class="county-point" data-fips="22123" data-region="South" cx="637.56" cy="412.21" r="3.05" fill="#D55E00" aria-label="West Carroll Parish, Louisiana"/>
 <circle class="county-point" data-fips="06073" data-region="West" cx="355.90" cy="517.56" r="3.05" fill="#CC79A7" aria-label="San Diego County, California"/>
 <circle class="county-point" data-fips="17023" data-region="Midwest" cx="388.89" cy="517.56" r="3.05" fill="#009E73" aria-label="Clark County, Illinois"/>
-<circle class="county-point" data-fips="51660" data-region="South" cx="589.35" cy="382.11" r="3.05" fill="#D55E00" aria-label="Harrisonburg County, Virginia"/>
+<circle class="county-point" data-fips="51660" data-region="South" cx="589.35" cy="382.11" r="3.05" fill="#D55E00" aria-label="Harrisonburg city, Virginia"/>
 <circle class="county-point" data-fips="13011" data-region="South" cx="548.75" cy="454.35" r="3.05" fill="#D55E00" aria-label="Banks County, Georgia"/>
 <circle class="county-point" data-fips="20193" data-region="Midwest" cx="457.40" cy="529.60" r="3.05" fill="#009E73" aria-label="Thomas County, Kansas"/>
 <circle class="county-point" data-fips="08121" data-region="West" cx="310.23" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Washington County, Colorado"/>
@@ -1964,7 +1964,7 @@
 <circle class="county-point" data-fips="40149" data-region="South" cx="619.80" cy="475.42" r="3.05" fill="#D55E00" aria-label="Washita County, Oklahoma"/>
 <circle class="county-point" data-fips="13087" data-region="South" cx="688.31" cy="339.97" r="3.05" fill="#D55E00" aria-label="Decatur County, Georgia"/>
 <circle class="county-point" data-fips="06109" data-region="West" cx="368.59" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Tuolumne County, California"/>
-<circle class="county-point" data-fips="02122" data-region="West" cx="353.36" cy="562.71" r="3.05" fill="#CC79A7" aria-label="Kenai Peninsula County, Alaska"/>
+<circle class="county-point" data-fips="02122" data-region="West" cx="353.36" cy="562.71" r="3.05" fill="#CC79A7" aria-label="Kenai Peninsula Borough, Alaska"/>
 <circle class="county-point" data-fips="17113" data-region="Midwest" cx="343.21" cy="514.55" r="3.05" fill="#009E73" aria-label="McLean County, Illinois"/>
 <circle class="county-point" data-fips="31077" data-region="Midwest" cx="498.00" cy="520.57" r="3.05" fill="#009E73" aria-label="Greeley County, Nebraska"/>
 <circle class="county-point" data-fips="20065" data-region="Midwest" cx="523.38" cy="493.48" r="3.05" fill="#009E73" aria-label="Graham County, Kansas"/>
@@ -1994,7 +1994,7 @@
 <circle class="county-point" data-fips="50019" data-region="Northeast" cx="388.89" cy="556.69" r="3.05" fill="#0072B2" aria-label="Orleans County, Vermont"/>
 <circle class="county-point" data-fips="29199" data-region="Midwest" cx="637.56" cy="487.46" r="3.05" fill="#009E73" aria-label="Scotland County, Missouri"/>
 <circle class="county-point" data-fips="35023" data-region="West" cx="571.59" cy="421.24" r="3.05" fill="#CC79A7" aria-label="Hidalgo County, New Mexico"/>
-<circle class="county-point" data-fips="51830" data-region="South" cx="434.56" cy="460.37" r="3.05" fill="#D55E00" aria-label="Williamsburg County, Virginia"/>
+<circle class="county-point" data-fips="51830" data-region="South" cx="434.56" cy="460.37" r="3.05" fill="#D55E00" aria-label="Williamsburg city, Virginia"/>
 <circle class="county-point" data-fips="31013" data-region="Midwest" cx="566.51" cy="487.46" r="3.05" fill="#009E73" aria-label="Box Butte County, Nebraska"/>
 <circle class="county-point" data-fips="48179" data-region="South" cx="619.80" cy="427.26" r="3.05" fill="#D55E00" aria-label="Gray County, Texas"/>
 <circle class="county-point" data-fips="39103" data-region="Midwest" cx="411.73" cy="517.56" r="3.05" fill="#009E73" aria-label="Medina County, Ohio"/>
@@ -2002,7 +2002,7 @@
 <circle class="county-point" data-fips="36087" data-region="Northeast" cx="505.61" cy="502.51" r="3.05" fill="#0072B2" aria-label="Rockland County, New York"/>
 <circle class="county-point" data-fips="13077" data-region="South" cx="449.79" cy="475.42" r="3.05" fill="#D55E00" aria-label="Coweta County, Georgia"/>
 <circle class="county-point" data-fips="32019" data-region="West" cx="495.46" cy="505.52" r="3.05" fill="#CC79A7" aria-label="Lyon County, Nevada"/>
-<circle class="county-point" data-fips="22103" data-region="South" cx="467.55" cy="472.41" r="3.05" fill="#D55E00" aria-label="St. Tammany County, Louisiana"/>
+<circle class="county-point" data-fips="22103" data-region="South" cx="467.55" cy="472.41" r="3.05" fill="#D55E00" aria-label="St. Tammany Parish, Louisiana"/>
 <circle class="county-point" data-fips="39125" data-region="Midwest" cx="576.66" cy="463.38" r="3.05" fill="#009E73" aria-label="Paulding County, Ohio"/>
 <circle class="county-point" data-fips="24019" data-region="South" cx="543.67" cy="415.22" r="3.05" fill="#D55E00" aria-label="Dorchester County, Maryland"/>
 <circle class="county-point" data-fips="24029" data-region="South" cx="406.65" cy="490.47" r="3.05" fill="#D55E00" aria-label="Kent County, Maryland"/>
@@ -2033,7 +2033,7 @@
 <circle class="county-point" data-fips="26089" data-region="Midwest" cx="292.46" cy="562.71" r="3.05" fill="#009E73" aria-label="Leelanau County, Michigan"/>
 <circle class="county-point" data-fips="39159" data-region="Midwest" cx="416.80" cy="520.57" r="3.05" fill="#009E73" aria-label="Union County, Ohio"/>
 <circle class="county-point" data-fips="41049" data-region="West" cx="530.99" cy="418.23" r="3.05" fill="#CC79A7" aria-label="Morrow County, Oregon"/>
-<circle class="county-point" data-fips="22039" data-region="South" cx="746.67" cy="349.00" r="3.05" fill="#D55E00" aria-label="Evangeline County, Louisiana"/>
+<circle class="county-point" data-fips="22039" data-region="South" cx="746.67" cy="349.00" r="3.05" fill="#D55E00" aria-label="Evangeline Parish, Louisiana"/>
 <circle class="county-point" data-fips="17103" data-region="Midwest" cx="447.25" cy="493.48" r="3.05" fill="#009E73" aria-label="Lee County, Illinois"/>
 <circle class="county-point" data-fips="06045" data-region="West" cx="452.32" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Mendocino County, California"/>
 <circle class="county-point" data-fips="13199" data-region="South" cx="673.09" cy="379.10" r="3.05" fill="#D55E00" aria-label="Meriwether County, Georgia"/>
@@ -2042,7 +2042,7 @@
 <circle class="county-point" data-fips="19043" data-region="Midwest" cx="546.21" cy="496.49" r="3.05" fill="#009E73" aria-label="Clayton County, Iowa"/>
 <circle class="county-point" data-fips="29049" data-region="Midwest" cx="561.44" cy="511.54" r="3.05" fill="#009E73" aria-label="Clinton County, Missouri"/>
 <circle class="county-point" data-fips="18101" data-region="Midwest" cx="490.39" cy="454.35" r="3.05" fill="#009E73" aria-label="Martin County, Indiana"/>
-<circle class="county-point" data-fips="51620" data-region="South" cx="629.95" cy="345.99" r="3.05" fill="#D55E00" aria-label="Franklin County, Virginia"/>
+<circle class="county-point" data-fips="51620" data-region="South" cx="629.95" cy="345.99" r="3.05" fill="#D55E00" aria-label="Franklin city, Virginia"/>
 <circle class="county-point" data-fips="48209" data-region="South" cx="444.71" cy="475.42" r="3.05" fill="#D55E00" aria-label="Hays County, Texas"/>
 <circle class="county-point" data-fips="37197" data-region="South" cx="480.24" cy="487.46" r="3.05" fill="#D55E00" aria-label="Yadkin County, North Carolina"/>
 <circle class="county-point" data-fips="55001" data-region="Midwest" cx="607.11" cy="463.38" r="3.05" fill="#009E73" aria-label="Adams County, Wisconsin"/>
@@ -2056,7 +2056,7 @@
 <circle class="county-point" data-fips="05023" data-region="South" cx="632.49" cy="478.43" r="3.05" fill="#D55E00" aria-label="Cleburne County, Arkansas"/>
 <circle class="county-point" data-fips="28139" data-region="South" cx="721.30" cy="406.19" r="3.05" fill="#D55E00" aria-label="Tippah County, Mississippi"/>
 <circle class="county-point" data-fips="45031" data-region="South" cx="571.59" cy="364.05" r="3.05" fill="#D55E00" aria-label="Darlington County, South Carolina"/>
-<circle class="county-point" data-fips="22061" data-region="South" cx="662.94" cy="345.99" r="3.05" fill="#D55E00" aria-label="Lincoln County, Louisiana"/>
+<circle class="county-point" data-fips="22061" data-region="South" cx="662.94" cy="345.99" r="3.05" fill="#D55E00" aria-label="Lincoln Parish, Louisiana"/>
 <circle class="county-point" data-fips="51051" data-region="South" cx="629.95" cy="421.24" r="3.05" fill="#D55E00" aria-label="Dickenson County, Virginia"/>
 <circle class="county-point" data-fips="48079" data-region="South" cx="878.62" cy="285.79" r="3.05" fill="#D55E00" aria-label="Cochran County, Texas"/>
 <circle class="county-point" data-fips="48145" data-region="South" cx="665.48" cy="385.12" r="3.05" fill="#D55E00" aria-label="Falls County, Texas"/>
@@ -2074,7 +2074,7 @@
 <circle class="county-point" data-fips="29133" data-region="Midwest" cx="848.17" cy="376.09" r="3.05" fill="#009E73" aria-label="Mississippi County, Missouri"/>
 <circle class="county-point" data-fips="06015" data-region="West" cx="452.32" cy="493.48" r="3.05" fill="#CC79A7" aria-label="Del Norte County, California"/>
 <circle class="county-point" data-fips="05067" data-region="South" cx="815.19" cy="388.13" r="3.05" fill="#D55E00" aria-label="Jackson County, Arkansas"/>
-<circle class="county-point" data-fips="51735" data-region="South" cx="322.91" cy="535.62" r="3.05" fill="#D55E00" aria-label="Poquoson County, Virginia"/>
+<circle class="county-point" data-fips="51735" data-region="South" cx="322.91" cy="535.62" r="3.05" fill="#D55E00" aria-label="Poquoson city, Virginia"/>
 <circle class="county-point" data-fips="47167" data-region="South" cx="525.91" cy="430.27" r="3.05" fill="#D55E00" aria-label="Tipton County, Tennessee"/>
 <circle class="county-point" data-fips="48085" data-region="South" cx="343.21" cy="526.59" r="3.05" fill="#D55E00" aria-label="Collin County, Texas"/>
 <circle class="county-point" data-fips="36031" data-region="Northeast" cx="432.02" cy="544.65" r="3.05" fill="#0072B2" aria-label="Essex County, New York"/>
@@ -2108,7 +2108,7 @@
 <circle class="county-point" data-fips="53047" data-region="West" cx="429.49" cy="487.46" r="3.05" fill="#CC79A7" aria-label="Okanogan County, Washington"/>
 <circle class="county-point" data-fips="30023" data-region="West" cx="424.41" cy="514.55" r="3.05" fill="#CC79A7" aria-label="Deer Lodge County, Montana"/>
 <circle class="county-point" data-fips="46025" data-region="Midwest" cx="470.09" cy="502.51" r="3.05" fill="#009E73" aria-label="Clark County, South Dakota"/>
-<circle class="county-point" data-fips="22083" data-region="South" cx="718.76" cy="349.00" r="3.05" fill="#D55E00" aria-label="Richland County, Louisiana"/>
+<circle class="county-point" data-fips="22083" data-region="South" cx="718.76" cy="349.00" r="3.05" fill="#D55E00" aria-label="Richland Parish, Louisiana"/>
 <circle class="county-point" data-fips="25013" data-region="Northeast" cx="574.12" cy="484.45" r="3.05" fill="#0072B2" aria-label="Hampden County, Massachusetts"/>
 <circle class="county-point" data-fips="05077" data-region="South" cx="883.70" cy="285.79" r="3.05" fill="#D55E00" aria-label="Lee County, Arkansas"/>
 <circle class="county-point" data-fips="39031" data-region="Midwest" cx="609.65" cy="433.28" r="3.05" fill="#009E73" aria-label="Coshocton County, Ohio"/>
@@ -2120,7 +2120,7 @@
 <circle class="county-point" data-fips="19193" data-region="Midwest" cx="558.90" cy="469.40" r="3.05" fill="#009E73" aria-label="Woodbury County, Iowa"/>
 <circle class="county-point" data-fips="13053" data-region="South" cx="594.42" cy="373.08" r="3.05" fill="#D55E00" aria-label="Chattahoochee County, Georgia"/>
 <circle class="county-point" data-fips="20163" data-region="Midwest" cx="503.07" cy="523.58" r="3.05" fill="#009E73" aria-label="Rooks County, Kansas"/>
-<circle class="county-point" data-fips="02282" data-region="West" cx="477.70" cy="481.44" r="3.05" fill="#CC79A7" aria-label="Yakutat County, Alaska"/>
+<circle class="county-point" data-fips="02282" data-region="West" cx="477.70" cy="481.44" r="3.05" fill="#CC79A7" aria-label="Yakutat City and Borough, Alaska"/>
 <circle class="county-point" data-fips="29163" data-region="Midwest" cx="647.71" cy="460.37" r="3.05" fill="#009E73" aria-label="Pike County, Missouri"/>
 <circle class="county-point" data-fips="40021" data-region="South" cx="632.49" cy="406.19" r="3.05" fill="#D55E00" aria-label="Cherokee County, Oklahoma"/>
 <circle class="county-point" data-fips="38041" data-region="Midwest" cx="421.88" cy="532.61" r="3.05" fill="#009E73" aria-label="Hettinger County, North Dakota"/>
@@ -2155,7 +2155,7 @@
 <circle class="county-point" data-fips="28163" data-region="South" cx="911.61" cy="261.71" r="3.05" fill="#D55E00" aria-label="Yazoo County, Mississippi"/>
 <circle class="county-point" data-fips="40055" data-region="South" cx="652.79" cy="451.34" r="3.05" fill="#D55E00" aria-label="Greer County, Oklahoma"/>
 <circle class="county-point" data-fips="08035" data-region="West" cx="175.74" cy="619.90" r="3.05" fill="#CC79A7" aria-label="Douglas County, Colorado"/>
-<circle class="county-point" data-fips="09120" data-region="Northeast" cx="530.99" cy="523.58" r="3.05" fill="#0072B2" aria-label="Greater Bridgeport County, Connecticut"/>
+<circle class="county-point" data-fips="09120" data-region="Northeast" cx="530.99" cy="523.58" r="3.05" fill="#0072B2" aria-label="Greater Bridgeport Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="51141" data-region="South" cx="525.91" cy="457.36" r="3.05" fill="#D55E00" aria-label="Patrick County, Virginia"/>
 <circle class="county-point" data-fips="51127" data-region="South" cx="358.44" cy="502.51" r="3.05" fill="#D55E00" aria-label="New Kent County, Virginia"/>
 <circle class="county-point" data-fips="51021" data-region="South" cx="454.86" cy="484.45" r="3.05" fill="#D55E00" aria-label="Bland County, Virginia"/>
@@ -2167,7 +2167,7 @@
 <circle class="county-point" data-fips="01101" data-region="South" cx="596.96" cy="355.02" r="3.05" fill="#D55E00" aria-label="Montgomery County, Alabama"/>
 <circle class="county-point" data-fips="29029" data-region="Midwest" cx="561.44" cy="502.51" r="3.05" fill="#009E73" aria-label="Camden County, Missouri"/>
 <circle class="county-point" data-fips="48089" data-region="South" cx="551.29" cy="451.34" r="3.05" fill="#D55E00" aria-label="Colorado County, Texas"/>
-<circle class="county-point" data-fips="02013" data-region="West" cx="561.44" cy="412.21" r="3.05" fill="#CC79A7" aria-label="Aleutians East County, Alaska"/>
+<circle class="county-point" data-fips="02013" data-region="West" cx="561.44" cy="412.21" r="3.05" fill="#CC79A7" aria-label="Aleutians East Borough, Alaska"/>
 <circle class="county-point" data-fips="06025" data-region="West" cx="728.91" cy="361.04" r="3.05" fill="#CC79A7" aria-label="Imperial County, California"/>
 <circle class="county-point" data-fips="17153" data-region="Midwest" cx="622.34" cy="364.05" r="3.05" fill="#009E73" aria-label="Pulaski County, Illinois"/>
 <circle class="county-point" data-fips="39095" data-region="Midwest" cx="571.59" cy="433.28" r="3.05" fill="#009E73" aria-label="Lucas County, Ohio"/>
@@ -2187,7 +2187,7 @@
 <circle class="county-point" data-fips="48329" data-region="South" cx="523.38" cy="457.36" r="3.05" fill="#D55E00" aria-label="Midland County, Texas"/>
 <circle class="county-point" data-fips="05131" data-region="South" cx="662.94" cy="454.35" r="3.05" fill="#D55E00" aria-label="Sebastian County, Arkansas"/>
 <circle class="county-point" data-fips="55031" data-region="Midwest" cx="492.93" cy="517.56" r="3.05" fill="#009E73" aria-label="Douglas County, Wisconsin"/>
-<circle class="county-point" data-fips="51550" data-region="South" cx="401.57" cy="451.34" r="3.05" fill="#D55E00" aria-label="Chesapeake County, Virginia"/>
+<circle class="county-point" data-fips="51550" data-region="South" cx="401.57" cy="451.34" r="3.05" fill="#D55E00" aria-label="Chesapeake city, Virginia"/>
 <circle class="county-point" data-fips="19001" data-region="Midwest" cx="495.46" cy="502.51" r="3.05" fill="#009E73" aria-label="Adair County, Iowa"/>
 <circle class="county-point" data-fips="05141" data-region="South" cx="695.92" cy="454.35" r="3.05" fill="#D55E00" aria-label="Van Buren County, Arkansas"/>
 <circle class="county-point" data-fips="12019" data-region="South" cx="457.40" cy="490.47" r="3.05" fill="#D55E00" aria-label="Clay County, Florida"/>
@@ -2233,11 +2233,11 @@
 <circle class="county-point" data-fips="31047" data-region="Midwest" cx="650.25" cy="442.31" r="3.05" fill="#009E73" aria-label="Dawson County, Nebraska"/>
 <circle class="county-point" data-fips="38105" data-region="Midwest" cx="459.94" cy="517.56" r="3.05" fill="#009E73" aria-label="Williams County, North Dakota"/>
 <circle class="county-point" data-fips="12077" data-region="South" cx="624.88" cy="409.20" r="3.05" fill="#D55E00" aria-label="Liberty County, Florida"/>
-<circle class="county-point" data-fips="22031" data-region="South" cx="668.01" cy="361.04" r="3.05" fill="#D55E00" aria-label="De Soto County, Louisiana"/>
+<circle class="county-point" data-fips="22031" data-region="South" cx="668.01" cy="361.04" r="3.05" fill="#D55E00" aria-label="De Soto Parish, Louisiana"/>
 <circle class="county-point" data-fips="29187" data-region="Midwest" cx="685.77" cy="457.36" r="3.05" fill="#009E73" aria-label="St. Francois County, Missouri"/>
 <circle class="county-point" data-fips="26105" data-region="Midwest" cx="426.95" cy="496.49" r="3.05" fill="#009E73" aria-label="Mason County, Michigan"/>
 <circle class="county-point" data-fips="31165" data-region="Midwest" cx="581.74" cy="463.38" r="3.05" fill="#009E73" aria-label="Sioux County, Nebraska"/>
-<circle class="county-point" data-fips="24510" data-region="South" cx="528.45" cy="388.13" r="3.05" fill="#D55E00" aria-label="Baltimore County, Maryland"/>
+<circle class="county-point" data-fips="24510" data-region="South" cx="528.45" cy="388.13" r="3.05" fill="#D55E00" aria-label="Baltimore city, Maryland"/>
 <circle class="county-point" data-fips="54097" data-region="South" cx="680.70" cy="400.17" r="3.05" fill="#D55E00" aria-label="Upshur County, West Virginia"/>
 <circle class="county-point" data-fips="55093" data-region="Midwest" cx="459.94" cy="532.61" r="3.05" fill="#009E73" aria-label="Pierce County, Wisconsin"/>
 <circle class="county-point" data-fips="27041" data-region="Midwest" cx="386.35" cy="544.65" r="3.05" fill="#009E73" aria-label="Douglas County, Minnesota"/>
@@ -2253,7 +2253,7 @@
 <circle class="county-point" data-fips="28003" data-region="South" cx="690.85" cy="427.26" r="3.05" fill="#D55E00" aria-label="Alcorn County, Mississippi"/>
 <circle class="county-point" data-fips="27085" data-region="Midwest" cx="452.32" cy="523.58" r="3.05" fill="#009E73" aria-label="McLeod County, Minnesota"/>
 <circle class="county-point" data-fips="37085" data-region="South" cx="490.39" cy="466.39" r="3.05" fill="#D55E00" aria-label="Harnett County, North Carolina"/>
-<circle class="county-point" data-fips="51790" data-region="South" cx="442.18" cy="478.43" r="3.05" fill="#D55E00" aria-label="Staunton County, Virginia"/>
+<circle class="county-point" data-fips="51790" data-region="South" cx="442.18" cy="478.43" r="3.05" fill="#D55E00" aria-label="Staunton city, Virginia"/>
 <circle class="county-point" data-fips="46097" data-region="Midwest" cx="452.32" cy="508.53" r="3.05" fill="#009E73" aria-label="Miner County, South Dakota"/>
 <circle class="county-point" data-fips="47141" data-region="South" cx="485.31" cy="448.33" r="3.05" fill="#D55E00" aria-label="Putnam County, Tennessee"/>
 <circle class="county-point" data-fips="18091" data-region="Midwest" cx="518.30" cy="424.25" r="3.05" fill="#009E73" aria-label="LaPorte County, Indiana"/>
@@ -2268,7 +2268,7 @@
 <circle class="county-point" data-fips="48067" data-region="South" cx="563.98" cy="439.30" r="3.05" fill="#D55E00" aria-label="Cass County, Texas"/>
 <circle class="county-point" data-fips="39137" data-region="Midwest" cx="426.95" cy="505.52" r="3.05" fill="#009E73" aria-label="Putnam County, Ohio"/>
 <circle class="county-point" data-fips="18009" data-region="Midwest" cx="566.51" cy="418.23" r="3.05" fill="#009E73" aria-label="Blackford County, Indiana"/>
-<circle class="county-point" data-fips="22053" data-region="South" cx="655.33" cy="421.24" r="3.05" fill="#D55E00" aria-label="Jefferson Davis County, Louisiana"/>
+<circle class="county-point" data-fips="22053" data-region="South" cx="655.33" cy="421.24" r="3.05" fill="#D55E00" aria-label="Jefferson Davis Parish, Louisiana"/>
 <circle class="county-point" data-fips="56009" data-region="West" cx="475.16" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Converse County, Wyoming"/>
 <circle class="county-point" data-fips="46127" data-region="Midwest" cx="343.21" cy="541.64" r="3.05" fill="#009E73" aria-label="Union County, South Dakota"/>
 <circle class="county-point" data-fips="53077" data-region="West" cx="541.14" cy="436.29" r="3.05" fill="#CC79A7" aria-label="Yakima County, Washington"/>
@@ -2303,24 +2303,24 @@
 <circle class="county-point" data-fips="28049" data-region="South" cx="706.08" cy="339.97" r="3.05" fill="#D55E00" aria-label="Hinds County, Mississippi"/>
 <circle class="county-point" data-fips="29039" data-region="Midwest" cx="668.01" cy="448.33" r="3.05" fill="#009E73" aria-label="Cedar County, Missouri"/>
 <circle class="county-point" data-fips="18057" data-region="Midwest" cx="236.64" cy="541.64" r="3.05" fill="#009E73" aria-label="Hamilton County, Indiana"/>
-<circle class="county-point" data-fips="02063" data-region="West" cx="350.82" cy="559.70" r="3.05" fill="#CC79A7" aria-label="Chugach County, Alaska"/>
+<circle class="county-point" data-fips="02063" data-region="West" cx="350.82" cy="559.70" r="3.05" fill="#CC79A7" aria-label="Chugach Census Area, Alaska"/>
 <circle class="county-point" data-fips="29203" data-region="Midwest" cx="647.71" cy="463.38" r="3.05" fill="#009E73" aria-label="Shannon County, Missouri"/>
 <circle class="county-point" data-fips="05127" data-region="South" cx="716.23" cy="448.33" r="3.05" fill="#D55E00" aria-label="Scott County, Arkansas"/>
 <circle class="county-point" data-fips="20177" data-region="Midwest" cx="462.48" cy="490.47" r="3.05" fill="#009E73" aria-label="Shawnee County, Kansas"/>
-<circle class="county-point" data-fips="22051" data-region="South" cx="574.12" cy="391.14" r="3.05" fill="#D55E00" aria-label="Jefferson County, Louisiana"/>
+<circle class="county-point" data-fips="22051" data-region="South" cx="574.12" cy="391.14" r="3.05" fill="#D55E00" aria-label="Jefferson Parish, Louisiana"/>
 <circle class="county-point" data-fips="12129" data-region="South" cx="503.07" cy="475.42" r="3.05" fill="#D55E00" aria-label="Wakulla County, Florida"/>
 <circle class="county-point" data-fips="31029" data-region="Midwest" cx="541.14" cy="508.53" r="3.05" fill="#009E73" aria-label="Chase County, Nebraska"/>
 <circle class="county-point" data-fips="35001" data-region="West" cx="409.19" cy="493.48" r="3.05" fill="#CC79A7" aria-label="Bernalillo County, New Mexico"/>
 <circle class="county-point" data-fips="54063" data-region="South" cx="668.01" cy="406.19" r="3.05" fill="#D55E00" aria-label="Monroe County, West Virginia"/>
 <circle class="county-point" data-fips="55137" data-region="Midwest" cx="579.20" cy="493.48" r="3.05" fill="#009E73" aria-label="Waushara County, Wisconsin"/>
 <circle class="county-point" data-fips="51081" data-region="South" cx="622.34" cy="330.94" r="3.05" fill="#D55E00" aria-label="Greensville County, Virginia"/>
-<circle class="county-point" data-fips="51800" data-region="South" cx="477.70" cy="436.29" r="3.05" fill="#D55E00" aria-label="Suffolk County, Virginia"/>
+<circle class="county-point" data-fips="51800" data-region="South" cx="477.70" cy="436.29" r="3.05" fill="#D55E00" aria-label="Suffolk city, Virginia"/>
 <circle class="county-point" data-fips="48397" data-region="South" cx="348.29" cy="538.63" r="3.05" fill="#D55E00" aria-label="Rockwall County, Texas"/>
 <circle class="county-point" data-fips="48409" data-region="South" cx="701.00" cy="382.11" r="3.05" fill="#D55E00" aria-label="San Patricio County, Texas"/>
 <circle class="county-point" data-fips="31123" data-region="Midwest" cx="599.50" cy="487.46" r="3.05" fill="#009E73" aria-label="Morrill County, Nebraska"/>
 <circle class="county-point" data-fips="38077" data-region="Midwest" cx="419.34" cy="529.60" r="3.05" fill="#009E73" aria-label="Richland County, North Dakota"/>
-<circle class="county-point" data-fips="51710" data-region="South" cx="525.91" cy="391.14" r="3.05" fill="#D55E00" aria-label="Norfolk County, Virginia"/>
-<circle class="county-point" data-fips="09160" data-region="Northeast" cx="393.96" cy="562.71" r="3.05" fill="#0072B2" aria-label="Northwest Hills County, Connecticut"/>
+<circle class="county-point" data-fips="51710" data-region="South" cx="525.91" cy="391.14" r="3.05" fill="#D55E00" aria-label="Norfolk city, Virginia"/>
+<circle class="county-point" data-fips="09160" data-region="Northeast" cx="393.96" cy="562.71" r="3.05" fill="#0072B2" aria-label="Northwest Hills Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="55047" data-region="Midwest" cx="594.42" cy="496.49" r="3.05" fill="#009E73" aria-label="Green Lake County, Wisconsin"/>
 <circle class="county-point" data-fips="13117" data-region="South" cx="335.60" cy="535.62" r="3.05" fill="#D55E00" aria-label="Forsyth County, Georgia"/>
 <circle class="county-point" data-fips="16037" data-region="West" cx="381.27" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Custer County, Idaho"/>
@@ -2351,7 +2351,7 @@
 <circle class="county-point" data-fips="28037" data-region="South" cx="754.29" cy="361.04" r="3.05" fill="#D55E00" aria-label="Franklin County, Mississippi"/>
 <circle class="county-point" data-fips="48173" data-region="South" cx="414.26" cy="502.51" r="3.05" fill="#D55E00" aria-label="Glasscock County, Texas"/>
 <circle class="county-point" data-fips="38043" data-region="Midwest" cx="449.79" cy="526.59" r="3.05" fill="#009E73" aria-label="Kidder County, North Dakota"/>
-<circle class="county-point" data-fips="51595" data-region="South" cx="718.76" cy="300.84" r="3.05" fill="#D55E00" aria-label="Emporia County, Virginia"/>
+<circle class="county-point" data-fips="51595" data-region="South" cx="718.76" cy="300.84" r="3.05" fill="#D55E00" aria-label="Emporia city, Virginia"/>
 <circle class="county-point" data-fips="08011" data-region="West" cx="571.59" cy="406.19" r="3.05" fill="#CC79A7" aria-label="Bent County, Colorado"/>
 <circle class="county-point" data-fips="13155" data-region="South" cx="647.71" cy="394.15" r="3.05" fill="#D55E00" aria-label="Irwin County, Georgia"/>
 <circle class="county-point" data-fips="06089" data-region="West" cx="366.05" cy="517.56" r="3.05" fill="#CC79A7" aria-label="Shasta County, California"/>
@@ -2384,7 +2384,7 @@
 <circle class="county-point" data-fips="51135" data-region="South" cx="591.89" cy="364.05" r="3.05" fill="#D55E00" aria-label="Nottoway County, Virginia"/>
 <circle class="county-point" data-fips="48345" data-region="South" cx="505.61" cy="484.45" r="3.05" fill="#D55E00" aria-label="Motley County, Texas"/>
 <circle class="county-point" data-fips="29137" data-region="Midwest" cx="627.41" cy="469.40" r="3.05" fill="#009E73" aria-label="Monroe County, Missouri"/>
-<circle class="county-point" data-fips="02185" data-region="West" cx="449.79" cy="469.40" r="3.05" fill="#CC79A7" aria-label="North Slope County, Alaska"/>
+<circle class="county-point" data-fips="02185" data-region="West" cx="449.79" cy="469.40" r="3.05" fill="#CC79A7" aria-label="North Slope Borough, Alaska"/>
 <circle class="county-point" data-fips="37115" data-region="South" cx="386.35" cy="526.59" r="3.05" fill="#D55E00" aria-label="Madison County, North Carolina"/>
 <circle class="county-point" data-fips="13189" data-region="South" cx="619.80" cy="385.12" r="3.05" fill="#D55E00" aria-label="McDuffie County, Georgia"/>
 <circle class="county-point" data-fips="06033" data-region="West" cx="495.46" cy="478.43" r="3.05" fill="#CC79A7" aria-label="Lake County, California"/>
@@ -2393,7 +2393,7 @@
 <circle class="county-point" data-fips="17149" data-region="Midwest" cx="475.16" cy="487.46" r="3.05" fill="#009E73" aria-label="Pike County, Illinois"/>
 <circle class="county-point" data-fips="35037" data-region="West" cx="579.20" cy="418.23" r="3.05" fill="#CC79A7" aria-label="Quay County, New Mexico"/>
 <circle class="county-point" data-fips="53013" data-region="West" cx="307.69" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Columbia County, Washington"/>
-<circle class="county-point" data-fips="22085" data-region="South" cx="708.61" cy="370.07" r="3.05" fill="#D55E00" aria-label="Sabine County, Louisiana"/>
+<circle class="county-point" data-fips="22085" data-region="South" cx="708.61" cy="370.07" r="3.05" fill="#D55E00" aria-label="Sabine Parish, Louisiana"/>
 <circle class="county-point" data-fips="39067" data-region="Midwest" cx="581.74" cy="445.32" r="3.05" fill="#009E73" aria-label="Harrison County, Ohio"/>
 <circle class="county-point" data-fips="27011" data-region="Midwest" cx="465.01" cy="520.57" r="3.05" fill="#009E73" aria-label="Big Stone County, Minnesota"/>
 <circle class="county-point" data-fips="36009" data-region="Northeast" cx="518.30" cy="511.54" r="3.05" fill="#0072B2" aria-label="Cattaraugus County, New York"/>
@@ -2418,7 +2418,7 @@
 <circle class="county-point" data-fips="20003" data-region="Midwest" cx="548.75" cy="493.48" r="3.05" fill="#009E73" aria-label="Anderson County, Kansas"/>
 <circle class="county-point" data-fips="40153" data-region="South" cx="591.89" cy="478.43" r="3.05" fill="#D55E00" aria-label="Woodward County, Oklahoma"/>
 <circle class="county-point" data-fips="06063" data-region="West" cx="376.20" cy="529.60" r="3.05" fill="#CC79A7" aria-label="Plumas County, California"/>
-<circle class="county-point" data-fips="22023" data-region="South" cx="508.15" cy="481.44" r="3.05" fill="#D55E00" aria-label="Cameron County, Louisiana"/>
+<circle class="county-point" data-fips="22023" data-region="South" cx="508.15" cy="481.44" r="3.05" fill="#D55E00" aria-label="Cameron Parish, Louisiana"/>
 <circle class="county-point" data-fips="54009" data-region="South" cx="538.60" cy="448.33" r="3.05" fill="#D55E00" aria-label="Brooke County, West Virginia"/>
 <circle class="county-point" data-fips="28091" data-region="South" cx="744.14" cy="367.06" r="3.05" fill="#D55E00" aria-label="Marion County, Mississippi"/>
 <circle class="county-point" data-fips="47121" data-region="South" cx="574.12" cy="433.28" r="3.05" fill="#D55E00" aria-label="Meigs County, Tennessee"/>
@@ -2427,7 +2427,7 @@
 <circle class="county-point" data-fips="23021" data-region="Northeast" cx="480.24" cy="511.54" r="3.05" fill="#0072B2" aria-label="Piscataquis County, Maine"/>
 <circle class="county-point" data-fips="39131" data-region="Midwest" cx="723.84" cy="403.18" r="3.05" fill="#009E73" aria-label="Pike County, Ohio"/>
 <circle class="county-point" data-fips="27149" data-region="Midwest" cx="475.16" cy="511.54" r="3.05" fill="#009E73" aria-label="Stevens County, Minnesota"/>
-<circle class="county-point" data-fips="51540" data-region="South" cx="424.41" cy="454.35" r="3.05" fill="#D55E00" aria-label="Charlottesville County, Virginia"/>
+<circle class="county-point" data-fips="51540" data-region="South" cx="424.41" cy="454.35" r="3.05" fill="#D55E00" aria-label="Charlottesville city, Virginia"/>
 <circle class="county-point" data-fips="45049" data-region="South" cx="690.85" cy="285.79" r="3.05" fill="#D55E00" aria-label="Hampton County, South Carolina"/>
 <circle class="county-point" data-fips="29181" data-region="Midwest" cx="736.52" cy="424.25" r="3.05" fill="#009E73" aria-label="Ripley County, Missouri"/>
 <circle class="county-point" data-fips="26113" data-region="Midwest" cx="503.07" cy="493.48" r="3.05" fill="#009E73" aria-label="Missaukee County, Michigan"/>
@@ -2528,16 +2528,16 @@
 <circle class="county-point" data-fips="46105" data-region="Midwest" cx="437.10" cy="499.50" r="3.05" fill="#009E73" aria-label="Perkins County, South Dakota"/>
 <circle class="county-point" data-fips="01047" data-region="South" cx="754.29" cy="255.69" r="3.05" fill="#D55E00" aria-label="Dallas County, Alabama"/>
 <circle class="county-point" data-fips="29147" data-region="Midwest" cx="556.36" cy="487.46" r="3.05" fill="#009E73" aria-label="Nodaway County, Missouri"/>
-<circle class="county-point" data-fips="51680" data-region="South" cx="480.24" cy="424.25" r="3.05" fill="#D55E00" aria-label="Lynchburg County, Virginia"/>
+<circle class="county-point" data-fips="51680" data-region="South" cx="480.24" cy="424.25" r="3.05" fill="#D55E00" aria-label="Lynchburg city, Virginia"/>
 <circle class="county-point" data-fips="40039" data-region="South" cx="652.79" cy="445.32" r="3.05" fill="#D55E00" aria-label="Custer County, Oklahoma"/>
 <circle class="county-point" data-fips="46063" data-region="Midwest" cx="340.68" cy="544.65" r="3.05" fill="#009E73" aria-label="Harding County, South Dakota"/>
 <circle class="county-point" data-fips="55075" data-region="Midwest" cx="536.06" cy="502.51" r="3.05" fill="#009E73" aria-label="Marinette County, Wisconsin"/>
 <circle class="county-point" data-fips="47035" data-region="South" cx="505.61" cy="448.33" r="3.05" fill="#D55E00" aria-label="Cumberland County, Tennessee"/>
-<circle class="county-point" data-fips="51750" data-region="South" cx="574.12" cy="388.13" r="3.05" fill="#D55E00" aria-label="Radford County, Virginia"/>
+<circle class="county-point" data-fips="51750" data-region="South" cx="574.12" cy="388.13" r="3.05" fill="#D55E00" aria-label="Radford city, Virginia"/>
 <circle class="county-point" data-fips="38035" data-region="Midwest" cx="411.73" cy="505.52" r="3.05" fill="#009E73" aria-label="Grand Forks County, North Dakota"/>
 <circle class="county-point" data-fips="01017" data-region="South" cx="662.94" cy="364.05" r="3.05" fill="#D55E00" aria-label="Chambers County, Alabama"/>
 <circle class="county-point" data-fips="36063" data-region="Northeast" cx="467.55" cy="532.61" r="3.05" fill="#0072B2" aria-label="Niagara County, New York"/>
-<circle class="county-point" data-fips="02070" data-region="West" cx="581.74" cy="424.25" r="3.05" fill="#CC79A7" aria-label="Dillingham County, Alaska"/>
+<circle class="county-point" data-fips="02070" data-region="West" cx="581.74" cy="424.25" r="3.05" fill="#CC79A7" aria-label="Dillingham Census Area, Alaska"/>
 <circle class="county-point" data-fips="53005" data-region="West" cx="348.29" cy="517.56" r="3.05" fill="#CC79A7" aria-label="Benton County, Washington"/>
 <circle class="county-point" data-fips="29013" data-region="Midwest" cx="655.33" cy="466.39" r="3.05" fill="#009E73" aria-label="Bates County, Missouri"/>
 <circle class="county-point" data-fips="31067" data-region="Midwest" cx="510.69" cy="508.53" r="3.05" fill="#009E73" aria-label="Gage County, Nebraska"/>
@@ -2604,29 +2604,29 @@
 <circle class="county-point" data-fips="48391" data-region="South" cx="701.00" cy="379.10" r="3.05" fill="#D55E00" aria-label="Refugio County, Texas"/>
 <circle class="county-point" data-fips="28083" data-region="South" cx="881.16" cy="228.60" r="3.05" fill="#D55E00" aria-label="Leflore County, Mississippi"/>
 <circle class="county-point" data-fips="28079" data-region="South" cx="772.05" cy="364.05" r="3.05" fill="#D55E00" aria-label="Leake County, Mississippi"/>
-<circle class="county-point" data-fips="51520" data-region="South" cx="538.60" cy="445.32" r="3.05" fill="#D55E00" aria-label="Bristol County, Virginia"/>
+<circle class="county-point" data-fips="51520" data-region="South" cx="538.60" cy="445.32" r="3.05" fill="#D55E00" aria-label="Bristol city, Virginia"/>
 <circle class="county-point" data-fips="48197" data-region="South" cx="581.74" cy="442.31" r="3.05" fill="#D55E00" aria-label="Hardeman County, Texas"/>
 <circle class="county-point" data-fips="38005" data-region="Midwest" cx="612.19" cy="397.16" r="3.05" fill="#009E73" aria-label="Benson County, North Dakota"/>
 <circle class="county-point" data-fips="49003" data-region="West" cx="330.52" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Box Elder County, Utah"/>
 <circle class="county-point" data-fips="13299" data-region="South" cx="741.60" cy="358.03" r="3.05" fill="#D55E00" aria-label="Ware County, Georgia"/>
 <circle class="county-point" data-fips="38055" data-region="Midwest" cx="414.26" cy="541.64" r="3.05" fill="#009E73" aria-label="McLean County, North Dakota"/>
-<circle class="county-point" data-fips="02150" data-region="West" cx="416.80" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Kodiak Island County, Alaska"/>
+<circle class="county-point" data-fips="02150" data-region="West" cx="416.80" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Kodiak Island Borough, Alaska"/>
 <circle class="county-point" data-fips="18035" data-region="Midwest" cx="487.85" cy="412.21" r="3.05" fill="#009E73" aria-label="Delaware County, Indiana"/>
 <circle class="county-point" data-fips="06055" data-region="West" cx="401.57" cy="520.57" r="3.05" fill="#CC79A7" aria-label="Napa County, California"/>
-<circle class="county-point" data-fips="22093" data-region="South" cx="617.26" cy="397.16" r="3.05" fill="#D55E00" aria-label="St. James County, Louisiana"/>
+<circle class="county-point" data-fips="22093" data-region="South" cx="617.26" cy="397.16" r="3.05" fill="#D55E00" aria-label="St. James Parish, Louisiana"/>
 <circle class="county-point" data-fips="30029" data-region="West" cx="297.54" cy="577.76" r="3.05" fill="#CC79A7" aria-label="Flathead County, Montana"/>
 <circle class="county-point" data-fips="46117" data-region="Midwest" cx="345.75" cy="544.65" r="3.05" fill="#009E73" aria-label="Stanley County, South Dakota"/>
 <circle class="county-point" data-fips="19019" data-region="Midwest" cx="411.73" cy="532.61" r="3.05" fill="#009E73" aria-label="Buchanan County, Iowa"/>
 <circle class="county-point" data-fips="08083" data-region="West" cx="355.90" cy="532.61" r="3.05" fill="#CC79A7" aria-label="Montezuma County, Colorado"/>
 <circle class="county-point" data-fips="48125" data-region="South" cx="594.42" cy="433.28" r="3.05" fill="#D55E00" aria-label="Dickens County, Texas"/>
-<circle class="county-point" data-fips="22003" data-region="South" cx="711.15" cy="370.07" r="3.05" fill="#D55E00" aria-label="Allen County, Louisiana"/>
+<circle class="county-point" data-fips="22003" data-region="South" cx="711.15" cy="370.07" r="3.05" fill="#D55E00" aria-label="Allen Parish, Louisiana"/>
 <circle class="county-point" data-fips="37033" data-region="South" cx="520.84" cy="439.30" r="3.05" fill="#D55E00" aria-label="Caswell County, North Carolina"/>
 <circle class="county-point" data-fips="38023" data-region="Midwest" cx="424.41" cy="529.60" r="3.05" fill="#009E73" aria-label="Divide County, North Dakota"/>
 <circle class="county-point" data-fips="40019" data-region="South" cx="690.85" cy="442.31" r="3.05" fill="#D55E00" aria-label="Carter County, Oklahoma"/>
-<circle class="county-point" data-fips="51650" data-region="South" cx="500.54" cy="385.12" r="3.05" fill="#D55E00" aria-label="Hampton County, Virginia"/>
+<circle class="county-point" data-fips="51650" data-region="South" cx="500.54" cy="385.12" r="3.05" fill="#D55E00" aria-label="Hampton city, Virginia"/>
 <circle class="county-point" data-fips="39157" data-region="Midwest" cx="556.36" cy="469.40" r="3.05" fill="#009E73" aria-label="Tuscarawas County, Ohio"/>
 <circle class="county-point" data-fips="41017" data-region="West" cx="234.10" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Deschutes County, Oregon"/>
-<circle class="county-point" data-fips="22037" data-region="South" cx="652.79" cy="403.18" r="3.05" fill="#D55E00" aria-label="East Feliciana County, Louisiana"/>
+<circle class="county-point" data-fips="22037" data-region="South" cx="652.79" cy="403.18" r="3.05" fill="#D55E00" aria-label="East Feliciana Parish, Louisiana"/>
 <circle class="county-point" data-fips="05079" data-region="South" cx="754.29" cy="394.15" r="3.05" fill="#D55E00" aria-label="Lincoln County, Arkansas"/>
 <circle class="county-point" data-fips="46023" data-region="Midwest" cx="558.90" cy="427.26" r="3.05" fill="#009E73" aria-label="Charles Mix County, South Dakota"/>
 <circle class="county-point" data-fips="08109" data-region="West" cx="439.64" cy="478.43" r="3.05" fill="#CC79A7" aria-label="Saguache County, Colorado"/>
@@ -2640,7 +2640,7 @@
 <circle class="county-point" data-fips="47175" data-region="South" cx="563.98" cy="445.32" r="3.05" fill="#D55E00" aria-label="Van Buren County, Tennessee"/>
 <circle class="county-point" data-fips="48319" data-region="South" cx="444.71" cy="502.51" r="3.05" fill="#D55E00" aria-label="Mason County, Texas"/>
 <circle class="county-point" data-fips="13119" data-region="South" cx="591.89" cy="427.26" r="3.05" fill="#D55E00" aria-label="Franklin County, Georgia"/>
-<circle class="county-point" data-fips="09170" data-region="Northeast" cx="498.00" cy="523.58" r="3.05" fill="#0072B2" aria-label="South Central Connecticut County, Connecticut"/>
+<circle class="county-point" data-fips="09170" data-region="Northeast" cx="498.00" cy="523.58" r="3.05" fill="#0072B2" aria-label="South Central Connecticut Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="31139" data-region="Midwest" cx="475.16" cy="541.64" r="3.05" fill="#009E73" aria-label="Pierce County, Nebraska"/>
 <circle class="county-point" data-fips="26095" data-region="Midwest" cx="498.00" cy="451.34" r="3.05" fill="#009E73" aria-label="Luce County, Michigan"/>
 <circle class="county-point" data-fips="29186" data-region="Midwest" cx="553.82" cy="505.52" r="3.05" fill="#009E73" aria-label="Ste. Genevieve County, Missouri"/>
@@ -2673,7 +2673,7 @@
 <circle class="county-point" data-fips="29219" data-region="Midwest" cx="589.35" cy="499.50" r="3.05" fill="#009E73" aria-label="Warren County, Missouri"/>
 <circle class="county-point" data-fips="27129" data-region="Midwest" cx="503.07" cy="493.48" r="3.05" fill="#009E73" aria-label="Renville County, Minnesota"/>
 <circle class="county-point" data-fips="48159" data-region="South" cx="442.18" cy="502.51" r="3.05" fill="#D55E00" aria-label="Franklin County, Texas"/>
-<circle class="county-point" data-fips="51820" data-region="South" cx="505.61" cy="457.36" r="3.05" fill="#D55E00" aria-label="Waynesboro County, Virginia"/>
+<circle class="county-point" data-fips="51820" data-region="South" cx="505.61" cy="457.36" r="3.05" fill="#D55E00" aria-label="Waynesboro city, Virginia"/>
 <circle class="county-point" data-fips="13033" data-region="South" cx="685.77" cy="342.98" r="3.05" fill="#D55E00" aria-label="Burke County, Georgia"/>
 <circle class="county-point" data-fips="36093" data-region="Northeast" cx="393.96" cy="532.61" r="3.05" fill="#0072B2" aria-label="Schenectady County, New York"/>
 <circle class="county-point" data-fips="50017" data-region="Northeast" cx="358.44" cy="583.78" r="3.05" fill="#0072B2" aria-label="Orange County, Vermont"/>
@@ -2687,7 +2687,7 @@
 <circle class="county-point" data-fips="29085" data-region="Midwest" cx="764.44" cy="412.21" r="3.05" fill="#009E73" aria-label="Hickory County, Missouri"/>
 <circle class="county-point" data-fips="05143" data-region="South" cx="558.90" cy="478.43" r="3.05" fill="#D55E00" aria-label="Washington County, Arkansas"/>
 <circle class="county-point" data-fips="01039" data-region="South" cx="591.89" cy="415.22" r="3.05" fill="#D55E00" aria-label="Covington County, Alabama"/>
-<circle class="county-point" data-fips="22067" data-region="South" cx="779.66" cy="294.82" r="3.05" fill="#D55E00" aria-label="Morehouse County, Louisiana"/>
+<circle class="county-point" data-fips="22067" data-region="South" cx="779.66" cy="294.82" r="3.05" fill="#D55E00" aria-label="Morehouse Parish, Louisiana"/>
 <circle class="county-point" data-fips="31035" data-region="Midwest" cx="495.46" cy="520.57" r="3.05" fill="#009E73" aria-label="Clay County, Nebraska"/>
 <circle class="county-point" data-fips="13069" data-region="South" cx="716.23" cy="349.00" r="3.05" fill="#D55E00" aria-label="Coffee County, Georgia"/>
 <circle class="county-point" data-fips="56025" data-region="West" cx="485.31" cy="511.54" r="3.05" fill="#CC79A7" aria-label="Natrona County, Wyoming"/>
@@ -2735,7 +2735,7 @@
 <circle class="county-point" data-fips="13239" data-region="South" cx="733.99" cy="318.90" r="3.05" fill="#D55E00" aria-label="Quitman County, Georgia"/>
 <circle class="county-point" data-fips="08045" data-region="West" cx="302.61" cy="556.69" r="3.05" fill="#CC79A7" aria-label="Garfield County, Colorado"/>
 <circle class="county-point" data-fips="12075" data-region="South" cx="548.75" cy="442.31" r="3.05" fill="#D55E00" aria-label="Levy County, Florida"/>
-<circle class="county-point" data-fips="02110" data-region="West" cx="269.62" cy="565.72" r="3.05" fill="#CC79A7" aria-label="Juneau County, Alaska"/>
+<circle class="county-point" data-fips="02110" data-region="West" cx="269.62" cy="565.72" r="3.05" fill="#CC79A7" aria-label="Juneau City and Borough, Alaska"/>
 <circle class="county-point" data-fips="19033" data-region="Midwest" cx="470.09" cy="514.55" r="3.05" fill="#009E73" aria-label="Cerro Gordo County, Iowa"/>
 <circle class="county-point" data-fips="06017" data-region="West" cx="292.46" cy="559.70" r="3.05" fill="#CC79A7" aria-label="El Dorado County, California"/>
 <circle class="county-point" data-fips="48445" data-region="South" cx="772.05" cy="345.99" r="3.05" fill="#D55E00" aria-label="Terry County, Texas"/>
@@ -2747,7 +2747,7 @@
 <circle class="county-point" data-fips="29153" data-region="Midwest" cx="739.06" cy="424.25" r="3.05" fill="#009E73" aria-label="Ozark County, Missouri"/>
 <circle class="county-point" data-fips="48361" data-region="South" cx="515.76" cy="472.41" r="3.05" fill="#D55E00" aria-label="Orange County, Texas"/>
 <circle class="county-point" data-fips="46007" data-region="Midwest" cx="721.30" cy="279.77" r="3.05" fill="#009E73" aria-label="Bennett County, South Dakota"/>
-<circle class="county-point" data-fips="22115" data-region="South" cx="647.71" cy="421.24" r="3.05" fill="#D55E00" aria-label="Vernon County, Louisiana"/>
+<circle class="county-point" data-fips="22115" data-region="South" cx="647.71" cy="421.24" r="3.05" fill="#D55E00" aria-label="Vernon Parish, Louisiana"/>
 <circle class="county-point" data-fips="20015" data-region="Midwest" cx="409.19" cy="520.57" r="3.05" fill="#009E73" aria-label="Butler County, Kansas"/>
 <circle class="county-point" data-fips="13173" data-region="South" cx="680.70" cy="361.04" r="3.05" fill="#D55E00" aria-label="Lanier County, Georgia"/>
 <circle class="county-point" data-fips="28015" data-region="South" cx="756.83" cy="370.07" r="3.05" fill="#D55E00" aria-label="Carroll County, Mississippi"/>
@@ -2779,14 +2779,14 @@
 <circle class="county-point" data-fips="18043" data-region="Midwest" cx="444.71" cy="481.44" r="3.05" fill="#009E73" aria-label="Floyd County, Indiana"/>
 <circle class="county-point" data-fips="45045" data-region="South" cx="409.19" cy="478.43" r="3.05" fill="#D55E00" aria-label="Greenville County, South Carolina"/>
 <circle class="county-point" data-fips="48287" data-region="South" cx="609.65" cy="427.26" r="3.05" fill="#D55E00" aria-label="Lee County, Texas"/>
-<circle class="county-point" data-fips="22101" data-region="South" cx="721.30" cy="358.03" r="3.05" fill="#D55E00" aria-label="St. Mary County, Louisiana"/>
+<circle class="county-point" data-fips="22101" data-region="South" cx="721.30" cy="358.03" r="3.05" fill="#D55E00" aria-label="St. Mary Parish, Louisiana"/>
 <circle class="county-point" data-fips="54105" data-region="South" cx="678.16" cy="400.17" r="3.05" fill="#D55E00" aria-label="Wirt County, West Virginia"/>
 <circle class="county-point" data-fips="20131" data-region="Midwest" cx="457.40" cy="529.60" r="3.05" fill="#009E73" aria-label="Nemaha County, Kansas"/>
 <circle class="county-point" data-fips="38059" data-region="Midwest" cx="388.89" cy="550.67" r="3.05" fill="#009E73" aria-label="Morton County, North Dakota"/>
 <circle class="county-point" data-fips="27061" data-region="Midwest" cx="424.41" cy="502.51" r="3.05" fill="#009E73" aria-label="Itasca County, Minnesota"/>
 <circle class="county-point" data-fips="39037" data-region="Midwest" cx="551.29" cy="460.37" r="3.05" fill="#009E73" aria-label="Darke County, Ohio"/>
 <circle class="county-point" data-fips="30021" data-region="West" cx="373.66" cy="553.68" r="3.05" fill="#CC79A7" aria-label="Dawson County, Montana"/>
-<circle class="county-point" data-fips="02275" data-region="West" cx="404.11" cy="526.59" r="3.05" fill="#CC79A7" aria-label="Wrangell County, Alaska"/>
+<circle class="county-point" data-fips="02275" data-region="West" cx="404.11" cy="526.59" r="3.05" fill="#CC79A7" aria-label="Wrangell City and Borough, Alaska"/>
 <circle class="county-point" data-fips="48253" data-region="South" cx="617.26" cy="412.21" r="3.05" fill="#D55E00" aria-label="Jones County, Texas"/>
 <circle class="county-point" data-fips="49011" data-region="West" cx="274.70" cy="547.66" r="3.05" fill="#CC79A7" aria-label="Davis County, Utah"/>
 <circle class="county-point" data-fips="19011" data-region="Midwest" cx="399.04" cy="541.64" r="3.05" fill="#009E73" aria-label="Benton County, Iowa"/>
@@ -2817,7 +2817,7 @@
 <circle class="county-point" data-fips="56017" data-region="West" cx="477.70" cy="499.50" r="3.05" fill="#CC79A7" aria-label="Hot Springs County, Wyoming"/>
 <circle class="county-point" data-fips="35061" data-region="West" cx="548.75" cy="427.26" r="3.05" fill="#CC79A7" aria-label="Valencia County, New Mexico"/>
 <circle class="county-point" data-fips="37171" data-region="South" cx="525.91" cy="475.42" r="3.05" fill="#D55E00" aria-label="Surry County, North Carolina"/>
-<circle class="county-point" data-fips="22029" data-region="South" cx="794.89" cy="294.82" r="3.05" fill="#D55E00" aria-label="Concordia County, Louisiana"/>
+<circle class="county-point" data-fips="22029" data-region="South" cx="794.89" cy="294.82" r="3.05" fill="#D55E00" aria-label="Concordia Parish, Louisiana"/>
 <circle class="county-point" data-fips="54065" data-region="South" cx="614.73" cy="433.28" r="3.05" fill="#D55E00" aria-label="Morgan County, West Virginia"/>
 <circle class="county-point" data-fips="35057" data-region="West" cx="574.12" cy="409.20" r="3.05" fill="#CC79A7" aria-label="Torrance County, New Mexico"/>
 <circle class="county-point" data-fips="26057" data-region="Midwest" cx="492.93" cy="484.45" r="3.05" fill="#009E73" aria-label="Gratiot County, Michigan"/>
@@ -2826,7 +2826,7 @@
 <circle class="county-point" data-fips="26071" data-region="Midwest" cx="477.70" cy="493.48" r="3.05" fill="#009E73" aria-label="Iron County, Michigan"/>
 <circle class="county-point" data-fips="16045" data-region="West" cx="414.26" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Gem County, Idaho"/>
 <circle class="county-point" data-fips="47075" data-region="South" cx="769.51" cy="303.85" r="3.05" fill="#D55E00" aria-label="Haywood County, Tennessee"/>
-<circle class="county-point" data-fips="22075" data-region="South" cx="569.05" cy="427.26" r="3.05" fill="#D55E00" aria-label="Plaquemines County, Louisiana"/>
+<circle class="county-point" data-fips="22075" data-region="South" cx="569.05" cy="427.26" r="3.05" fill="#D55E00" aria-label="Plaquemines Parish, Louisiana"/>
 <circle class="county-point" data-fips="13079" data-region="South" cx="563.98" cy="436.29" r="3.05" fill="#D55E00" aria-label="Crawford County, Georgia"/>
 <circle class="county-point" data-fips="55019" data-region="Midwest" cx="650.25" cy="493.48" r="3.05" fill="#009E73" aria-label="Clark County, Wisconsin"/>
 <circle class="county-point" data-fips="49051" data-region="West" cx="256.94" cy="577.76" r="3.05" fill="#CC79A7" aria-label="Wasatch County, Utah"/>
@@ -2865,7 +2865,7 @@
 <circle class="county-point" data-fips="48029" data-region="South" cx="617.26" cy="385.12" r="3.05" fill="#D55E00" aria-label="Bexar County, Texas"/>
 <circle class="county-point" data-fips="19119" data-region="Midwest" cx="498.00" cy="505.52" r="3.05" fill="#009E73" aria-label="Lyon County, Iowa"/>
 <circle class="county-point" data-fips="31115" data-region="Midwest" cx="444.71" cy="532.61" r="3.05" fill="#009E73" aria-label="Loup County, Nebraska"/>
-<circle class="county-point" data-fips="02016" data-region="West" cx="487.85" cy="457.36" r="3.05" fill="#CC79A7" aria-label="Aleutians West County, Alaska"/>
+<circle class="county-point" data-fips="02016" data-region="West" cx="487.85" cy="457.36" r="3.05" fill="#CC79A7" aria-label="Aleutians West Census Area, Alaska"/>
 <circle class="county-point" data-fips="29227" data-region="Midwest" cx="647.71" cy="463.38" r="3.05" fill="#009E73" aria-label="Worth County, Missouri"/>
 <circle class="county-point" data-fips="48327" data-region="South" cx="599.50" cy="436.29" r="3.05" fill="#D55E00" aria-label="Menard County, Texas"/>
 <circle class="county-point" data-fips="51089" data-region="South" cx="609.65" cy="397.16" r="3.05" fill="#D55E00" aria-label="Henry County, Virginia"/>
@@ -2888,14 +2888,14 @@
 <circle class="county-point" data-fips="29041" data-region="Midwest" cx="581.74" cy="487.46" r="3.05" fill="#009E73" aria-label="Chariton County, Missouri"/>
 <circle class="county-point" data-fips="27167" data-region="Midwest" cx="462.48" cy="511.54" r="3.05" fill="#009E73" aria-label="Wilkin County, Minnesota"/>
 <circle class="county-point" data-fips="30043" data-region="West" cx="335.60" cy="571.74" r="3.05" fill="#CC79A7" aria-label="Jefferson County, Montana"/>
-<circle class="county-point" data-fips="22011" data-region="South" cx="569.05" cy="445.32" r="3.05" fill="#D55E00" aria-label="Beauregard County, Louisiana"/>
+<circle class="county-point" data-fips="22011" data-region="South" cx="569.05" cy="445.32" r="3.05" fill="#D55E00" aria-label="Beauregard Parish, Louisiana"/>
 <circle class="county-point" data-fips="13229" data-region="South" cx="584.27" cy="436.29" r="3.05" fill="#D55E00" aria-label="Pierce County, Georgia"/>
 <circle class="county-point" data-fips="46019" data-region="Midwest" cx="500.54" cy="499.50" r="3.05" fill="#009E73" aria-label="Butte County, South Dakota"/>
 <circle class="county-point" data-fips="12095" data-region="South" cx="462.48" cy="454.35" r="3.05" fill="#D55E00" aria-label="Orange County, Florida"/>
 <circle class="county-point" data-fips="17021" data-region="Midwest" cx="447.25" cy="496.49" r="3.05" fill="#009E73" aria-label="Christian County, Illinois"/>
 <circle class="county-point" data-fips="40011" data-region="South" cx="637.56" cy="457.36" r="3.05" fill="#D55E00" aria-label="Blaine County, Oklahoma"/>
 <circle class="county-point" data-fips="08017" data-region="West" cx="338.14" cy="538.63" r="3.05" fill="#CC79A7" aria-label="Cheyenne County, Colorado"/>
-<circle class="county-point" data-fips="02198" data-region="West" cx="475.16" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Prince of Wales-Hyder County, Alaska"/>
+<circle class="county-point" data-fips="02198" data-region="West" cx="475.16" cy="469.40" r="3.05" fill="#CC79A7" aria-label="Prince of Wales-Hyder Census Area, Alaska"/>
 <circle class="county-point" data-fips="04027" data-region="West" cx="541.14" cy="412.21" r="3.05" fill="#CC79A7" aria-label="Yuma County, Arizona"/>
 <circle class="county-point" data-fips="54041" data-region="South" cx="665.48" cy="397.16" r="3.05" fill="#D55E00" aria-label="Lewis County, West Virginia"/>
 <circle class="county-point" data-fips="27031" data-region="Midwest" cx="381.27" cy="535.62" r="3.05" fill="#009E73" aria-label="Cook County, Minnesota"/>
@@ -2922,7 +2922,7 @@
 <circle class="county-point" data-fips="48077" data-region="South" cx="452.32" cy="505.52" r="3.05" fill="#D55E00" aria-label="Clay County, Texas"/>
 <circle class="county-point" data-fips="51125" data-region="South" cx="457.40" cy="478.43" r="3.05" fill="#D55E00" aria-label="Nelson County, Virginia"/>
 <circle class="county-point" data-fips="12067" data-region="South" cx="614.73" cy="415.22" r="3.05" fill="#D55E00" aria-label="Lafayette County, Florida"/>
-<circle class="county-point" data-fips="02158" data-region="West" cx="815.19" cy="258.70" r="3.05" fill="#CC79A7" aria-label="Kusilvak County, Alaska"/>
+<circle class="county-point" data-fips="02158" data-region="West" cx="815.19" cy="258.70" r="3.05" fill="#CC79A7" aria-label="Kusilvak Census Area, Alaska"/>
 <circle class="county-point" data-fips="20091" data-region="Midwest" cx="312.76" cy="550.67" r="3.05" fill="#009E73" aria-label="Johnson County, Kansas"/>
 <circle class="county-point" data-fips="37107" data-region="South" cx="657.86" cy="376.09" r="3.05" fill="#D55E00" aria-label="Lenoir County, North Carolina"/>
 <circle class="county-point" data-fips="20067" data-region="Midwest" cx="569.05" cy="481.44" r="3.05" fill="#009E73" aria-label="Grant County, Kansas"/>
@@ -2933,7 +2933,7 @@
 <circle class="county-point" data-fips="51139" data-region="South" cx="520.84" cy="478.43" r="3.05" fill="#D55E00" aria-label="Page County, Virginia"/>
 <circle class="county-point" data-fips="23011" data-region="Northeast" cx="426.95" cy="517.56" r="3.05" fill="#0072B2" aria-label="Kennebec County, Maine"/>
 <circle class="county-point" data-fips="39059" data-region="Midwest" cx="619.80" cy="442.31" r="3.05" fill="#009E73" aria-label="Guernsey County, Ohio"/>
-<circle class="county-point" data-fips="09110" data-region="Northeast" cx="434.56" cy="523.58" r="3.05" fill="#0072B2" aria-label="Capitol County, Connecticut"/>
+<circle class="county-point" data-fips="09110" data-region="Northeast" cx="434.56" cy="523.58" r="3.05" fill="#0072B2" aria-label="Capitol Planning Region, Connecticut"/>
 <circle class="county-point" data-fips="48333" data-region="South" cx="454.86" cy="502.51" r="3.05" fill="#D55E00" aria-label="Mills County, Texas"/>
 <circle class="county-point" data-fips="28121" data-region="South" cx="505.61" cy="478.43" r="3.05" fill="#D55E00" aria-label="Rankin County, Mississippi"/>
 <circle class="county-point" data-fips="17125" data-region="Midwest" cx="434.56" cy="499.50" r="3.05" fill="#009E73" aria-label="Mason County, Illinois"/>
@@ -2991,11 +2991,11 @@
 <circle class="county-point" data-fips="28029" data-region="South" cx="754.29" cy="339.97" r="3.05" fill="#D55E00" aria-label="Copiah County, Mississippi"/>
 <circle class="county-point" data-fips="36081" data-region="Northeast" cx="591.89" cy="433.28" r="3.05" fill="#0072B2" aria-label="Queens County, New York"/>
 <circle class="county-point" data-fips="20165" data-region="Midwest" cx="546.21" cy="499.50" r="3.05" fill="#009E73" aria-label="Rush County, Kansas"/>
-<circle class="county-point" data-fips="48495" data-region="South" cx="675.62" cy="400.17" r="3.05" fill="#D55E00" aria-label="Winkler County, Texas"/></g><path d="M147.82,601.13L155.65,598.44L163.48,595.76L171.30,593.09L179.13,590.42L186.95,587.76L194.78,585.11L202.61,582.46L210.43,579.81L218.26,577.16L226.08,574.51L233.91,571.84L241.73,569.17L249.56,566.48L257.39,563.78L265.21,561.06L273.04,558.33L280.86,555.62L288.69,552.95L296.51,550.38L304.34,547.96L312.17,545.64L319.99,543.35L327.82,540.97L335.64,538.40L343.47,535.69L351.29,532.94L359.12,530.33L366.95,527.97L374.77,525.85L382.60,523.69L390.42,521.20L398.25,518.46L406.07,515.69L413.90,512.90L421.73,509.89L429.55,506.97L437.38,504.26L445.20,501.45L453.03,498.38L460.85,495.36L468.68,492.59L476.51,490.15L484.33,487.91L492.16,485.59L499.98,482.74L507.81,479.52L515.63,476.20L523.46,472.85L531.29,469.10L539.11,464.53L546.94,460.01L554.76,455.68L562.59,451.34L570.41,447.00L578.24,442.73L586.07,438.50L593.89,434.65L601.72,431.22L609.54,428.17L617.37,425.22L625.19,422.17L633.02,419.00L640.85,415.83L648.67,412.64L656.50,409.05L664.32,405.14L672.15,401.31L679.98,397.47L687.80,393.59L695.63,389.67L703.45,385.68L711.28,381.52L719.10,377.35L726.93,373.08L734.76,368.54L742.58,363.85L750.41,359.09L758.23,354.28L766.06,349.33L773.88,344.10L781.71,338.61L789.54,333.08L797.36,327.38L805.19,321.65L813.01,315.93L820.84,310.26L828.66,304.63L836.49,299.06L844.32,293.56L852.14,288.13L859.97,282.77L867.79,277.45L875.62,272.17L883.44,266.91L891.27,261.65L899.10,256.38L906.92,251.10L914.75,245.80L922.57,240.48L930.40,235.14L938.22,229.79L946.05,224.42L953.88,219.03L961.70,213.64L969.53,208.23L977.35,202.82L985.18,197.40L993.00,191.98L1000.83,186.56L1008.66,181.14L1016.48,175.72L1024.31,170.31L1032.13,164.90L1039.96,159.49L1047.78,154.09L1055.61,148.70L1063.44,143.31L1071.26,137.94L1079.09,132.57" class="trend"/><text x="945" y="163" class="trend-label">LOWESS trend</text></g>
+<circle class="county-point" data-fips="48495" data-region="South" cx="675.62" cy="400.17" r="3.05" fill="#D55E00" aria-label="Winkler County, Texas"/></g><path d="M147.82,601.13L155.65,598.44L163.48,595.76L171.30,593.09L179.13,590.42L186.95,587.76L194.78,585.11L202.61,582.46L210.43,579.81L218.26,577.16L226.08,574.51L233.91,571.84L241.73,569.17L249.56,566.48L257.39,563.78L265.21,561.06L273.04,558.33L280.86,555.62L288.69,552.95L296.51,550.38L304.34,547.96L312.17,545.64L319.99,543.35L327.82,540.97L335.64,538.40L343.47,535.69L351.29,532.94L359.12,530.33L366.95,527.97L374.77,525.85L382.60,523.69L390.42,521.20L398.25,518.46L406.07,515.69L413.90,512.90L421.73,509.89L429.55,506.97L437.38,504.26L445.20,501.45L453.03,498.38L460.85,495.36L468.68,492.59L476.51,490.15L484.33,487.91L492.16,485.59L499.98,482.74L507.81,479.52L515.63,476.20L523.46,472.85L531.29,469.10L539.11,464.53L546.94,460.01L554.76,455.68L562.59,451.34L570.41,447.00L578.24,442.73L586.07,438.50L593.89,434.65L601.72,431.22L609.54,428.17L617.37,425.22L625.19,422.17L633.02,419.00L640.85,415.83L648.67,412.64L656.50,409.05L664.32,405.14L672.15,401.31L679.98,397.47L687.80,393.59L695.63,389.67L703.45,385.68L711.28,381.52L719.10,377.35L726.93,373.08L734.76,368.54L742.58,363.85L750.41,359.09L758.23,354.28L766.06,349.33L773.88,344.10L781.71,338.61L789.54,333.08L797.36,327.38L805.19,321.65L813.01,315.93L820.84,310.26L828.66,304.63L836.49,299.06L844.32,293.56L852.14,288.13L859.97,282.77L867.79,277.45L875.62,272.17L883.44,266.91L891.27,261.65L899.10,256.38L906.92,251.10L914.75,245.80L922.57,240.48L930.40,235.14L938.22,229.79L946.05,224.42L953.88,219.03L961.70,213.64L969.53,208.23L977.35,202.82L985.18,197.40L993.00,191.98L1000.83,186.56L1008.66,181.14L1016.48,175.72L1024.31,170.31L1032.13,164.90L1039.96,159.49L1047.78,154.09L1055.61,148.70L1063.44,143.31L1071.26,137.94L1079.09,132.57" class="trend"/><text x="945" y="163" class="trend-label">Smoothed trend</text></g>
 <rect x="1146" y="120" width="220" height="650" rx="16" fill="#fff" stroke="#dce4ec"/>
 <text x="1172" y="161" class="panel-label">ASSOCIATION</text>
-<text x="1172" y="210" class="stat">r = 0.873</text><text x="1172" y="235" class="note">Pearson correlation</text>
-<text x="1172" y="286" class="stat">R² = 0.763</text><text x="1172" y="311" class="note">Descriptive linear fit</text>
+<text x="1172" y="210" class="stat">r = 0.87</text><text x="1172" y="235" class="note">Correlation (−1 to +1)</text>
+<text x="1172" y="286" class="stat">Strong</text><text x="1172" y="311" class="note">Strength of the link</text>
 <text x="1172" y="362" class="stat">n = 2,956</text><text x="1172" y="387" class="note">Complete counties</text>
 <line x1="1172" y1="426" x2="1340" y2="426" stroke="#dce4ec"/>
 <text x="1172" y="460" class="panel-label">CENSUS REGION</text><circle cx="1190" cy="491" r="7" fill="#0072B2"/><text x="1208" y="496" class="legend">Northeast · 151</text><circle cx="1190" cy="527" r="7" fill="#009E73"/><text x="1208" y="532" class="legend">Midwest · 1,055</text><circle cx="1190" cy="563" r="7" fill="#D55E00"/><text x="1208" y="568" class="legend">South · 1,301</text><circle cx="1190" cy="599" r="7" fill="#CC79A7"/><text x="1208" y="604" class="legend">West · 449</text>

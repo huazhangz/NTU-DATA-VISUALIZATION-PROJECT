@@ -1,6 +1,6 @@
 # 基础探索性数据分析（Basic EDA）报告
 
-生成时间（Generated）：2026-10-29T23:31:14+08:00
+生成时间（Generated）：2026-10-31T22:34:47+08:00
 
 ## 1. 分析范围（Scope）
 
@@ -10,7 +10,7 @@
 
 ## 2. 数据覆盖情况（Coverage）
 
-每个指标均有 2,956 个已发布的县级估计，并有 187 行缺失，缺失率为 5.95%。所有缺失行均来自 Kentucky（KY）和 Pennsylvania（PA）。这些空白值代表未发布（Unpublished），本分析保留其缺失状态，未将其替换为 0，也未进行插补（Imputation）。
+每个指标均有 2,956 个已发布的县级估计，并有 187 行缺失，缺失率为 5.95%。所有缺失行均来自 Kentucky（KY）、Pennsylvania（PA）。这些空白值代表未发布（Unpublished），本分析保留其缺失状态，未将其替换为 0，也未进行插补（Imputation）。
 
 ## 3. 分布摘要（Distribution summary）
 

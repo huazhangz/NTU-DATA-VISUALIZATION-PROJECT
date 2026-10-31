@@ -98,15 +98,17 @@ def relationship_tables(complete: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
                 }
             )
 
-            x = pair[metric_x].to_numpy(float)
-            y = pair[metric_y].to_numpy(float)
+            # Diabetes is the outcome whenever it is in the pair, matching the charts.
+            predictor, outcome = (metric_y, metric_x) if metric_x == "DIABETES_AdjPrev" else (metric_x, metric_y)
+            x = pair[predictor].to_numpy(float)
+            y = pair[outcome].to_numpy(float)
             slope, intercept = np.polyfit(x, y, 1)
             predicted = slope * x + intercept
             r_squared = 1 - np.square(y - predicted).sum() / np.square(y - y.mean()).sum()
             regression_rows.append(
                 {
-                    "predictor": metric_x,
-                    "outcome": metric_y,
+                    "predictor": predictor,
+                    "outcome": outcome,
                     "n": len(pair),
                     "slope": round(float(slope), 6),
                     "intercept": round(float(intercept), 6),
@@ -310,6 +312,7 @@ def main() -> int:
     obesity_inactivity_rho = corr("OBESITY_AdjPrev", "LPA_AdjPrev", "spearman_rho")
     joint_count = int(joint_mask.sum())
     joint_pct = joint_count / len(complete) * 100
+    independent_pct = float(high_flags.mean().prod() * 100)
     generated_at = datetime.now(ZoneInfo("Asia/Singapore")).isoformat(timespec="seconds")
 
     report = f"""# 关系分析（Relationship Analysis）报告
@@ -339,7 +342,7 @@ def main() -> int:
 
 ## 4. 共同高值重叠（Joint high-burden overlap）
 
-共有 {joint_count:,} 个县在三项指标上都达到或超过各自第 75 百分位，占完整样本的 {joint_pct:.1f}%。如果三项指标完全独立，三者同时进入上四分位的理论比例约为 1.56%；实际重叠远高于该参考值，与三项指标的正相关一致。
+共有 {joint_count:,} 个县在三项指标上都达到或超过各自第 75 百分位，占完整样本的 {joint_pct:.1f}%。如果三项指标互不相关，按各自实际达标比例（约 25%，含并列值）相乘，三者同时达标的期望比例约为 {independent_pct:.1f}%；实际重叠远高于该参考值，与三项指标的正相关一致。
 
 这些县应用于后续空间分析（Spatial analysis），检查是否形成地理集聚；不应把它们表述为“最不健康县排名”。
 

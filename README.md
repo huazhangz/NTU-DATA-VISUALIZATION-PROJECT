@@ -23,7 +23,8 @@ A local Windows copy was cited during the run and was not present in this enviro
 | `reports/data_cleaning/run_20261022_185006/` | Phase reports, profiles, and the execution log |
 | `02_analysis/` | EDA input acceptance, current Chinese EDA report, and reproducible analysis scripts |
 | `03_visualisations/exploratory/` | Current exploratory SVG charts |
-| `03_visualisations/final/` | Six interactive views, static SVGs, and `index.html` gallery |
+| `03_visualisations/final/` | Five interactive views, static SVGs, and `index.html` gallery |
+| `docs/` | Presentation guide (plain language) and technical summary |
 
 Source columns are copied unchanged. Derived columns are prefixed with `derived__` and hold parsed confidence limits, centroid coordinates, a display name, a short-name collision flag, and the raw row number.
 

@@ -1,8 +1,8 @@
 # SD6105 项目进度与 Pipeline
 
-本文件最初根据 2026-10-22 工作区写成，2026-10-31 按当时仓库内容更新了 EDA 与可视化进度（见第 1、2、5 节）。报告标识 `SD6105` 来自本次写作要求，仓库内没有另一份课程说明定义该编号。
+本文件最初根据 2026-10-22 工作区写成，2026-10-31 按当时仓库内容更新了 EDA 与可视化进度，并在同日复查修正后再次更新（见第 1、2、5 节）。报告标识 `SD6105` 来自本次写作要求，仓库内没有另一份课程说明定义该编号。
 
-2026-10-31 更新时检查的提交是 `1d16dfb`（`Add interactive upper quartile overlap map`），并在其上加入扩展分析。清洗部分的记录未改动；本次没有修改原始数据、清洗结果或清洗脚本。
+2026-10-31 更新时检查的提交是 `1d16dfb`（`Add interactive upper quartile overlap map`），并在其上加入扩展分析与复查修正。清洗部分的记录未改动；没有修改原始数据、清洗结果或清洗脚本。
 
 事实分成三类：
 
@@ -35,9 +35,20 @@
 - 自动化测试文件存在，已保存的 pytest 日志汇总为 4 passed。
 - 2026-10-29 EDA 输入验收通过（16 PASS、0 FAIL），完成糖尿病、肥胖、缺乏体育活动三项指标的基础 EDA：`02_analysis/EDA_report.md`。
 - 2026-10-30 完成三项核心指标的关系分析（Pearson/Spearman、趋势、上四分位重叠）：`02_analysis/RELATIONSHIP_report.md`。
-- 2026-10-31 完成三张核心最终可视化，各有静态 SVG 和交互 HTML：县级分级地图、糖尿病与缺乏运动散点图（LOWESS）、上四分位重叠地图。
-- 2026-10-31 完成扩展初步分析，覆盖其余 37 项指标：`02_analysis/EXTENDED_report.md`。又新增三张交互可视化，使用项目中此前没有的图表形式：聚类相关热力图 + 树状图 + 六边形分箱图、州瓦片地图 + 排名点图、山脊图 + 县级哑铃图。另有一个汇总所有视图的首页 `03_visualisations/final/index.html`。
-- 2026-10-31 在云端环境做了实机测试：完整流水线重跑全部退出码为 0；pytest 7 passed（原 4 项 + 新增 3 项）；用 Playwright/Chromium 在亮色和暗色模式下加载全部 7 个页面，控制台零错误，交互按预期工作。
+- 2026-10-31 完成三张核心最终可视化，各有静态 SVG 和交互 HTML：县级分级地图、糖尿病与缺乏运动散点图（平滑趋势线）、前 25% 叠加地图。
+- 2026-10-31 完成扩展初步分析，覆盖全部 40 项指标：`02_analysis/EXTENDED_report.md`。最终保留两张扩展交互图：相关指标（排序条形图 + 县级散点图）和州瓦片地图（+ 排名点图）。另有汇总全部 5 张图的首页 `03_visualisations/final/index.html`。
+- 2026-10-31 复查并修正全部 preliminary analysis（详见 `docs/02_technical_summary.md` 第 5 节）：
+  - 修复州中位数排序不稳定和浮点尾差；
+  - 修正回归方向；
+  - 改正三张核心图中县名一律加 "County" 的错误（如 Orleans Parish）；
+  - 核对最强相关与原始数据一致，并确认其主要来自 CDC 模型结构；
+  - 删除两张过度技术化的图（聚类热力图、年龄差山脊图）及其合成指标；
+  - 全部图表改用通俗用语。
+- 2026-10-31 新增两份指导文档：`docs/01_presentation_guide_plain_language.md`（通俗版，供汇报）和 `docs/02_technical_summary.md`（技术版）。
+- 2026-10-31 在云端环境做了实机测试：
+  - 完整流水线重跑，退出码全部为 0；
+  - pytest 10 passed；
+  - Playwright/Chromium 在亮色、暗色两种模式下加载首页和 5 张图，另测 390 px 移动端，控制台零错误，交互断言全部通过。
 
 ### 当前阶段
 
@@ -67,8 +78,8 @@ flowchart TD
     out["清洗结果与字段字典<br/>已完成"]
     valid["校验与 pytest<br/>已完成"]
     eda["EDA 与关系分析<br/>已完成"]
-    ext["扩展初步分析（37 项指标）<br/>已完成"]
-    viz["最终可视化 6 张 + 首页<br/>已完成"]
+    ext["扩展初步分析（40 项指标）<br/>已完成"]
+    viz["最终可视化 5 张 + 首页<br/>已复查"]
     deliver["演示文稿 / 最终报告<br/>当前阶段"]
 
     raw --> profile
@@ -97,8 +108,9 @@ flowchart TD
 | EDA | 已完成 | `02_analysis/validate_eda_input.py`、`basic_eda.py`、`EDA_report.md` |
 | 关系分析 | 已完成 | `02_analysis/relationship_analysis.py`、`RELATIONSHIP_report.md` |
 | 扩展初步分析 | 已完成 | `02_analysis/extended_analysis.py`、`EXTENDED_report.md`、`outputs/extended_*` |
-| 最终可视化 | 已完成 | `03_visualisations/final/`：6 个交互页面、6 张静态 SVG、首页；校验 JSON 均为 PASS |
-| 实机测试 | 已完成 | pytest 7 passed；Playwright 测试 14 次页面加载（7 页 × 亮/暗两种模式）零错误 |
+| 最终可视化 | 已完成并复查 | `03_visualisations/final/`：5 个交互页面、5 张静态 SVG、首页；校验 JSON 均为 PASS |
+| 汇报指导文档 | 已完成 | `docs/01_presentation_guide_plain_language.md`、`docs/02_technical_summary.md` |
+| 实机测试 | 已完成 | pytest 10 passed；Playwright 测试 12 次页面加载（6 页 × 亮/暗两种模式）+ 移动端，零错误 |
 | 演示文稿或最终报告 | 当前阶段 | 尚未开始 |
 
 ## 3. 技术记录
@@ -129,9 +141,9 @@ flowchart TD
 | `scripts/clean_places_county.py` | 清洗 |
 | `scripts/validate_places_county.py` | 独立校验 |
 | `tests/test_places_cleaning.py` | pytest |
-| `02_analysis/extended_analysis.py` | 扩展初步分析：40 项指标目录、Spearman 聚类、州中位数、粗率与年龄调整差 |
-| `03_visualisations/final/build_extended_views.py` | 生成三张扩展可视化、静态 SVG、首页和 `extended_views_validation.json` |
-| `tests/test_extended_views.py` | 扩展分析与可视化的 pytest（聚类算法、输出形状、缺失不补零、页面数据为严格 JSON） |
+| `02_analysis/extended_analysis.py` | 扩展初步分析：40 项指标目录、Spearman 相关（含原始值核对与州内检查）、州中位数、粗率与年龄调整差 |
+| `03_visualisations/final/build_extended_views.py` | 生成两张扩展可视化、静态 SVG、首页和 `extended_views_validation.json` |
+| `tests/test_extended_views.py` | 分析与可视化的 pytest（强度分级、输出形状、缺失不补零、回归方向、排序确定性、严格 JSON、首页链接、县名后缀） |
 
 重跑清洗：
 
@@ -235,13 +247,19 @@ HRSN 空白州，来自 V17 的记录：CO、FL、KY、OR、PA、SD、TN、TX、
 
 清洗、EDA 和可视化均已完成，下一阶段是整合成果并制作汇报。不要回到清洗脚本。
 
-### 2026-10-31 扩展可视化
+### 2026-10-31 最终可视化（复查后）
 
-| 视图 | 新使用的方法 | 回答的问题 | 主要发现 |
-| --- | --- | --- | --- |
-| `interactive_measure_landscape/` | 聚类相关热力图、树状图、六边形分箱密度图 | 35 项 2023 指标怎样共变？ | 27 项指标（慢性病、健康状况、残疾和全部 7 项社会需求）同属一个大簇。暴饮、癌症、胆固醇筛查与该簇负相关。 |
-| `interactive_state_tiles/` | 州瓦片地图、发散色阶、联动排名点图 | 各州的县中位数相对全国县中位数偏高还是偏低？ | 抑郁：WV +8.4、TN +7.3；食物不安全：LA、MS 各 +10.8；暴饮：ND、IA 偏高，UT 偏低。 |
-| `interactive_age_gap/` | 山脊图、县级哑铃图 | 粗率与年龄调整率差多少？ | 年龄结构把慢性病粗率推高（高胆固醇中位 +6.3 个百分点），把暴饮、心理困扰、社会需求类粗率压低。年龄差指数最高的县是 Sumter, FL，最低的是 Madison, ID。 |
+| 视图 | 回答的问题 | 主要发现 |
+| --- | --- | --- |
+| `interactive_county_map/` | 哪里的比例最高？ | 糖尿病在南方最高（MS、LA、GA、SC）；肥胖和缺乏运动集中在南方腹地和阿巴拉契亚。 |
+| `interactive_relationship/` | 缺乏运动与糖尿病是否同步？ | 强相关，r = 0.87；肥胖与糖尿病为 0.68。 |
+| `interactive_overlap/` | 问题在哪里叠加？ | 377 县三项同时进入前 25%（12.8%），约为互不相关时期望值的 7.9 倍；89% 在南方。 |
+| `interactive_related_measures/` | 还有什么一起变化？ | 与糖尿病强相关的指标有 19 项；暴饮、癌症与其反向。≥ 0.9 的相关主要反映 CDC 模型，图中以 † 标注。 |
+| `interactive_state_tiles/` | 各州比全国如何？ | 抑郁：WV +8.4、TN +7.3；食物不安全：MS、LA 各 +10.8；暴饮：ND +5.1、UT −5.3。 |
+
+已删除：`interactive_measure_landscape/`（聚类热力图）和 `interactive_age_gap/`（年龄差山脊图）。原因是技术性过强、合成指数难以向听众解释。年龄调整的方法检查改写在技术文档中。
+
+汇报材料：先读 `docs/01_presentation_guide_plain_language.md`，其中有指标解释、讲述顺序和常见问题。技术细节见 `docs/02_technical_summary.md`。
 
 运行顺序：
 
@@ -259,7 +277,7 @@ python3 -m http.server 8000 --directory 03_visualisations/final
 
 线上测试链接（Claude artifact，目前仅所有者可见，需在 claude.ai 页面上分享）：<https://claude.ai/artifact/ReSnRDKC3MKsQUoDPhoDxJ>
 
-已知问题：重跑 `02_analysis/basic_eda.py` 时，`basic_state_county_medians.csv` 和对应 SVG 中同值州的排列顺序会变化（排序遇到并列值时顺序不稳定）。数值不受影响。
+已修复：`basic_eda.py` 州中位数的并列值排序不稳定问题已于 2026-10-31 修复，连续两次运行输出逐字节一致。
 
 ### 现在可用
 
@@ -334,4 +352,4 @@ python3 -m http.server 8000 --directory 03_visualisations/final
 3. 粗率与年龄调整并排，同一指标两列，不取平均。
 4. HRSN 小倍数图，事先去掉 11 个空白州，避免大片假缺失被读成低患病率。
 
-不做的事：不把县按一个点估计排成健康排名，不把 2022 与 2023 指标连成时间趋势。（扩展视图中的州排名只是州内县中位数的排序；县级年龄差指数描述的是年龄结构，都不是健康排名。）
+不做的事：不把县按一个点估计排成健康排名，不把 2022 与 2023 指标连成时间趋势。（州瓦片图中的州排名只是州内县中位数的排序，不是健康排名。）

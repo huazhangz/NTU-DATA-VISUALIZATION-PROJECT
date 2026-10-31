@@ -42,13 +42,15 @@ python3 02_analysis/relationship_analysis.py
 
 新的正式 EDA 必须读取已验收的清洗 CSV。若清洗表不存在、验收未通过或文件哈希已变，分析流程应停止并明确报错，不得静默改用原始 CSV。
 
-扩展初步分析已于 2026-10-31 完成，覆盖核心 EDA 之外的 37 项指标：指标共变聚类、州级轮廓、粗率与年龄调整差。
+扩展初步分析已于 2026-10-31 完成并复查，覆盖全部 40 项指标：覆盖范围、2023 指标间 Spearman 相关（含最强配对的原始值核对与州内检查）、州级轮廓，以及粗率与年龄调整率的方法检查。
 
 - `extended_analysis.py`：可复现的扩展分析脚本，同样要求验收 PASS 且输入哈希未变。
 - `EXTENDED_report.md`：中文扩展分析报告。
-- `outputs/extended_*`：指标目录、Spearman 矩阵与聚类、州中位数、年龄调整差和县级年龄差指数。
+- `outputs/extended_*`：指标目录、Spearman 矩阵与配对表、州中位数、粗率与年龄调整差。
 
 ```bash
 python3 02_analysis/extended_analysis.py
 python3 03_visualisations/final/build_extended_views.py
 ```
+
+汇报用总结见 `../docs/01_presentation_guide_plain_language.md`（通俗版）和 `../docs/02_technical_summary.md`（技术版）。

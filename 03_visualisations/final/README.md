@@ -77,22 +77,25 @@ inactivity 30.5%. Exactly 377 of 2,956 complete counties meet all three. These
 are descriptive, project-defined thresholds—not clinical cutoffs, causal
 effects, policy priority designations, or an overall county health ranking.
 
-## Extended views (2026-10-31)
+## Extended views (revised 2026-10-31)
 
 Built by `build_extended_views.py` from `02_analysis/extended_analysis.py`
 outputs. Validation: `02_analysis/outputs/extended_views_validation.json`.
 
-- `interactive_measure_landscape/` + `measure_landscape_heatmap.svg`: clustered
-  Spearman heatmap of the 35 measures estimated for 2023, with a dendrogram;
-  click any cell for a hexbin density plot of that pair.
-- `interactive_state_tiles/` + `state_tile_small_multiples.svg`: state
-  tile-grid cartogram for any of the 40 measures (state median of county
-  estimates minus national county median, diverging scale), linked to a
-  ranked dot plot. Unpublished states are hatched, never zero.
-- `interactive_age_gap/` + `age_adjustment_ridgeline.svg`: ridgeline of crude
-  minus age-adjusted gaps per measure, plus a county search with a
-  crude-vs-adjusted dumbbell profile.
-- `index.html`: gallery linking all six interactive views.
+- `interactive_related_measures/` + `related_measures_diabetes.svg`: pick a
+  2023 measure; ranked bars show how closely each other measure moves with it
+  across counties (Spearman correlation, plain strength words); click a bar for
+  the county scatterplot. Correlations of 0.9+ are flagged as mostly reflecting
+  the shared CDC model.
+- `interactive_state_tiles/` + `state_tile_small_multiples.svg`: each state's
+  typical (median) county versus the typical U.S. county, for 39 measures, on an
+  equal-size state tile map linked to a ranked dot plot. Unpublished states are
+  hatched, never zero.
+- `index.html`: gallery linking all five interactive views.
+
+The earlier measure-landscape (clustered heatmap) and age-gap (ridgeline) views
+were removed in the 2026-10-31 review as too technical for the audience; see
+`docs/02_technical_summary.md`.
 
 Preview everything:
 

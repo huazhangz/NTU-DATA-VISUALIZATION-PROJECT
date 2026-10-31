@@ -222,8 +222,10 @@ def main() -> int:
     state_medians = (
         df.groupby(["StateAbbr", "StateDesc"], dropna=False)[list(METRICS)]
         .median()
+        .round(2)
         .reset_index()
-        .sort_values("DIABETES_AdjPrev", na_position="last")
+        # Stable sort with a tie-breaker so reruns produce identical files.
+        .sort_values(["DIABETES_AdjPrev", "StateAbbr"], na_position="last", kind="mergesort")
     )
     state_medians.to_csv(OUT / "basic_state_county_medians.csv", index=False)
 
@@ -273,6 +275,10 @@ def main() -> int:
     (OUT / "basic_eda_manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     rows = {row.metric: row for row in summary.itertuples()}
+    missing_abbr = sorted(df.loc[df[list(METRICS)].isna().any(axis=1), "StateAbbr"].unique())
+    missing_states = "、".join(
+        f"{df.loc[df['StateAbbr'] == abbr, 'StateDesc'].iloc[0]}（{abbr}）" for abbr in missing_abbr
+    )
     report = f"""# 基础探索性数据分析（Basic EDA）报告
 
 生成时间（Generated）：{generated_at}
@@ -285,7 +291,7 @@ def main() -> int:
 
 ## 2. 数据覆盖情况（Coverage）
 
-每个指标均有 2,956 个已发布的县级估计，并有 187 行缺失，缺失率为 5.95%。所有缺失行均来自 Kentucky（KY）和 Pennsylvania（PA）。这些空白值代表未发布（Unpublished），本分析保留其缺失状态，未将其替换为 0，也未进行插补（Imputation）。
+每个指标均有 {rows['DIABETES_AdjPrev'].non_missing:,} 个已发布的县级估计，并有 {rows['DIABETES_AdjPrev'].missing} 行缺失，缺失率为 {rows['DIABETES_AdjPrev'].missing_pct:.2f}%。所有缺失行均来自 {missing_states}。这些空白值代表未发布（Unpublished），本分析保留其缺失状态，未将其替换为 0，也未进行插补（Imputation）。
 
 ## 3. 分布摘要（Distribution summary）
 

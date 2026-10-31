@@ -37,7 +37,7 @@ METRICS = {
         "high": "derived__DIABETES_Adj95CI_High",
         "button": "Diabetes",
         "title": "Diagnosed diabetes",
-        "headline": "Age-adjusted diagnosed diabetes prevalence varies markedly across U.S. counties.",
+        "headline": "Diabetes rates are highest in the South, led by Mississippi, Louisiana, Georgia and South Carolina.",
     },
     "obesity": {
         "value": "OBESITY_AdjPrev",
@@ -45,7 +45,7 @@ METRICS = {
         "high": "derived__OBESITY_Adj95CI_High",
         "button": "Obesity",
         "title": "Obesity",
-        "headline": "Obesity estimates reveal a broad but uneven county-level pattern.",
+        "headline": "Obesity is most common in the Deep South and Appalachia; lowest in Colorado, Hawaii and parts of New England.",
     },
     "inactivity": {
         "value": "LPA_AdjPrev",
@@ -53,7 +53,7 @@ METRICS = {
         "high": "derived__LPA_Adj95CI_High",
         "button": "Physical inactivity",
         "title": "No leisure-time physical activity",
-        "headline": "Physical inactivity shows a strong spatial pattern across U.S. counties.",
+        "headline": "Physical inactivity is highest in the lower Mississippi valley and Appalachia.",
     },
 }
 
@@ -61,6 +61,16 @@ METRICS = {
 COLORS = ["#eff3ff", "#bdd7e7", "#6baed6", "#3182bd", "#08519c"]
 MISSING_COLOR = "#d7dce2"
 
+
+
+def full_county_names() -> dict[str, str]:
+    """Official names with the legal type (County, Parish, city, Borough...)."""
+    path = DATA_ROOT / "reference/places_to_2023_gazetteer.csv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        return {row["CountyFIPS"].zfill(5): row["census_name"] for row in csv.DictReader(handle)}
+
+
+FULL_NAMES = full_county_names()
 
 def clean_number(value: str) -> float | None:
     value = value.strip()
@@ -74,7 +84,7 @@ def read_places() -> dict[str, dict]:
             fips = row["CountyFIPS"].zfill(5)
             item = {
                 "fips": fips,
-                "county": row["derived__CountyName_display"],
+                "county": FULL_NAMES.get(row["CountyFIPS"].zfill(5), row["derived__CountyName_display"]),
                 "state": row["StateDesc"],
                 "abbr": row["StateAbbr"],
                 "population": int(row["TotalPopulation"]),
@@ -306,7 +316,7 @@ def build_path_markup(
         value = record["diabetes"]["value"] if record else None
         fill = color_for(value, summaries["diabetes"]["breaks"])
         label = (
-            f'{record["county"]} County, {record["state"]}'
+            f'{record["county"]}, {record["state"]}'
             if record
             else f"County FIPS {fips}; no PLACES row"
         )
@@ -336,12 +346,12 @@ def static_legend(summary: dict) -> str:
 def write_static_svg(path_markup: str, summaries: dict[str, dict]) -> None:
     summary = summaries["diabetes"]
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
-<title id="title">Age-adjusted diagnosed diabetes prevalence by U.S. county</title>
-<desc id="desc">A county choropleth using 2023 CDC PLACES model-based estimates. Darker blue indicates higher prevalence. Kentucky and Pennsylvania are shown as not published.</desc>
+<title id="title">Diabetes rate by U.S. county</title>
+<desc id="desc">A county map of 2023 CDC PLACES estimates. Darker blue indicates higher prevalence. Kentucky and Pennsylvania are shown as not published.</desc>
 <rect width="1400" height="800" fill="#f7f9fc"/>
-<text x="55" y="42" class="eyebrow">CDC PLACES • 2023 model-based estimates</text>
+<text x="55" y="42" class="eyebrow">CDC PLACES • 2023 county estimates</text>
 <text x="55" y="76" class="title">Where is diagnosed diabetes prevalence higher?</text>
-<text x="55" y="103" class="subtitle">Age-adjusted prevalence among adults by county; darker blue indicates a higher estimate.</text>
+<text x="55" y="103" class="subtitle">Share of adults, adjusted for age; darker blue means a higher rate.</text>
 <rect x="35" y="125" width="1000" height="640" rx="16" fill="#ffffff" stroke="#dbe3ed"/>
 <g transform="translate(16,128) scale(.86)">{path_markup}</g>
 <text x="86" y="626" class="inset-title">Alaska</text><text x="330" y="650" class="inset-title">Hawaii</text>
@@ -351,11 +361,11 @@ def write_static_svg(path_markup: str, summaries: dict[str, dict]) -> None:
 <text x="1088" y="212" class="stat">{summary["median"]:.1f}%</text><text x="1088" y="237" class="note">Median estimate</text>
 <text x="1225" y="212" class="stat">{summary["count"]:,}</text><text x="1225" y="237" class="note">Published counties</text>
 <line x1="1088" y1="267" x2="1332" y2="267" stroke="#dbe3ed"/>
-<text x="1088" y="301" class="legend-title">Age-adjusted prevalence</text>
+<text x="1088" y="301" class="legend-title">Share of adults (age-adjusted)</text>
 {static_legend(summary)}
 <line x1="1088" y1="653" x2="1332" y2="653" stroke="#dbe3ed"/>
-<text x="1088" y="683" class="note">Five quantile classes contain roughly</text>
-<text x="1088" y="702" class="note">equal numbers of counties.</text>
+<text x="1088" y="683" class="note">Each of the 5 colours holds about</text>
+<text x="1088" y="702" class="note">one fifth of counties (20% each).</text>
 <text x="1088" y="731" class="note">Gray includes unpublished estimates and</text>
 <text x="1088" y="750" class="note">Loving County, TX (no PLACES row).</text>
 <style>
@@ -400,7 +410,7 @@ HTML_TEMPLATE = r'''<!doctype html>
 <body>
 <main class="app">
   <header>
-    <div><div class="kicker">CDC PLACES · County health patterns</div><h1 id="headline">@@INITIAL_HEADLINE@@</h1><div class="subtitle">2023 model-based, age-adjusted prevalence estimates among adults</div></div>
+    <div><div class="kicker">CDC PLACES · County health patterns</div><h1 id="headline">@@INITIAL_HEADLINE@@</h1><div class="subtitle">Share of adults, 2023 estimates, adjusted for age</div></div>
   </header>
   <nav class="controls" aria-label="Choose health metric">@@BUTTONS@@</nav>
   <section class="workspace">
@@ -415,9 +425,9 @@ HTML_TEMPLATE = r'''<!doctype html>
     </div>
     <aside class="side-card">
       <div><div class="section-label">Distribution</div><div class="stat-grid"><div class="stat"><strong id="median"></strong><span>Median estimate</span></div><div class="stat"><strong id="available"></strong><span>Published counties</span></div></div></div>
-      <div><div class="section-label">Quantile classes</div><div id="legend-title" style="font-weight:760;margin-top:4px"></div><div class="legend-swatches">@@SWATCHES@@</div><div class="legend-labels" id="legend-labels"></div><div class="missing"><span class="missing-box"></span><span>Not published / no data row</span></div></div>
+      <div><div class="section-label">Colour groups (20% of counties each)</div><div id="legend-title" style="font-weight:760;margin-top:4px"></div><div class="legend-swatches">@@SWATCHES@@</div><div class="legend-labels" id="legend-labels"></div><div class="missing"><span class="missing-box"></span><span>Not published / no data row</span></div></div>
       <div class="selection" id="selection"><div class="section-label">Selected county</div><p class="selection-empty">Hover over a county for details. Click to keep it highlighted.</p></div>
-      <div class="method-note"><strong>How to read:</strong> colour classes contain roughly equal numbers of counties. Estimates are model-based and should not be interpreted as causal effects or an overall county health ranking.</div>
+      <div class="method-note"><strong>How to read:</strong> each colour holds about one fifth of counties, from the lowest 20% (lightest) to the highest 20% (darkest). Rates are adjusted for age so counties with older or younger populations can be compared. Values are CDC model estimates, not direct counts, and this is not a health ranking.</div>
     </aside>
   </section>
   <footer><p><strong>Source:</strong> CDC PLACES 2025 release; 2023 county-level estimates. Boundary: U.S. Census Bureau 2023 Cartographic Boundary File (1:5,000,000). Kentucky and Pennsylvania estimates are unpublished for these 2023 measures.</p><p>Use the metric buttons, then hover or click a county.</p></footer>
@@ -432,7 +442,7 @@ const paths=[...document.querySelectorAll('.county')],tooltip=document.getElemen
 const fmt=value=>value==null?'Not published':`${value.toFixed(1)}%`;
 function colorFor(value,breaks){if(value==null)return '@@MISSING_COLOR@@';let i=0;while(i<breaks.length&&value>breaks[i])i++;return colors[i]}
 function updateMetric(metric){currentMetric=metric;tooltip.classList.remove('is-visible');const meta=metricMeta[metric],summary=summaries[metric];document.getElementById('headline').textContent=meta.headline;document.getElementById('legend-title').textContent=meta.title;document.getElementById('median').textContent=`${summary.median.toFixed(1)}%`;document.getElementById('available').textContent=summary.count.toLocaleString();document.querySelectorAll('.metric-button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.metric===metric)));paths.forEach(path=>{const row=countyData[path.dataset.fips];path.style.fill=colorFor(row?.[metric]?.value??null,summary.breaks)});const edges=[summary.min,...summary.breaks,summary.max];document.getElementById('legend-labels').innerHTML=colors.map((_,i)=>`<span>${edges[i].toFixed(1)}–${edges[i+1].toFixed(1)}</span>`).join('');if(selectedFips)renderSelection(selectedFips)}
-function details(fips){const row=countyData[fips],meta=metricMeta[currentMetric];if(!row)return {title:`County FIPS ${fips}`,place:'No PLACES data row',estimate:'Not published',ci:''};const m=row[currentMetric];return{title:`${row.county} County`,place:`${row.state} · FIPS ${row.fips}`,estimate:fmt(m.value),ci:m.low==null?'95% CI not published':`95% CI ${m.low.toFixed(1)}–${m.high.toFixed(1)}%`,metric:meta.title}}
+function details(fips){const row=countyData[fips],meta=metricMeta[currentMetric];if(!row)return {title:`County FIPS ${fips}`,place:'No PLACES data row',estimate:'Not published',ci:''};const m=row[currentMetric];return{title:`${row.county}`,place:`${row.state} · FIPS ${row.fips}`,estimate:fmt(m.value),ci:m.low==null?'Likely range not published':`Likely range ${m.low.toFixed(1)}–${m.high.toFixed(1)}% (95% interval)`,metric:meta.title}}
 function showTooltip(fips,x,y){const d=details(fips);tooltip.innerHTML=`<strong>${d.title}</strong><span>${d.place}</span><span>${d.metric||''}: ${d.estimate}</span><span>${d.ci}</span>`;tooltip.style.left=`${Math.min(x,window.innerWidth-245)}px`;tooltip.style.top=`${Math.min(y,window.innerHeight-130)}px`;tooltip.classList.add('is-visible')}
 function renderSelection(fips){const d=details(fips);selection.innerHTML=`<div class="section-label">Selected county</div><h2>${d.title}</h2><div class="place">${d.place}</div><div class="estimate">${d.estimate}</div><div class="ci">${d.metric||''}${d.ci?' · '+d.ci:''}</div><button class="clear" id="clear-selection">Clear selection</button>`;document.getElementById('clear-selection').onclick=clearSelection}
 function clearSelection(){selectedFips=null;paths.forEach(p=>p.classList.remove('is-selected','is-dimmed'));selection.innerHTML='<div class="section-label">Selected county</div><p class="selection-empty">Hover over a county for details. Click to keep it highlighted.</p>'}
