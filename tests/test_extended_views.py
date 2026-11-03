@@ -114,3 +114,9 @@ def test_county_map_has_no_persistent_selection_panel():
     assert "Click to keep it highlighted" not in text
     assert "How to read:" not in text
     assert "renderSelection" not in text
+
+
+def test_relationship_and_overlap_have_no_how_to_read_panel():
+    for name in ("interactive_relationship", "interactive_overlap"):
+        text = (FINAL / name / "index.html").read_text(encoding="utf-8")
+        assert "How to read:" not in text
