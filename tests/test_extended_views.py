@@ -106,3 +106,11 @@ def test_no_county_suffix_on_county_equivalents():
         text = (FINAL / name / "index.html").read_text(encoding="utf-8")
         assert "Orleans Parish" in text or "Orleans Parish" in text.replace("\\u", "")
         assert "Parish County" not in text and "city County" not in text
+
+
+def test_county_map_has_no_persistent_selection_panel():
+    text = (FINAL / "interactive_county_map/index.html").read_text(encoding="utf-8")
+    assert "Selected county" not in text
+    assert "Click to keep it highlighted" not in text
+    assert "How to read:" not in text
+    assert "renderSelection" not in text
