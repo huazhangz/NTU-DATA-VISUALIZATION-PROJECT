@@ -116,10 +116,10 @@
 | `interactive_county_map/` | 分级填色地图，按五分位分 5 组，ColorBrewer Blues | 3 项核心指标，含 95% 区间 |
 | `interactive_relationship/` | 散点图 + LOWESS，可按 Census region 筛选 | 2,956 县 |
 | `interactive_overlap/` | 有序类别地图（0–3 项）+ 计数条形图 | P75 阈值 |
-| `interactive_related_measures/` | 排序发散条形图（ρ），点击后显示配对散点图 | 34 项 2023 指标（不含 BPMED） |
-| `interactive_state_tiles/` | 等面积州瓦片地图，发散色阶（每项指标按自身最大偏差对称缩放），联动排序点图 | 39 项指标 × 51 州 |
+| `interactive_related_measures/` | 糖尿病固定为主指标；排序发散条形图（ρ），点击后显示配对散点图 | 糖尿病与其他 33 项 2023 指标（不含 BPMED） |
+| `interactive_state_tiles/` | 糖尿病州瓦片地图，发散色阶，联动排序点图 | 糖尿病 × 51 州 |
 
-所有交互页面都提供 hover/focus 提示框和表格视图；扩展视图另支持亮/暗主题。缺失值用灰色或斜线显示，从不显示为 0。
+所有交互页面都提供 hover/focus 提示框和表格视图。图 4–5 固定糖尿病并只使用亮色主题。缺失值用灰色或斜线显示，从不显示为 0。
 
 ## 7. 复现与测试
 

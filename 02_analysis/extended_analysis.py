@@ -341,8 +341,8 @@ def main() -> None:
         "",
         "## 7. 对应可视化",
         "",
-        "- `03_visualisations/final/interactive_related_measures/`：选择一项指标，查看其他 2023 指标与它的同步程度（排序条形图），点击条形查看县级散点。",
-        "- `03_visualisations/final/interactive_state_tiles/`：州瓦片地图 + 排名点图，可切换 39 项指标。",
+        "- `03_visualisations/final/interactive_related_measures/`：糖尿病固定为主指标，查看其他 2023 指标与它的同步程度（排序条形图），点击条形查看县级散点。",
+        "- `03_visualisations/final/interactive_state_tiles/`：只展示糖尿病的州瓦片地图 + 排名点图。",
         "",
     ]
     REPORT.write_text("\n".join(lines), encoding="utf-8")

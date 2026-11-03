@@ -12,23 +12,13 @@
     "state_tiles": {
       "tiles": 51,
       "states_in_data": 51,
-      "measures": 39,
+      "measures": 1,
+      "measure_ids": [
+        "DIABETES"
+      ],
       "unpublished_2023_core": [
         "KY",
         "PA"
-      ],
-      "unpublished_hrsn": [
-        "CO",
-        "FL",
-        "KY",
-        "OR",
-        "PA",
-        "SD",
-        "TN",
-        "TX",
-        "VT",
-        "WA",
-        "WY"
       ]
     }
   },
@@ -37,6 +27,6 @@
     "03_visualisations/final/interactive_related_measures/index.html",
     "03_visualisations/final/interactive_state_tiles/index.html",
     "03_visualisations/final/related_measures_diabetes.svg",
-    "03_visualisations/final/state_tile_small_multiples.svg"
+    "03_visualisations/final/state_tile_diabetes.svg"
   ]
 }

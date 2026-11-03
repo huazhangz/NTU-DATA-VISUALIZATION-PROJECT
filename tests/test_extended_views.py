@@ -86,6 +86,20 @@ def test_views_and_gallery():
     for other in FINAL.glob("interactive_*"):
         assert other.name in links, f"{other.name} is not linked from the gallery"
 
+    related = (FINAL / "interactive_related_measures/index.html").read_text(encoding="utf-8")
+    state_tiles = (FINAL / "interactive_state_tiles/index.html").read_text(encoding="utf-8")
+    for text in (related, state_tiles):
+        assert 'id="measure"' not in text
+        assert 'id="theme"' not in text
+        assert "Dark mode" not in text and "data-theme" not in text
+        assert "Table view" not in text
+    assert "Least in step" not in related
+    assert "Read this carefully" not in related
+    assert "background:#fff" in related and "background:#fff" in state_tiles
+    assert "Source: CDC PLACES" not in related and "Source: CDC PLACES" not in state_tiles
+    state_payload = state_tiles.split('<script id="data" type="application/json">', 1)[1].split("</script>", 1)[0]
+    assert [m["id"] for m in json.loads(state_payload)["measures"]] == ["DIABETES"]
+
 
 def test_no_county_suffix_on_county_equivalents():
     for name in ("interactive_county_map", "interactive_relationship", "interactive_overlap"):

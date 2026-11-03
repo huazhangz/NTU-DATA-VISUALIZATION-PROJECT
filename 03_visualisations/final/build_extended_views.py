@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Build the two extended visualisations and the project gallery.
 
-* interactive_related_measures/ - pick a 2023 measure; ranked bars show how
-  closely every other measure moves with it across counties; click a bar for
-  the county scatterplot.
+* interactive_related_measures/ - diabetes is fixed as the focal measure;
+  ranked bars show how closely every other 2023 measure moves with it across
+  counties; click a bar for the county scatterplot.
 * interactive_state_tiles/      - each state's typical (median) county versus
-  the typical U.S. county, on an equal-size state tile map, linked to a
-  ranked dot plot.
+  the typical U.S. county for diabetes, on an equal-size state tile map linked
+  to a ranked dot plot.
 
 Each view also gets a static SVG. Run ``02_analysis/extended_analysis.py``
 first. Uses pandas/numpy (already required by the project).
@@ -90,11 +90,6 @@ def num(v: float | None, digits: int = 1) -> float | None:
 BASE_CSS = """
 .viz-root{color-scheme:light;--surface:#fcfcfb;--plane:#f9f9f7;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;
 --grid:#e1e0d9;--axis:#c3c2b7;--ring:rgba(11,11,11,.10);--accent:#2a78d6;--missing:#d9d8d3;--focus:#eda100;--pos:#2a78d6;--neg:#eb6834}
-@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface:#1a1a19;
---plane:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);
---accent:#3987e5;--missing:#454542;--pos:#3987e5;--neg:#d95926}}
-:root[data-theme="dark"] .viz-root{color-scheme:dark;--surface:#1a1a19;--plane:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;
---muted:#898781;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);--accent:#3987e5;--missing:#454542;--pos:#3987e5;--neg:#d95926}
 *{box-sizing:border-box}html,body{margin:0;height:100%}
 body{background:var(--plane);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .viz-root{background:var(--plane);min-height:100vh;color:var(--ink)}
@@ -112,9 +107,10 @@ button{cursor:pointer}button[aria-pressed="true"]{background:var(--ink);color:va
 .card h2{font-size:15px;margin:0 0 4px}.card .note{font-size:12px;color:var(--ink2);margin:0 0 8px;line-height:1.4}
 svg text{fill:var(--ink2);font-size:11px;font-variant-numeric:tabular-nums}
 .tick{fill:var(--muted)}.gridline{stroke:var(--grid);stroke-width:1}.axisline{stroke:var(--axis);stroke-width:1}
-.tip{position:fixed;pointer-events:none;z-index:9;background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--ring),0 6px 20px rgba(0,0,0,.14);
-border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.45;max-width:300px;display:none}
-.tip strong{font-size:15px;display:block}.tip .k{color:var(--ink2)}
+.tip{position:fixed;pointer-events:none;z-index:99;background:#fff;color:#0b0b0b;border:1px solid #c3c2b7;
+box-shadow:0 8px 24px rgba(0,0,0,.22);border-radius:9px;padding:9px 11px;font-size:12px;line-height:1.45;
+min-width:190px;max-width:300px;display:none}
+.tip strong{font-size:15px;display:block}.tip .k{color:#52514e}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .stat{background:var(--plane);border-radius:10px;padding:9px 10px}.stat .lab{font-size:11px;color:var(--ink2)}
 .stat .val{font-size:20px;font-weight:650}.stat .ctx{font-size:11px;color:var(--muted)}
@@ -129,11 +125,7 @@ a{color:var(--accent)}
 @media (max-width:900px){section[style*="grid-template-columns"]{grid-template-columns:1fr!important}.stats{grid-template-columns:1fr}}
 """
 
-THEME_JS = """
-const themeBtn=document.getElementById('theme');
-themeBtn.addEventListener('click',()=>{const r=document.documentElement;
-const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
-r.dataset.theme=dark?'light':'dark';themeBtn.textContent=dark?'Dark mode':'Light mode';});
+COMMON_JS = """
 const tip=document.getElementById('tip');
 function showTip(ev,build){tip.replaceChildren();build(tip);tip.style.display='block';
 const w=tip.offsetWidth,h=tip.offsetHeight;let x=ev.clientX+14,y=ev.clientY+14;
@@ -160,12 +152,10 @@ def page(title: str, kicker: str, headline: str, sub: str, body: str, data: dict
 <style>{BASE_CSS}</style></head><body><div class="viz-root"><main class="app">
 <header><div class="kicker">{esc(kicker)}</div><h1>{esc(headline)}</h1><div class="sub">{sub}</div></header>
 {body}
-<p class="foot">Source: CDC PLACES County Data (GIS Friendly Format), 2025 release, dataset i46a-9kgh; cleaned and validated
-project table. Model-based small-area estimates; county-level, descriptive, not causal. <a href="../index.html">All project views</a></p>
 </main></div><div class="tip" id="tip" role="status"></div>
 <script id="data" type="application/json">{payload}</script>
 <script>const DATA=JSON.parse(document.getElementById('data').textContent);
-{THEME_JS}
+{COMMON_JS}
 {script}</script></body></html>
 """
 
@@ -184,8 +174,7 @@ def svg_doc(width: int, height: int, title: str, body: list[str]) -> str:
 
 RELATED_JS = r"""
 const M=DATA.measures, idx=Object.fromEntries(M.map((m,i)=>[m.id,i]));
-const sel=document.getElementById('measure'), bars=document.getElementById('bars'), sc=document.getElementById('scatter');
-for(const c of DATA.categories){const og=el('optgroup',{label:c},sel);for(const m of M.filter(m=>m.category===c))el('option',{value:m.id,text:m.label},og);}
+const bars=document.getElementById('bars'), sc=document.getElementById('scatter');
 const word=r=>{const a=Math.abs(r);return a>=.7?'strong':a>=.4?'moderate':a>=.2?'weak':'little or none';};
 const dir=r=>r>=0?'move together':'move in opposite directions';
 let cur=null, other=null;
@@ -208,11 +197,7 @@ g.addEventListener('click',()=>{setOther(row.m.id);});g.addEventListener('keydow
 const strong=rows.filter(r=>Math.abs(r.r)>=.7).length;
 document.getElementById('nStrong').textContent=String(strong);
 document.getElementById('top').textContent=rows[0].m.label;document.getElementById('topv').textContent=rows[0].r.toFixed(2)+' · '+word(rows[0].r);
-const last=rows[rows.length-1];document.getElementById('bot').textContent=last.m.label;document.getElementById('botv').textContent=last.r.toFixed(2)+' · '+(last.r<0?word(last.r)+' opposite':word(last.r));
-const tb=document.querySelector('#tbl tbody');tb.replaceChildren();
-for(const row of rows){const tr=el('tr',{},tb);el('td',{text:row.m.label},tr);el('td',{text:row.m.category},tr);el('td',{class:'n',text:row.r.toFixed(2)},tr);
-el('td',{text:word(row.r)+(row.r<0?' (opposite)':'')},tr);el('td',{class:'n',text:row.n.toLocaleString()},tr);}
-if(!other||other===id)other=rows[0].m.id;setOther(other,true);history.replaceState(null,'','#'+id);}
+if(!other||other===id)other=rows[0].m.id;setOther(other,true);}
 function setOther(o,skipRedraw){other=o;if(!skipRedraw){draw(cur);return;}
 const a=DATA.values[idx[o]],b=DATA.values[idx[cur]];const pts=[];for(let k=0;k<a.length;k++)if(a[k]!==null&&b[k]!==null)pts.push([a[k],b[k],k]);
 sc.replaceChildren();const W=460,H=380,PL=50,PB=44,PT=10,PR=12;sc.setAttribute('viewBox',`0 0 ${W} ${H}`);
@@ -234,8 +219,7 @@ sc.onpointerleave=()=>{hl.setAttribute('visibility','hidden');hideTip();};
 const r=DATA.rho[idx[cur]][idx[o]];
 document.getElementById('pairTitle').textContent=`${M[idx[cur]].label} vs ${M[idx[o]].label}`;
 document.getElementById('pairStat').textContent=`Correlation ${r.toFixed(2)} (${word(r)}${r<0?', opposite':''}) · ${pts.length.toLocaleString()} counties · each dot is one county`;}
-sel.addEventListener('change',()=>{other=null;draw(sel.value);});
-const start=location.hash.slice(1);sel.value=idx[start]!==undefined?start:DATA.defaultMeasure;draw(sel.value);
+draw(DATA.defaultMeasure);
 """
 
 
@@ -260,33 +244,26 @@ def build_related(data: pd.DataFrame, catalog: pd.DataFrame) -> dict:
         "defaultMeasure": "DIABETES",
     }
     body = f"""
-<div class="controls"><label>Measure <select id="measure" aria-label="Measure"></select></label>
-<button id="theme" type="button">Dark mode</button></div>
-<div class="stats"><div class="stat"><div class="lab">Strongly linked measures</div><div class="val" id="nStrong"></div><div class="ctx">correlation of 0.7 or more, either direction</div></div>
+<div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="stat"><div class="lab">Strongly linked with diabetes</div><div class="val" id="nStrong"></div><div class="ctx">correlation of 0.7 or more, either direction</div></div>
 <div class="stat"><div class="lab">Most in step</div><div class="val" id="top" style="font-size:16px"></div><div class="ctx" id="topv"></div></div>
-<div class="stat"><div class="lab">Least in step</div><div class="val" id="bot" style="font-size:16px"></div><div class="ctx" id="botv"></div></div></div>
+</div>
 <section style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,1fr);gap:14px">
-<div class="card"><h2>How closely each measure moves with the selected one</h2>
+<div class="card"><h2>How closely each measure moves with diabetes</h2>
 <p class="note">Correlation across counties, from −1 to +1. Near +1: counties high on one are almost always high on the other.
 Near 0: no consistent pattern. Below 0: they move in opposite directions. Click a bar to see the counties.</p>
 <svg id="bars" role="group" aria-label="Correlation bars" style="width:100%;height:auto"></svg>
 <div class="legend"><span><i style="background:var(--pos)"></i>Move together</span><span><i style="background:var(--neg)"></i>Move in opposite directions</span></div></div>
 <div style="display:flex;flex-direction:column;gap:14px">
 <div class="card"><h2 id="pairTitle"></h2><p class="note" id="pairStat"></p>
-<svg id="scatter" role="img" aria-label="County scatterplot" style="width:100%;height:auto"></svg></div>
-<div class="card"><h2>Read this carefully</h2><p class="note">These are county estimates from one CDC statistical model, which uses the same
-county background data (age, income, education and so on) for every measure. That makes many measures look more alike than they really are:
-† marks correlations of 0.9 or more, which mostly reflect the model, not a direct link. Correlation is not cause.
-Social-need measures are published for 2,299 counties (not CO, FL, KY, OR, PA, SD, TN, TX, VT, WA, WY); other measures for 2,956 (not KY, PA).
-Only 2023 estimates are shown.</p>
-<details><summary>Table view</summary><table id="tbl"><thead><tr><th>Measure</th><th>Group</th><th>Correlation</th><th>Strength</th><th>Counties</th></tr></thead><tbody></tbody></table></details></div>
+<svg id="scatter" role="img" aria-label="County scatterplot" style="width:100%;height:auto"></svg>
+<p class="note">County-level association, not causation. † Correlations of 0.9 or more may largely reflect the shared CDC estimation model.</p></div>
 </div></section>"""
     out = FINAL / "interactive_related_measures"
     out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(page(
         "Related measures — PLACES county estimates", "Related measures",
-        "Counties with more of one health problem tend to have more of many others",
-        "Pick a 2023 measure to see which other measures rise and fall with it across U.S. counties.",
+        "Counties with more diabetes tend to have more of many other health problems",
+        "Diabetes is the fixed focal measure. Select a correlation bar to reveal the underlying county-level scatterplot.",
         body, payload, RELATED_JS), encoding="utf-8")
 
     # static: diabetes bars
@@ -328,9 +305,6 @@ TILES_JS = r"""
 const M=DATA.measures, S=DATA.states, T=50, G=4;
 const mapSvg=document.getElementById('tiles'), dots=document.getElementById('dots');
 mapSvg.setAttribute('viewBox',`0 0 ${12*(T+G)} ${8*(T+G)}`);
-const sel=document.getElementById('measure');
-const cats=[...new Set(M.map(m=>m.category))];
-for(const c of cats){const og=el('optgroup',{label:c},sel);for(const m of M.filter(m=>m.category===c))el('option',{value:m.id,text:m.label+(m.year===2022?' (2022 data)':'')},og);}
 let current=null, hover=null;
 const tileEls={};
 for(const s of S){const[cx,cy]=DATA.tiles[s.abbr];const g=el('g',{transform:`translate(${cx*(T+G)},${cy*(T+G)})`,tabindex:0,role:'img'},mapSvg);
@@ -369,13 +343,8 @@ el('line',{x1:X(0),x2:X(v.d),y1:y,y2:y,stroke:'var(--axis)','stroke-width':2},g)
 el('circle',{cx:X(v.d),cy:y,r:5,fill:divColor(v.d/ext),stroke:'var(--surface)','stroke-width':2},g);
 el('text',{x:PL-6,y:y+4,'text-anchor':'end',text:s.abbr},g);
 g.addEventListener('pointermove',ev=>{setHover(s.abbr);tipFor(ev,s.abbr);});g.addEventListener('pointerleave',()=>{setHover(null);hideTip();});});
-// table
-const tb=document.querySelector('#tbl tbody');tb.replaceChildren();
-for(const s of pub){const v=m.values[s.abbr];const tr=el('tr',{},tb);el('td',{text:s.name},tr);el('td',{class:'n',text:v.m.toFixed(1)+'%'},tr);
-el('td',{class:'n',text:(v.d>0?'+':'')+v.d.toFixed(1)},tr);el('td',{class:'n',text:String(v.n)},tr);}
-history.replaceState(null,'','#'+id);}
-sel.addEventListener('change',()=>draw(sel.value));
-const start=location.hash.slice(1);sel.value=M.some(m=>m.id===start)?start:DATA.defaultMeasure;draw(sel.value);
+}
+draw(DATA.defaultMeasure);
 """
 
 
@@ -383,8 +352,7 @@ def build_state_tiles(data: pd.DataFrame, catalog: pd.DataFrame) -> dict:
     states_tbl = pd.read_csv(ANALYSIS / "extended_state_medians.csv")
     names = data.groupby("StateAbbr")["StateDesc"].first().to_dict()
     measures = []
-    order = {c: i for i, c in enumerate(CATEGORY_ORDER)}
-    for m in sorted(catalog[catalog["in_charts"]].itertuples(), key=lambda r: (order[r.category], r.label)):
+    for m in catalog[catalog["measure"] == "DIABETES"].itertuples():
         sub = states_tbl[states_tbl["measure"] == m.measure]
         values = {r.state: {"m": float(r.state_median), "d": float(r.difference_pp), "n": int(r.counties)}
                   for r in sub.itertuples() if r.counties > 0}
@@ -397,11 +365,9 @@ def build_state_tiles(data: pd.DataFrame, catalog: pd.DataFrame) -> dict:
         })
     payload = {
         "measures": measures, "states": [{"abbr": a, "name": names[a]} for a in sorted(TILES)],
-        "tiles": TILES, "defaultMeasure": "DEPRESSION",
+        "tiles": TILES, "defaultMeasure": "DIABETES",
     }
     body = """
-<div class="controls"><label>Measure <select id="measure" aria-label="Measure"></select></label>
-<button id="theme" type="button">Dark mode</button></div>
 <div class="stats"><div class="stat"><div class="lab">Typical U.S. county</div><div class="val" id="nat"></div><div class="ctx" id="cov"></div></div>
 <div class="stat"><div class="lab">Furthest above</div><div class="val" id="top"></div><div class="ctx">points above the typical U.S. county</div></div>
 <div class="stat"><div class="lab">Furthest below</div><div class="val" id="bot"></div><div class="ctx">points below the typical U.S. county</div></div></div>
@@ -411,31 +377,27 @@ def build_state_tiles(data: pd.DataFrame, catalog: pd.DataFrame) -> dict:
 <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
 <rect width="6" height="6" fill="var(--missing)"/><line x1="0" y1="0" x2="0" y2="6" stroke="var(--surface)" stroke-width="2"/></pattern></defs></svg>
 <div class="legend"><span>Lower <span id="lo"></span><span class="ramp" style="background:linear-gradient(90deg,""" + ",".join(DIVERGING) + """)"></span><span id="hi"></span> higher</span>
-<span><i style="background:repeating-linear-gradient(45deg,var(--missing) 0 3px,var(--surface) 3px 5px)"></i>Not published</span></div></div>
+<span><i style="background:repeating-linear-gradient(45deg,var(--missing) 0 3px,var(--surface) 3px 5px)"></i>Not published</span></div>
+<p class="note" style="margin-top:8px">Each tile is one state. The number is how many percentage points its median county is above (+, red) or below (−, blue) the median U.S. county. It is not population-weighted.</p></div>
 <div class="card"><h2>States ranked</h2><p class="note">Same numbers, sorted. Hover a state here or on the map to see both.</p>
-<svg id="dots" role="img" aria-label="Ranked dot plot" style="width:100%;height:auto"></svg></div></section>
-<div class="card"><details><summary>Table view</summary><table id="tbl"><thead><tr><th>State</th><th>Typical county</th><th>Difference (points)</th><th>Counties</th></tr></thead><tbody></tbody></table></details>
-<p class="note" style="margin-top:8px">How to read: each tile is one state, all the same size so small states stay visible. The number is how many
-percentage points the state's middle (median) county sits above (+, red) or below (−, blue) the middle county of the whole U.S. It is not the
-state's overall rate and is not weighted by population; DC has only 1 county, DE 3 and HI 5. Red means a higher rate, which is not always worse: for checkups and screenings, higher is better. Hatched tiles: CDC did not publish this measure there,
-which is not the same as zero. Measures marked 2022 are from an earlier survey year and are published in every state.</p></div>"""
+<svg id="dots" role="img" aria-label="Ranked dot plot" style="width:100%;height:auto"></svg></div></section>"""
     out = FINAL / "interactive_state_tiles"
     out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(page(
-        "State profiles — PLACES tile map", "Extended analysis · State profiles",
-        "How does each state's typical county compare with the U.S.?",
-        "Pick any of 39 measures. Red: the state's typical county has a higher rate than the typical U.S. county. Blue: lower.",
+        "Diabetes state profiles — PLACES tile map", "Diabetes · State profiles",
+        "How does each state's typical county diabetes estimate compare with the U.S.?",
+        "Diabetes is fixed. Red: the state's typical county has a higher estimate than the typical U.S. county. Blue: lower.",
         body, payload, TILES_JS), encoding="utf-8")
 
-    # static small multiples
-    show = ["DIABETES", "DEPRESSION", "FOODINSECU", "CSMOKING", "BINGE", "CHECKUP"]
-    t, g = 22, 2
+    # static diabetes state tile map
+    show = ["DIABETES"]
+    t, g = 42, 4
     pw, ph = 12 * (t + g), 8 * (t + g)
-    cols, gapx, gapy = 3, 34, 64
-    width = 24 * 2 + cols * pw + (cols - 1) * gapx
-    height = 90 + 2 * (ph + gapy) + 30
-    b = ['<text x="24" y="34" font-size="20" font-weight="700" fill="#0b0b0b">How does each state\'s typical county compare with the U.S.?</text>',
-         '<text x="24" y="56" font-size="13" fill="#52514e">Points above (red) or below (blue) the typical U.S. county. Red means a higher rate, not always worse (e.g. checkups). Hatched = not published.</text>',
+    cols, gapx, gapy = 1, 34, 64
+    width = max(820, 24 * 2 + cols * pw + (cols - 1) * gapx)
+    height = 90 + ph + 60
+    b = ['<text x="24" y="34" font-size="20" font-weight="700" fill="#0b0b0b">How does each state\'s typical county diabetes estimate compare with the U.S.?</text>',
+         '<text x="24" y="56" font-size="13" fill="#52514e">Points above (red) or below (blue) the typical U.S. county. Hatched = not published.</text>',
          '<defs><pattern id="h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="#d9d8d3"/><line x1="0" y1="0" x2="0" y2="5" stroke="#fcfcfb" stroke-width="2"/></pattern></defs>']
     by_id = {m["id"]: m for m in measures}
     for k, mid in enumerate(show):
@@ -454,11 +416,11 @@ which is not the same as zero. Measures marked 2022 are from an earlier survey y
                 ink = "#0b0b0b" if lum > .36 else "#ffffff"
             b.append(f'<text x="{ox + cx * (t + g) + t / 2}" y="{oy + cy * (t + g) + 14}" font-size="8" text-anchor="middle" fill="{ink}">{abbr}</text>')
     b.append('<defs><linearGradient id="dv">' + "".join(f'<stop offset="{k / 4}" stop-color="{c}"/>' for k, c in enumerate(DIVERGING)) + '</linearGradient></defs>')
-    b.append(f'<text x="24" y="{height - 16}" font-size="11" fill="#52514e">Lower</text><rect x="62" y="{height - 25}" width="140" height="10" rx="5" fill="url(#dv)"/><text x="208" y="{height - 16}" font-size="11" fill="#52514e">Higher · each panel uses its own scale · Source: CDC PLACES 2025 (i46a-9kgh), age-adjusted 2023 estimates</text>')
-    (FINAL / "state_tile_small_multiples.svg").write_text(svg_doc(width, height, "State tile small multiples", b), encoding="utf-8")
+    b.append(f'<text x="24" y="{height - 16}" font-size="11" fill="#52514e">Lower</text><rect x="62" y="{height - 25}" width="140" height="10" rx="5" fill="url(#dv)"/><text x="208" y="{height - 16}" font-size="11" fill="#52514e">Higher · Source: CDC PLACES 2025 (i46a-9kgh), age-adjusted 2023 diabetes estimates</text>')
+    (FINAL / "state_tile_diabetes.svg").write_text(svg_doc(width, height, "Diabetes state tile map", b), encoding="utf-8")
     return {"tiles": len(TILES), "states_in_data": len(names), "measures": len(measures),
-            "unpublished_2023_core": sorted(set(TILES) - set(by_id["DIABETES"]["values"])),
-            "unpublished_hrsn": sorted(set(TILES) - set(by_id["FOODINSECU"]["values"]))}
+            "measure_ids": [m["id"] for m in measures],
+            "unpublished_2023_core": sorted(set(TILES) - set(by_id["DIABETES"]["values"]))}
 
 
 # ---------------------------------------------------------------------------
@@ -472,10 +434,10 @@ GALLERY = [
      "Each dot is a county: places with more physical inactivity tend to have more diabetes."),
     ("interactive_overlap/index.html", "3 · Where problems overlap",
      "Counties in the top 25% for none, one, two or all three of the core measures."),
-    ("interactive_related_measures/index.html", "4 · What else goes with it?",
-     "Pick a measure and see which of the other 2023 measures rise and fall with it."),
-    ("interactive_state_tiles/index.html", "5 · How does each state compare?",
-     "Each state's typical county against the typical U.S. county, for 39 measures."),
+    ("interactive_related_measures/index.html", "4 · What else goes with diabetes?",
+     "Rank other 2023 measures by their county-level relationship with diabetes; select a bar for the scatterplot."),
+    ("interactive_state_tiles/index.html", "5 · How does diabetes compare by state?",
+     "Each state's typical county diabetes estimate against the typical U.S. county."),
 ]
 
 
@@ -487,8 +449,8 @@ def build_gallery() -> None:
 .gal{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}}a.g{{text-decoration:none;color:var(--ink)}}a.g:hover{{box-shadow:0 0 0 2px var(--accent)}}
 </style></head><body><div class="viz-root"><main class="app"><header><div class="kicker">SD6105 · CDC PLACES county data, 2025 release</div>
 <h1>Adult health across U.S. counties</h1><div class="sub">Five interactive views of CDC estimates for 3,143 U.S. counties. Views 1–3 focus on diabetes,
-obesity and physical inactivity; views 4–5 widen the lens to all measures. All rates are age-adjusted so counties with older or younger
-populations can be compared fairly.</div></header>
+obesity and physical inactivity; views 4–5 keep diabetes fixed while adding wider health relationships and state comparisons. All rates are
+age-adjusted so counties with older or younger populations can be compared fairly.</div></header>
 <section class="gal">{cards}</section>
 <p class="foot">Source: CDC PLACES County Data (GIS Friendly Format), 2025 release (i46a-9kgh); U.S. Census Bureau 2023 county boundaries.
 Values are model-based estimates, not direct counts. They describe counties, not individuals, and show association, not cause.</p></main></div></body></html>
@@ -514,11 +476,11 @@ def main() -> None:
     ok = (checks["related"]["symmetric"] and checks["related"]["measures"] == 34
           and checks["related"]["excluded"] == ["BPMED"]
           and checks["state_tiles"]["tiles"] == checks["state_tiles"]["states_in_data"] == 51
-          and checks["state_tiles"]["measures"] == 39
-          and checks["state_tiles"]["unpublished_2023_core"] == ["KY", "PA"]
-          and len(checks["state_tiles"]["unpublished_hrsn"]) == 11)
+          and checks["state_tiles"]["measures"] == 1
+          and checks["state_tiles"]["measure_ids"] == ["DIABETES"]
+          and checks["state_tiles"]["unpublished_2023_core"] == ["KY", "PA"])
     outputs = sorted(str(p.relative_to(ROOT)) for p in [
-        FINAL / "index.html", FINAL / "related_measures_diabetes.svg", FINAL / "state_tile_small_multiples.svg",
+        FINAL / "index.html", FINAL / "related_measures_diabetes.svg", FINAL / "state_tile_diabetes.svg",
         FINAL / "interactive_related_measures/index.html", FINAL / "interactive_state_tiles/index.html"])
     result = {"status": "PASS" if ok else "FAIL", "input_sha256": digest, "checks": checks, "outputs": outputs}
     VALIDATION_OUT.write_text(json.dumps(result, indent=2), encoding="utf-8")

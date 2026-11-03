@@ -82,15 +82,17 @@ effects, policy priority designations, or an overall county health ranking.
 Built by `build_extended_views.py` from `02_analysis/extended_analysis.py`
 outputs. Validation: `02_analysis/outputs/extended_views_validation.json`.
 
-- `interactive_related_measures/` + `related_measures_diabetes.svg`: pick a
-  2023 measure; ranked bars show how closely each other measure moves with it
-  across counties (Spearman correlation, plain strength words); click a bar for
-  the county scatterplot. Correlations of 0.9+ are flagged as mostly reflecting
-  the shared CDC model.
-- `interactive_state_tiles/` + `state_tile_small_multiples.svg`: each state's
-  typical (median) county versus the typical U.S. county, for 39 measures, on an
+- `interactive_related_measures/` + `related_measures_diabetes.svg`: diabetes
+  is fixed as the focal measure; ranked bars show how closely every other 2023
+  measure moves with it across counties (Spearman correlation, plain strength
+  words); click a bar for the county scatterplot. Correlations of 0.9+ are
+  flagged as mostly reflecting the shared CDC model.
+- `interactive_state_tiles/` + `state_tile_diabetes.svg`: each state's typical
+  (median) county diabetes estimate versus the typical U.S. county, on an
   equal-size state tile map linked to a ranked dot plot. Unpublished states are
   hatched, never zero.
+
+Both extended views use light mode only and have no measure selector.
 - `index.html`: gallery linking all five interactive views.
 
 The earlier measure-landscape (clustered heatmap) and age-gap (ridgeline) views
