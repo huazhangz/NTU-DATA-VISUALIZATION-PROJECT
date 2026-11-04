@@ -153,11 +153,11 @@ return(.2126*r+.7152*g+.0722*b)>.36?'#0b0b0b':'#ffffff';}
 """ % json.dumps(DIVERGING)
 
 
-def page(title: str, kicker: str, headline: str, sub: str, body: str, data: dict, script: str) -> str:
+def page(title: str, kicker: str, headline: str, sub: str, body: str, data: dict, script: str, extra_css: str = "") -> str:
     payload = json.dumps(data, separators=(",", ":"), allow_nan=False).replace("</", "<\\/")
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/><title>{esc(title)}</title>
-<style>{BASE_CSS}</style></head><body><div class="viz-root"><main class="app">
+<style>{BASE_CSS}{extra_css}</style></head><body><div class="viz-root"><main class="app">
 <header><div class="kicker">{esc(kicker)}</div><h1>{esc(headline)}</h1><div class="sub">{sub}</div></header>
 {body}
 <p class="foot">Source: CDC PLACES County Data (GIS Friendly Format), 2025 release, dataset i46a-9kgh; cleaned and validated
@@ -239,6 +239,18 @@ const start=location.hash.slice(1);sel.value=idx[start]!==undefined?start:DATA.d
 """
 
 
+# Figure 4 only: the tooltip sits outside .viz-root, so it cannot read the
+# theme variables. Give it explicit opaque colours in both themes.
+RELATED_TIP_CSS = """
+#tip{background:#fcfcfb;color:#0b0b0b;box-shadow:0 0 0 1px rgba(11,11,11,.14),0 6px 20px rgba(0,0,0,.18)}
+#tip .k{color:#52514e}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) #tip{background:#262624;color:#f0efec;
+box-shadow:0 0 0 1px rgba(255,255,255,.16),0 6px 20px rgba(0,0,0,.5)}:root:where(:not([data-theme="light"])) #tip .k{color:#c3c2b7}}
+:root[data-theme="dark"] #tip{background:#262624;color:#f0efec;box-shadow:0 0 0 1px rgba(255,255,255,.16),0 6px 20px rgba(0,0,0,.5)}
+:root[data-theme="dark"] #tip .k{color:#c3c2b7}
+"""
+
+
 def build_related(data: pd.DataFrame, catalog: pd.DataFrame) -> dict:
     cat = catalog[(catalog["year"] == 2023) & catalog["in_charts"]].copy()
     order = {c: i for i, c in enumerate(CATEGORY_ORDER)}
@@ -287,7 +299,7 @@ Only 2023 estimates are shown.</p>
         "Related measures — PLACES county estimates", "Related measures",
         "Counties with more of one health problem tend to have more of many others",
         "Pick a 2023 measure to see which other measures rise and fall with it across U.S. counties.",
-        body, payload, RELATED_JS), encoding="utf-8")
+        body, payload, RELATED_JS, RELATED_TIP_CSS), encoding="utf-8")
 
     # static: diabetes bars
     i = ids.index("DIABETES")
