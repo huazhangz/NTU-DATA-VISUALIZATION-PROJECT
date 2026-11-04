@@ -275,7 +275,7 @@ PYTHONPATH=scripts python3 -m pytest tests -q
 python3 -m http.server 8000 --directory 03_visualisations/final
 ```
 
-线上测试链接（Claude artifact，目前仅所有者可见，需在 claude.ai 页面上分享）：<https://claude.ai/artifact/ReSnRDKC3MKsQUoDPhoDxJ>
+线上测试链接（直接渲染 GitHub 仓库 `main` 分支中的 `03_visualisations/final/index.html`，推送后几分钟内自动更新）：<https://raw.githack.com/huazhangz/NTU-DATA-VISUALIZATION-PROJECT/main/03_visualisations/final/index.html>
 
 已修复：`basic_eda.py` 州中位数的并列值排序不稳定问题已于 2026-10-31 修复，连续两次运行输出逐字节一致。
 

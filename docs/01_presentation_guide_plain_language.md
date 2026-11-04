@@ -2,7 +2,7 @@
 
 用途：给做 presentation 的组员用。用日常语言解释项目里的指标、数据流程和 5 张图，方便讲给没有统计背景的听众。数字都来自仓库里的分析输出（2026-10-31 版本）。
 
-线上演示链接：<https://claude.ai/artifact/ReSnRDKC3MKsQUoDPhoDxJ>（首页可进入全部 5 张交互图）
+线上演示链接：<https://raw.githack.com/huazhangz/NTU-DATA-VISUALIZATION-PROJECT/main/03_visualisations/final/index.html>（首页可进入全部 5 张交互图）
 
 ---
 
